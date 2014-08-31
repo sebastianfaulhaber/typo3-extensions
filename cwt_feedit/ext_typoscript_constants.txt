@@ -1,0 +1,10 @@
+plugin.cwt_feedit{
+
+  ###Constants
+
+  # cat=plugin.cwt_feedit/file; type=file[gif]; label= Icon used for deletion of items.
+  file.icon_delete = EXT:cwt_feedit/pi1/icon_delete.gif
+  
+  # cat=plugin.cwt_feedit/ctext/0; type=boolean; label= Enable MD5 encoding for password fields?
+  passwords.enableMD5 = 0
+}

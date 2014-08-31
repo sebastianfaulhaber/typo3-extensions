@@ -1,0 +1,5 @@
+plugin.tx_cwtfeedit_pi1{
+
+	###Setup
+	icon_delete = {$plugin.cwt_feedit.file.icon_delete}	
+}
