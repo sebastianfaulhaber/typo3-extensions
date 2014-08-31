@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<T3DataStructure>
+  <sheets>
+	<sDEF>
+	  <ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general</sheetTitle>
+			<sheetDescription>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_description</sheetDescription>
+			<langDisable>1</langDisable>
+		</TCEforms>
+	    <type>array</type>
+	    <el>
+			<field_code>
+				<TCEforms>
+					<label>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code</label>
+					<config>
+						<type>select</type>
+						<items>
+							<numIndex index="0">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.0</numIndex>
+								<numIndex index="1">WELCOME</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.1</numIndex>
+								<numIndex index="1">MESSAGES</numIndex>
+							</numIndex>							
+							<numIndex index="2">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.2</numIndex>
+								<numIndex index="1">GUESTBOOK</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.3</numIndex>
+								<numIndex index="1">PROFILE</numIndex>
+							</numIndex>			
+							<numIndex index="4">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.4</numIndex>
+								<numIndex index="1">PROFILE_EDIT</numIndex>
+							</numIndex>																		
+							<numIndex index="5">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.5</numIndex>
+								<numIndex index="1">USERLIST</numIndex>
+							</numIndex>							
+							<numIndex index="6">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.6</numIndex>
+								<numIndex index="1">BUDDYLIST</numIndex>
+							</numIndex>									
+							<numIndex index="7">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.7</numIndex>
+								<numIndex index="1">GALLERY</numIndex>
+							</numIndex>	
+							<numIndex index="8">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.8</numIndex>
+								<numIndex index="1">SEARCH</numIndex>
+							</numIndex>
+							<numIndex index="9">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.9</numIndex>
+								<numIndex index="1">SEARCH_EXTENDED</numIndex>
+							</numIndex>
+							<numIndex index="10">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.10</numIndex>
+								<numIndex index="1">PROFILE_MINI</numIndex>
+							</numIndex>
+							<numIndex index="11">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.11</numIndex>
+								<numIndex index="1">ABUSE_REPORT</numIndex>
+							</numIndex>
+							<numIndex index="12">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.12</numIndex>
+								<numIndex index="1">PROFILE_USERSTATS</numIndex>
+							</numIndex>						
+							<numIndex index="13">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.13</numIndex>
+								<numIndex index="1">BUDDYADMIN</numIndex>
+							</numIndex>
+							<numIndex index="14">
+								<numIndex index="0">-------------------------</numIndex>
+								<numIndex index="1">-------------------------</numIndex>
+							</numIndex>							
+							<numIndex index="15">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.15</numIndex>
+								<numIndex index="1">GENERICS_USERLIST</numIndex>
+							</numIndex>
+							<numIndex index="16">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.16</numIndex>
+								<numIndex index="1">GENERICS_PROFILE</numIndex>
+							</numIndex>
+							<numIndex index="17">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.17</numIndex>
+								<numIndex index="1">WALL</numIndex>
+							</numIndex>							
+							<numIndex index="18">
+								<numIndex index="0">LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_general_code.I.18</numIndex>
+								<numIndex index="1">XHR_API</numIndex>
+							</numIndex>																																		
+						</items>
+						<minitems>1</minitems>
+						<maxitems>1</maxitems>
+						<size>20</size>
+						<multiple>0</multiple>
+					</config>
+				</TCEforms>
+			</field_code>
+	    </el>
+	  </ROOT>
+    </sDEF>
+	<debug>
+     <ROOT>
+      <TCEforms>
+       <sheetTitle>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_debug</sheetTitle>
+       <sheetDescription>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_debug_description</sheetDescription>
+       <langDisable>1</langDisable>
+      </TCEforms>
+      <type>array</type>
+      <el>
+       <show_ts_configuration>
+        <TCEforms>
+         <label>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_debug.show_ts_configuration</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </show_ts_configuration>
+       <show_sql_queries>
+        <TCEforms>
+         <label>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_debug.show_sql_queries</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </show_sql_queries>
+      </el>      
+     </ROOT>
+    </debug>
+    <generic_views_profile>
+     <ROOT>
+      <TCEforms>
+       <sheetTitle>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_profile</sheetTitle>
+       <sheetDescription>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_profile_description</sheetDescription>
+       <langDisable>1</langDisable>
+      </TCEforms>
+      <type>array</type>
+      <el>
+       <ts_configuration>
+        <TCEforms>
+         <label>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_profile.ts_configuration</label>
+         <config>
+          <type>input</type>
+         </config>
+        </TCEforms>
+       </ts_configuration>
+      </el>      
+     </ROOT>
+    </generic_views_profile>
+	<generic_views_userlist>
+	 <ROOT>
+	  <TCEforms>
+	   <sheetTitle>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_userlist</sheetTitle>
+	   <sheetDescription>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_userlist_description</sheetDescription>
+	   <langDisable>1</langDisable>
+	  </TCEforms>
+	  <type>array</type>
+	  <el>
+	   <ts_configuration>
+	    <TCEforms>
+	     <label>LLL:EXT:cwt_community/locallang_db.xml:cwt_community.pi_flexform.sheet_generic_views_userlist.ts_configuration</label>
+	     <config>
+	      <type>input</type>
+	     </config>
+	    </TCEforms>
+	   </ts_configuration>
+	  </el>      
+	 </ROOT>
+	</generic_views_userlist> 
+  </sheets>
+</T3DataStructure>
