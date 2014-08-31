@@ -1,0 +1,30 @@
+{if $isSubmitted eq false}
+<form action="?id={$CONF.pid_abuse}&action=newAbuseRequest" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="url" value="{$url}">
+	<table border="0">
+		<tr>
+			<td colspan="2">{$LIB_COMMON->getLL('ABUSE_INTRODUCTION')}</td>
+		</tr>
+		<tr>
+			<td>{$LIB_COMMON->getLL('ABUSE_EMAIL')}:</td>
+			<td><input name="email" type="text" value="{$email}" size="30"/></td>
+		</tr>
+		<tr>
+			<td>{$LIB_COMMON->getLL('ABUSE_TEXT')} (*):</td>
+			<td><textarea name="reason" cols="30" rows="5">{$reason}</textarea></td>
+		</tr>  
+		<tr>
+			<td><input type="submit" name="send" value="{$LIB_COMMON->getLL('FORM_SUBMIT_BUTTON')}"/></td>
+		</tr>                                              
+	</table>
+</form>
+{else}
+	<table border="0">
+		<tr>
+			<td>{$LIB_COMMON->getLL('ABUSE_RESULT')}</td>
+		</tr>  
+		<tr>
+			<td><a href="{$url}">{$LIB_COMMON->getLL('BACK')}...</a></td>
+		</tr>                                             
+	</table>
+{/if}

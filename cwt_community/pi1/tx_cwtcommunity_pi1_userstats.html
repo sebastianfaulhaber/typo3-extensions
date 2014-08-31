@@ -1,0 +1,13 @@
+{$LIB_COMMON->getLL('CWT_PROFILE_MEMBERSINCE')}: {$user.crdate|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_LASTLOGIN')}: {$user.tstamp|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_PROFILEVIEWS')}: {$user.stats.profileviews}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_ALBUMCOUNT')}: {$user.stats.albums}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_PHOTOCOUNT')}: {$user.stats.photos}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_BUDDYCOUNT')}: {$user.stats.buddies}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_BUDDYONLINECOUNT')}: {$user.stats.buddies_online}<br/>
+{$LIB_COMMON->getLL('CWT_PROFILE_BUDDYREQUESTCOUNT')}: {$user.stats.buddy_requests}<br/>
+
+
+
+
+

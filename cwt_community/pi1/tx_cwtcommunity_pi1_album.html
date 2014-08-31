@@ -1,0 +1,46 @@
+<table cellspacing="0" cellpadding="2">
+	{if $owner_uid eq $CUR_USER.uid}
+	<tr>
+		<td colspan="2">
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_new&album_user_id=`$CUR_USER.uid`"}
+			{$LIB_COMMON->getLL('ALBUM_NEW_ACTION')}{/link}
+		</td>
+	</tr>
+	{/if}
+	{section name="entry" loop=$albumData}
+	<tr>
+		<td style="border: 1px solid #E5E5E5; width: 150px;" valign="top">
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&album_uid=`$albumData[entry].uid`"}
+				
+				{image file=$albumData[entry].preview_pic setup=plugin.tx_cwtcommunity_pi1.album.preview_photo}
+			{/link}&nbsp;
+		</td>
+		<td style="border: 1px solid #E5E5E5; width: 100%;" valign="top">
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&album_uid=`$albumData[entry].uid`"}
+				<b>{$albumData[entry].title|truncate:$CONF.album.title.length}</b>
+			{/link}<br/>
+			<small>{$albumData[entry].description|truncate:$CONF.album.description.length}</small><br/>
+			<small>{$albumData[entry].photo_count}&nbsp;{$LIB_COMMON->getLL('ALBUM_PHOTO_COUNT_LABEL')}</small><br/>
+			{if $albumData[entry].cruser_id eq $CUR_USER.uid}
+				{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_delete&album_uid=`$albumData[entry].uid`"}
+					{$LIB_COMMON->getLL('ALBUM_DELETE_EXISTING')}
+				{/link}<br/>
+				{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_edit&album_uid=`$albumData[entry].uid`"}
+					{$LIB_COMMON->getLL('ALBUM_EDIT_EXISTING')}
+				{/link}
+			{/if}
+		</td>
+	</tr>
+	{sectionelse}
+	<tr>
+		<td colspan="2">		
+			{$LIB_COMMON->getLL('ALBUM_NO_REC')}
+		</td>
+	</tr>	
+	{/section}
+	<tr>
+		<td colspan="2">		
+		<a href="{$LIB_COMMON->getLinkToUsersProfile($owner_uid)}">{$LIB_COMMON->getLL('ALBUM_DETAIL_BACK_TO_PROFILE')}</a>		
+		</td>
+	</tr>
+</table>

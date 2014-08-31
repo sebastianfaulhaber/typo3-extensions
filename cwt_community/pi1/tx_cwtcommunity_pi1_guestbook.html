@@ -1,0 +1,93 @@
+{if $view eq "logged_in"}
+
+<table  cellspacing="2" cellpadding="2">
+	<tr>
+		<td colspan="4">
+		{if $isLocked == false}
+		<!-- ###DEACTIVATE### begin-->
+			{$LIB_COMMON->getLL('CWT_GUESTBOOK_ACTIVEMSG')}
+			<FORM action={$enable_disable_guestbook} method="POST">
+				<INPUT type="submit" name="tx_cwtcommunity_pi1[lock_guestbook]" value="{$LIB_COMMON->getLL('LOCK_GUESTBOOK_BUTTON')}"/>
+			</FORM>
+		<!-- ###DEACTIVATE### end-->
+		{else}
+		<!-- ###ACTIVATE### begin-->
+			{$LIB_COMMON->getLL('CWT_GUESTBOOK_INACTIVEMSG')}
+			<FORM action={$enable_disable_guestbook} method="POST">
+				<INPUT type="submit" name="tx_cwtcommunity_pi1[open_guestbook]" value="{$LIB_COMMON->getLL('OPEN_GUESTBOOK_BUTTON')}"/>
+			</FORM>
+		<!-- ###ACTIVATE### end-->
+		{/if}
+		</td>
+	</tr>
+	{section name="entry" loop=$guestbook}
+		<tr {if $smarty.section.entry.index is odd}{else}bgcolor="F0F0F0"{/if}>
+			<td valign="top"><a href="{$LIB_COMMON->getLinkToUsersProfile($guestbook[entry].cruser_id)}">{$LIB_COMMON->getUserPic($guestbook[entry].cruser_id)}</a></td>
+			<td valign="top">{$guestbook[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')}, {$guestbook[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_TIME_FORMAT_SMARTY')}</td>
+			<td valign="top"><a href="{$LIB_COMMON->getLinkToUsersProfile($guestbook[entry].cruser_id)}">{$guestbook[entry].username}</a></td>
+			<td valign="top">{$LIB_COMMON->parseIcons($guestbook[entry].text)}</td>
+			<td valign="top">{link parameter=$CONF.pid_profile additionalParams="&action=getviewguestbookdeleteitem&uid=`$uid`&item=`$guestbook[entry].uid`"}{image file=$CONF.icon_guestbook_delete altText=$LIB_COMMON->getLL('icon_guestbook_delete')}{/link}</td>
+		</tr>
+	{/section}
+	<tr>
+		<td colspan="5">
+			{link parameter=$CONF.pid_profile additionalParams="&action=getviewguestbookdeleteall&uid=`$uid`"}{$LIB_COMMON->getLL('CWT_GUESTBOOK_DELETEALL')}{/link}	
+		</td>
+	</tr>	
+
+</table>	
+
+{elseif $view eq "add"}
+<FORM action={$add_guestbook_entry} method="POST">
+	<table border="0">
+		<tr>
+			<td></td>
+			<td>{$LIB_COMMON->getLL('CWT_GUESTBOOK_NEWENTRY')}:</td>
+		</tr>
+		<tr>
+			<td valign="top"></td>
+			<td><textarea name="tx_cwtcommunity_pi1[text]" cols="60" rows="12" /></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="right">
+				<INPUT type="submit" name="tx_cwtcommunity_pi1[submit_button]" value="{$LIB_COMMON->getLL('FORM_SUBMIT_BUTTON')}"/>
+				<INPUT type="submit" name="tx_cwtcommunity_pi1[cancel_button]" value="{$LIB_COMMON->getLL('FORM_CANCEL_BUTTON')}"/>
+			</td>
+		</tr>
+	</table>
+</FORM>
+
+{elseif $view eq "add_result"}
+	{$LIB_COMMON->getLL('CWT_GUESTBOOK_ENTRYADDED')}<br><a href="{$LIB_COMMON->getLinkToUsersProfile($uid)}">{$LIB_COMMON->getLL('CWT_GUESTBOOK_BACK')}</a>
+
+{elseif $view eq "disabled"}
+	{$LIB_COMMON->getLL('CWT_GUESTBOOK_DISABLEDMSG')}
+
+{else}
+<table cellspacing="0" cellpadding="2">
+	{section name="entry" loop=$guestbook}
+	<tr {if $smarty.section.entry.index is odd}{else}{/if}>
+		<td style="border: 1px solid #E5E5E5" rowspan="2">
+			<a href="{$LIB_COMMON->getLinkToUsersProfile($guestbook[entry].cruser_id)}">{$LIB_COMMON->getUserPic($guestbook[entry].cruser_id)}</a>
+		</td>
+		<td style="border: 1px solid #E5E5E5">
+			<a href="{$LIB_COMMON->getLinkToUsersProfile($guestbook[entry].cruser_id)}">{$guestbook[entry].username}</a>&nbsp;
+				{$LIB_COMMON->getSexIcon($guestbook[entry].cruser_id)},&nbsp;
+				{$guestbook[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')},&nbsp;
+				{$guestbook[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_TIME_FORMAT_SMARTY')}
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #E5E5E5">{$LIB_COMMON->parseIcons($guestbook[entry].text)}</td>
+	</tr>
+	<tr>
+		<td><br/></td>
+	</tr>
+	{/section}
+	<tr>
+		<td colspan="2">	
+			{link parameter=$PID_SELF additionalParams="&action=getviewguestbookadd&uid=`$uid`"}{$LIB_COMMON->getLL('CWT_GUESTBOOK_NEWENTRY')}{/link}	
+		</td>
+	</tr>
+</table>
+{/if}

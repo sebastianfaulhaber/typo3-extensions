@@ -1,0 +1,57 @@
+{if $view eq "report"}
+<FORM action="{$form_action_report}" method="POST">
+	{$LIB_COMMON->getLL('PHOTO_DETAIL_REPORT_DESC')}<br>
+	<textarea name="REASON" cols="30" rows="5" /></textarea><br>
+	<INPUT type="submit" name="report_photo" value="{$LIB_COMMON->getLL('FORM_SUBMIT_BUTTON')}"/>
+	<INPUT type="submit" name="cancel" value="{$LIB_COMMON->getLL('FORM_CANCEL_BUTTON')}"/>
+</FORM>
+{else}
+
+<table cellspacing="0" cellpadding="2">
+	<tr>
+		<td>		
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&album_uid=`$album.uid`"}
+				{$LIB_COMMON->getLL('PHOTO_DETAIL_BACK')}{/link}<br> 
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_report&photo_uid=`$photo.uid`"}
+				{$LIB_COMMON->getLL('PHOTO_DETAIL_REPORT')}{/link}
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #E5E5E5">
+			{image file=$photo.pic setup=plugin.tx_cwtcommunity_pi1.photo.detail}<br>
+			<b>{$photo.title}</b><br>
+			{$photo.description}<br>
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #E5E5E5">
+			<table style="width: 100%">
+				<tr>
+					<td colspan="2">
+						<FORM action="{$form_action_detail}" method="POST">
+					    	{$LIB_COMMON->getLL('PHOTO_DETAIL_NEW_COMMENT')}:<br>
+					    	<textarea name="TEXT" cols="30" rows="5" /></textarea><br>
+	                    	<INPUT type="submit" name="cmd" value="{$LIB_COMMON->getLL('FORM_COMMENT_ADD')}"/>
+				        </FORM>				        
+					</td>
+				</tr>
+				{section name="entry" loop=$comments}
+				<tr>
+					<td valign="top">{$LIB_COMMON->getUserPic($comments[entry].cruser_id)}</td>
+					<td style="width: 100%;" valign="top">
+						<a href="{$LIB_COMMON->getLinkToUsersProfile($comments[entry].cruser_id)}"><b>{$comments[entry].username}</b></a>, 
+						{$comments[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')},&nbsp;
+						{$comments[entry].crdate|date_format:$LIB_COMMON->getLL('CWT_TIME_FORMAT_SMARTY')}<br>
+						{$comments[entry].text}<br>
+						{if $album.cruser_id eq $CUR_USER.uid}
+							<br>{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_detail&photo_uid=`$photo.uid`&cmd=delete_comment&comment_uid=`$comments[entry].uid`"}
+								{$LIB_COMMON->getLL('PHOTO_DETAIL_DELETE_COMMENT')}{/link}
+						{/if}
+					</td>		
+				</tr>
+				{/section}	
+			</table>
+		</td>
+	</tr>
+</table>
+{/if}

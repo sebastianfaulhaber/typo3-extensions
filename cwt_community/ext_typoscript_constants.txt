@@ -1,0 +1,198 @@
+##########################################################################################################
+### Constants
+##########################################################################################################
+
+plugin.cwt_community {
+
+  ##########################################################################################################
+  ## TEMPLATE FILES
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Guestbook HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_guestbook = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_guestbook.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Profile HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_profile = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_profile.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Profile Mini HTML Template File: The profile of the currently logged in user will be shown here. 
+  file.template_profile_mini = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_profile_mini.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Search HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_search = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_search.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Buddylist HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_buddylist = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_buddylist.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Userlist HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_userlist = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_userlist.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Messages HTML Template File: This is the HTML Template file, which will be used for displaying records. 
+  file.template_messages = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_messages.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Welcome HTML Template File: This template is intended for the users welcome page, after he has logged in.
+  file.template_welcome = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_welcome.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Album HTML Template File
+  file.template_album = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_album.html
+  
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Album Admin HTML Template File
+  file.template_album_admin = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_album_admin.html
+  
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Album Detail HTML Template File
+  file.template_album_detail = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_album_detail.html
+    
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Photo Admin HTML Template File
+  file.template_photo_admin = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_photo_admin.html
+    
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Photo Detail HTML Template File
+  file.template_photo_detail = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_photo_detail.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Abuse Report HTML Template File
+  file.template_abuse_report = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_abuse.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= User statistics HTML Template File
+  file.template_userstats = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_userstats.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Buddy administration HTML Template File
+  file.template_buddyadmin = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_buddyadmin.html
+
+  # cat=PLUGIN.CWT Community - Templates/file; type=file[html,htm,tmpl,txt]; label= Wall HTML Template File
+  file.template_wall = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_wall.html
+
+  ## PICTURES
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Userlist (on): Status -> Online.
+  file.icon_userlist_status_online = EXT:cwt_community/pi1/userlist_status_online.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Userlist (off): Status -> Offline.
+  file.icon_userlist_status_offline = EXT:cwt_community/pi1/userlist_status_offline.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Userlist (add): Add buddy.
+  file.icon_userlist_addbuddy = EXT:cwt_community/pi1/userlist_addbuddy.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Userlist (male): Male icon
+  file.icon_userlist_male = EXT:cwt_community/pi1/userlist_male.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Userlist (female): Female icon
+  file.icon_userlist_female = EXT:cwt_community/pi1/userlist_female.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Guestbook (delete): Icon used for deletion of items.
+  file.icon_guestbook_delete = EXT:cwt_community/pi1/guestbook_delete.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Messages (new): Icon for new mail.
+  file.icon_messages_new = EXT:cwt_community/pi1/messages_new.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Messages (unread): Icon for unread mail.
+  file.icon_messages_unread = EXT:cwt_community/pi1/messages_unread.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Messages (read): Icon for mail that has been read.
+  file.icon_messages_read = EXT:cwt_community/pi1/messages_read.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Messages (reply): Icon for answering mail.
+  file.icon_messages_answer = EXT:cwt_community/pi1/messages_answer.gif
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Welcome (new): Icon indicating new mail.
+  file.icon_welcome_newmail = EXT:cwt_community/pi1/welcome_newmail.png
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Welcome (no): Icon indicating that no new mail has arrived yet.
+  file.icon_welcome_nonewmail = EXT:cwt_community/pi1/welcome_nonewmail.png
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Profile pic male: This picture will be displayed if a user has not uploaded a photo.
+  file.no_pic_male = EXT:cwt_community/pi1/no_pic_male.png
+
+  # cat=PLUGIN.CWT Community - Icons/file; type=file[gif]; label= Profile pic female: This picture will be displayed if a user has not uploaded a photo.
+  file.no_pic_female = EXT:cwt_community/pi1/no_pic_female.png
+
+  ##########################################################################################################
+  ## CONFIGURATION VARS
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= STORAGE FOLDER: PID of the page where all records related to the CWT Community are stored.
+  pid.storage_folder = 27
+  
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Profile: PID of the page containing the 'PROFILE' plugin
+  pid.profile = 78
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Profile: PID of the page containing the 'PROFILE_EDIT' plugin
+  pid.profile_edit = 78
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Buddylist: PID of the page containing the 'BUDDYLIST' plugin
+  pid.buddylist = 79
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Buddylist administration: PID of the page containing the 'BUDDYADMIN' plugin
+  pid.buddyadmin = 0
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Userlist: PID of the page containing the 'USERLIST' plugin
+  pid.userlist = 82
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Messages: PID of the page containing the 'MESSAGES' plugin
+  pid.messages = 80
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Icon Replacement: PID of Sysfolder, where the icon records (for replacement of strings) reside.
+  pid.icons = 81
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Gallery: PID of the page containing the 'GALLERY' plugin
+  pid.gallery = 0
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Search: PID of the page containing the 'SEARCH EXTENDED' plugin
+  pid.search = 0
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Abuse Report: PID of the page containing the 'ABUSE REPORT' plugin
+  pid.abuse = 0
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= XHR API: PID of the page containing the 'XHR API' plugin
+  pid.xhrapi = 0
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=boolean; label= Icon Replacement: Parse for strings and replace them?
+  iconReplacement = 1
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=int+; label= Maximum idle time: After this maximum amount of idle time (in minutes) a fe_user is considered as logged out.
+  maxIdleTime = 15
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=boolean; label= Use MD5 Hashed Password in Profile view: If true, then all passwords changed via the profile edit view are hashed with PHP's md5 algorithm.
+  profile.use_md5_hashed_passwords = 0
+  
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=boolean; label= Buddylist Approval: Set this to 'true' to force buddylist approval; User A can only add User B to his list, if B accepts A's request.
+  buddylist.approval = 1  
+
+  # cat=PLUGIN.CWT Community - Configuration vars/ctext/0; type=boolean; label= Buddylist Approval messages: Set this to 'true' to turn on sending of buddylist confirmation messages.
+  buddylist.approval_message = 1
+
+  ##########################################################################################################
+  ## GALLERY CONFIGURATION VARS
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=boolean; label= Compact gallery: If true, a link to a user's gallery will be shown, instead of the gallery list.
+  gallery.show_on_profile_minimal = 1
+  
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= The sysfolder's PID where album and photo records will be stored.
+  album.storage_folder_pid = 0
+  
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Maximum number of character shown in frontend for 'title' in the ALBUM_LIST_VIEW. 
+  album.title.length = 60
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Maximum number of character shown in frontend for 'description' in the ALBUM_LIST_VIEW. 
+  album.description.length = 100  
+  
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Max. albums per user: Maximum albums per user.
+  album.new.maximumPerUser = 50
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Max. photos per album: Maximum photos per album.
+  album.photo.new.maximumPerAlbum = 100
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Max. size: Maximum size in KB for new photos.
+  album.photo.new.maxSize = 500
+  
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=string; label= Allowed file types: Allowed file types for new photos.
+  album.photo.new.formatsAllowed = jpeg,jpg,gif,png
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=string; label= Storage folder: Storage folder for users' photos. This path must be relative to the web root.
+  album.photo.storageFolder = uploads/tx_cwtcommunity/gallery/
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Photos per table row. 
+  album.detail.photosPerRow = 2
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Maximum number of character shown in frontend for 'title' in the ALBUM_DETAIL_VIEW. 
+  album.detail.title.length = 60
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=int+; label= Maximum number of character shown in frontend for 'description' in the ALBUM_DETAIL_VIEW. 
+  album.detail.description.length = 100
+
+  # cat=PLUGIN.CWT Community - Gallery configuration vars/ctext/0; type=string; label= Report photo recipient: If a user executes the "Report Photo" function an email is sent to this email address.
+  photo.detail.report.recipient = admin@YOURDOMAIN
+  
+  
+}

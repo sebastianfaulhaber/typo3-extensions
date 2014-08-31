@@ -1,0 +1,151 @@
+
+
+<div style="visibility: hidden; display: none;">
+	<input id="XHR_API_TARGET" type="hidden" value="/index.php?id={$CONF.pid_xhrapi}"/>
+	<input id="OWNER_UID" type="hidden" value="{$user.uid}"/>
+</div>
+
+{literal}
+<style type="text/css">
+	
+.wall_entry_new_content_text {
+	
+}
+
+.wall_entry_new_add {
+
+}
+
+.cwt_community_wall_entry {
+    margin-bottom: 10px;
+}
+.cwt_community_wall_entry_pic {
+    display: inline;
+    float: left;
+    width: 60px;
+}
+.cwt_community_wall_entry_content {
+    display: inline;
+    float: left;
+    margin-bottom: 10px;
+    vertical-align: top;
+    width: 500px;
+}
+.cwt_community_wall_entry_content_header {
+    font-weight: bold;
+    display: inline;
+    margin-bottom: 4px;
+}
+.cwt_community_wall_entry_content_header_functions {
+    display: inline;
+    float: right;
+    color: gray;
+    font-size: 75%;
+}
+.cwt_community_wall_entry_content_body {
+    display: block;
+    margin-bottom: 4px;
+}
+.cwt_community_wall_entry_content_footer {
+    color: gray;
+    font-size: 75%;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+	const XHR_API = jQuery("#XHR_API_TARGET").val();
+
+	jQuery(document).ready(function() {
+		reloadWall(); 
+	});
+
+	
+	function log(msg){
+		if (window.console && console.log) {
+			console.log(msg); //for firebug
+		}
+	}
+
+	function addWallEntryText() {
+		jQuery.getJSON(XHR_API, {header : {
+										module : "tx_cwtcommunity_lib_wall", 
+										func : "addWallEntryText"}, 
+								data : {
+										owner_uid : jQuery("#OWNER_UID").val(),
+										content_text : jQuery("#wall_entry_new_content_text").val() }
+								}, function(data) {
+									// Reload the wall after new post
+									reloadWall();
+
+									// Clear textarea
+									jQuery("#wall_entry_new_content_text").val("");
+								});
+	}
+
+	function deleteWallEntry(entry_uid) {
+		if (confirm("{/literal}{$LIB_COMMON->getLL('CWT_WALL_DELETE_CONFIRM')}{literal}")) {
+			jQuery.getJSON(XHR_API, {header : {
+										module : "tx_cwtcommunity_lib_wall", 
+										func : "deleteWallEntry"}, 
+									data : {
+											"entry_uid" : entry_uid}
+									}, function(data) {
+										// Reload the wall after new post
+										reloadWall();
+									});
+
+		}
+
+	}
+ 
+	function reloadWall() {
+		// Fetch data from server
+		log("Reloading Wall...");
+
+		jQuery.getJSON(XHR_API, {header : {module : "tx_cwtcommunity_lib_wall", func : "getWallEntriesForUser"}, data : {owner_uid : jQuery("#OWNER_UID").val()} }
+		, function(data){
+			var entries = data;
+			//Clear wall
+			jQuery("#wall_entries").fadeToggle("fast", "linear");
+			jQuery("#wall_entries").html("");
+					
+			// Reload HTML
+			if (entries.length > 0) {
+				for (var i = 0; i < entries.length; i++) {
+					jQuery("#wall_entries").append(renderWallEntry(entries[i]));
+				}
+			} else {
+				jQuery("#wall_entries").html("{/literal}{$LIB_COMMON->getLL('CWT_WALL_NO_ENTRIES')}{literal}");
+			}
+			jQuery("#wall_entries").fadeToggle("fast", "linear"); 
+		});
+	}
+	
+	function renderWallEntry(entry) {
+		var html = '<div class="cwt_community_wall_entry">';
+		html += '<div class="cwt_community_wall_entry_pic"><a href="' + entry.cruser_linkToUsersProfile + '">' + entry.cruser_pic + '</a></div>';
+		html += '<div class="cwt_community_wall_entry_content">';
+		html += '<span class="cwt_community_wall_entry_content_header"><a href="' + entry.cruser_linkToUsersProfile + '">' + entry.cruser.first_name + "&nbsp;" + entry.cruser.last_name + "</a></span>";
+		html += '<span class="cwt_community_wall_entry_content_header_functions"><a href="javascript:deleteWallEntry(' + entry.uid + ')">{/literal}{$LIB_COMMON->getLL('CWT_WALL_DELETE')}{literal}</a></span>'; 
+		html += '<span class="cwt_community_wall_entry_content_body">' + entry.content_text + "</span>";
+		html += '<span class="cwt_community_wall_entry_content_footer">' + entry.crdate_date + ", " + entry.crdate_time + "</span>"; 
+		html += '</div>';
+		html += '</div>'; 
+		return html;
+	}
+
+</script>
+
+{/literal}
+
+<div id="wall_add">
+		<textarea id="wall_entry_new_content_text"></textarea>
+		<input id="wall_entry_new_add" type="submit" value="{$LIB_COMMON->getLL('CWT_WALL_POST')}" onclick="javascript:addWallEntryText()">
+</div>
+
+<div id="wall_entries">
+	{$LIB_COMMON->getLL('CWT_WALL_NO_ENTRIES')}
+</div>

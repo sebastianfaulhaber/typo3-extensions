@@ -1,0 +1,37 @@
+<form action="{$form_action}" method="POST" enctype="multipart/form-data">
+	<table border="0">
+		<tr>
+			<td colspan="2">
+				{capture name='formatsAllowed'}{$CONF.album.photo.new.formatsAllowed|replace:',':', '}{/capture}
+				{assign var=wildcards value="`$smarty.capture.formatsAllowed`;`$CONF.album.photo.new.maxSize`"}
+				{$LIB_COMMON->getLLWithWildcardsAsString('PHOTO_NEW_HEADER',$wildcards)}
+			</td>
+		</tr> 
+		<tr>
+			<td></td>
+			<td><input name="FILE01" type="file" value=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input name="FILE02" type="file" value=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input name="FILE03" type="file" value=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input name="FILE04" type="file" value=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input name="FILE05" type="file" value=""></td>
+		</tr>                                                
+		<tr>
+			<td colspan="3" align="left">
+				<INPUT type="submit" name="cmd" value="{$LIB_COMMON->getLL('FORM_BUTTON_UPLOAD')}"/>
+				<INPUT type="submit" name="cmd" value="{$LIB_COMMON->getLL('FORM_CANCEL_BUTTON')}"/>
+			</td>
+		</tr>
+	</table>
+</FORM>

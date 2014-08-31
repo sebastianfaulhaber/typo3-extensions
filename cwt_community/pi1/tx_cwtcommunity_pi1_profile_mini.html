@@ -1,0 +1,20 @@
+<h1>cwt_community profile mini template</h1>
+
+
+<h2>VIEW_PROFILE_MINI</h2>
+<!-- ###VIEW_PROFILE### begin -->
+	<div class="cwt_community_profile_mini">		
+		<!-- ###RECORD### begin-->
+			<div class="cwt_community_userlist_record clearfix">
+				<div class="cwt_community_guestbook_img">
+					<a href="{$LIB_COMMON->getLinkToUsersProfile($user.uid)}">
+					{image file=$LIB_COMMON->getPathToUserProfileImage($user.uid) setup=plugin.tx_cwtcommunity_pi1.profile_mini.user_pic}</a>
+				</div>
+				<p class="profile_details">
+					<strong><a href="{$LIB_COMMON->getLinkToUsersProfile($user.uid)}">{$user.name}</a></strong> {$LIB_COMMON->getSexIcon($user.uid)} ({$user.username} {$LIB_COMMON->getIsOnlineIcon($user.uid)})<br />
+					{$user.city},&nbsp;{$user.country}
+				</p>
+			</div>
+		<!-- ###RECORD### end-->
+	</div>
+<!-- ###VIEW_PROFILE### end -->

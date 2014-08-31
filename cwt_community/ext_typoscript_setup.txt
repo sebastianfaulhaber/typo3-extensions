@@ -1,0 +1,263 @@
+################################################################
+# IMPORTANT !!!!
+# the plugin MUST have exactly the same name as the classname.
+# otherwise the $conf will not be filled with the values from
+# ext_typoscript_constants.txt and ext_typoscript_setup.txt!
+################################################################
+
+#Include the php class
+includeLibs.ts_cwt_community = EXT:cwt_community/pi1/class.tx_cwtcommunity_pi1.php
+
+plugin.tx_cwtcommunity_pi1 > 
+plugin.tx_cwtcommunity_pi1 = USER_INT
+plugin.tx_cwtcommunity_pi1{
+	
+	code.field = select_key
+	###########################################################################
+	# Start the php script
+	###########################################################################
+	userFunc = tx_cwtcommunity_pi1->main
+	
+	###########################################################################
+	# Define Template file
+	###########################################################################
+	template_guestbook = {$plugin.cwt_community.file.template_guestbook}
+	template_profile = {$plugin.cwt_community.file.template_profile}
+	template_profile_mini = {$plugin.cwt_community.file.template_profile_mini}
+	template_search = {$plugin.cwt_community.file.template_search}
+	template_buddylist = {$plugin.cwt_community.file.template_buddylist}
+	template_userlist = {$plugin.cwt_community.file.template_userlist}
+	template_messages = {$plugin.cwt_community.file.template_messages}
+	template_welcome = {$plugin.cwt_community.file.template_welcome}
+	template_album = {$plugin.cwt_community.file.template_album}
+	template_album_detail = {$plugin.cwt_community.file.template_album_detail}
+	template_album_admin = {$plugin.cwt_community.file.template_album_admin}
+	template_photo_admin = {$plugin.cwt_community.file.template_photo_admin}
+	template_photo_detail = {$plugin.cwt_community.file.template_photo_detail}
+	template_profile_edit = EXT:cwt_community/pi1/tx_cwtcommunity_pi1_profile_edit.php
+	template_abuse_report = {$plugin.cwt_community.file.template_abuse_report}
+	template_userstats = {$plugin.cwt_community.file.template_userstats}
+	template_buddyadmin = {$plugin.cwt_community.file.template_buddyadmin}	
+	template_wall = {$plugin.cwt_community.file.template_wall}
+	
+	###########################################################################
+	# Define Icons
+	###########################################################################
+	icon_userlist_status_online = {$plugin.cwt_community.file.icon_userlist_status_online}
+	icon_userlist_status_offline = {$plugin.cwt_community.file.icon_userlist_status_offline}
+	icon_userlist_addbuddy = {$plugin.cwt_community.file.icon_userlist_addbuddy}
+	icon_userlist_male = {$plugin.cwt_community.file.icon_userlist_male}
+	icon_userlist_female = {$plugin.cwt_community.file.icon_userlist_female}
+	icon_guestbook_delete = {$plugin.cwt_community.file.icon_guestbook_delete}	
+	icon_messages_new = {$plugin.cwt_community.file.icon_messages_new}	
+	icon_messages_unread = {$plugin.cwt_community.file.icon_messages_unread}	
+	icon_messages_read = {$plugin.cwt_community.file.icon_messages_read}
+	icon_messages_answer = {$plugin.cwt_community.file.icon_messages_answer}
+	icon_welcome_newmail = {$plugin.cwt_community.file.icon_welcome_newmail}	
+	icon_welcome_nonewmail = {$plugin.cwt_community.file.icon_welcome_nonewmail}	
+	icon_profilepic_male = {$plugin.cwt_community.file.no_pic_male}
+	icon_profilepic_female = {$plugin.cwt_community.file.no_pic_female}
+	
+	###########################################################################
+	# Misc. configuration vars
+	###########################################################################
+	pid_profile = {$plugin.cwt_community.pid.profile}
+	pid_profile_edit = {$plugin.cwt_community.pid.profile_edit}
+	pid_buddylist = {$plugin.cwt_community.pid.buddylist}
+	pid_buddyadmin = {$plugin.cwt_community.pid.buddyadmin}
+	pid_userlist = {$plugin.cwt_community.pid.userlist}
+	pid_messages = {$plugin.cwt_community.pid.messages}
+	pid_icons = {$plugin.cwt_community.pid.icons}
+	pid_gallery = {$plugin.cwt_community.pid.gallery}
+	pid_search = {$plugin.cwt_community.pid.search}
+	pid_storage_folder = {$plugin.cwt_community.pid.storage_folder}
+	pid_abuse = {$plugin.cwt_community.pid.abuse}
+	pid_xhrapi = {$plugin.cwt_community.pid.xhrapi}
+	iconReplacement = {$plugin.cwt_community.iconReplacement}
+	maxIdleTime = {$plugin.cwt_community.maxIdleTime}
+	mergeTCAFromExtension = sr_feuser_register
+	includeAdditionalClasses = 
+	common.killDuplicateUserSessions = 0
+	
+	common.customMarker.types.check{
+		wrap = &nbsp;|&nbsp;
+		prefixEnabled = <input type="checkbox" checked="true" disabled="true" />&nbsp;
+		prefixDisabled = <input type="checkbox" disabled="true" />&nbsp;
+		showDisabled = 1
+	}
+
+	common.user_pic{
+		file.maxW = 80
+		file.maxH = 80
+	}
+	
+	common.messages.error{
+		wrap = <div class="ui-widget"><div class="ui-state-error ui-corner-all" style="padding: 0pt 0.7em"><p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: 0.3em;"></span><strong>|</strong></p></div></div><br/>
+	}
+
+	common.messages.info{
+		wrap = <div class="ui-widget"><div class="ui-state-highlight ui-corner-all" style="padding: 0pt 0.7em; margin-top: 20px;"> <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: 0.3em;"></span>|</p></div></div>
+	}	
+	
+	common.notification.mail {
+		fromAddress = admin@myCommunityDomain.de
+		fromName = Community Admin
+	}
+	
+	
+	
+	###########################################################################
+	# Userlist configuration
+	###########################################################################
+	userlist.default.sortColumn = username
+	userlist.default.sortOrder = asc
+	userlist.paging.usersPerPage = 20
+	userlist.search.simpleCustomSearchFields = username
+	userlist.additionalSQLWhereClause = 
+
+	###########################################################################
+	# Messages configuration
+	###########################################################################
+	messages.new.reply.body_abbreviation = ----------------------------
+	messages.new.max_recipients = 5
+	messages.new.recipient_delimiter = ,
+	messages.new.recipient_db_field = name
+	messages.notification.enabled = 1
+	messages.softDeletion.enabled = 1
+	messages.notification.sender_db_field = username
+	messages.typo3SiteURL = http://myCommunity/
+
+	###########################################################################
+	# Abuse report configuration
+	###########################################################################
+	abuse.notification.isEnabled = 1
+	abuse.notification.recipient = 
+	
+	###########################################################################
+	# Profile configuration
+	###########################################################################	
+	profile.use_md5_hashed_passwords = {$plugin.cwt_community.profile.use_md5_hashed_passwords}
+	profile.custom_gender_db_field =
+	profile.custom_pic_db_field =
+	profile.custom_pic_path =	
+	profile.imagePopup{
+	  file.maxW = 150
+	  wrap = | 
+	  imageLinkWrap = 1
+	  imageLinkWrap {
+	    enable = 1
+	    bodyTag = <body>
+	    wrap = <a href="javascript:close()">|</a>
+	    width = 400
+	    JSwindow = 1
+	    JSwindow.newWindow = 1
+	    JSwindow.expand = 17,20
+	  }
+	}	
+	
+	###########################################################################
+	# Wall configuration
+	###########################################################################	
+	wall.user_pic{
+		file.maxW = 50
+		file.maxH = 50
+	}
+	
+	###########################################################################
+	# Profile mini configuration
+	###########################################################################	
+	profile_mini.user_pic{
+		file.maxW = 60
+		file.maxH = 60
+	}	
+	
+	###########################################################################
+	# Buddylist configuration
+	###########################################################################	
+	buddylist.approval = {$plugin.cwt_community.buddylist.approval}
+	buddylist.approval_message = {$plugin.cwt_community.buddylist.approval_message}
+	buddylist.notification.sender_db_field = username
+
+	###########################################################################
+	# Userstats configuration
+	###########################################################################		
+	userstats.countProfileViewAfterMinutes = 240
+	
+	###########################################################################
+	# Guestbook configuration
+	###########################################################################		
+	guestbook.notification.enabled = 1
+	guestbook.notification.sender_db_field = username
+	guestbook.typo3SiteURL = http://myCommunity/
+	
+	###########################################################################
+	# Gallery configuration
+	###########################################################################
+	photo.detail.report.recipient = {$plugin.cwt_community.photo.detail.report.recipient}	
+	gallery.show_on_profile_minimal = {$plugin.cwt_community.gallery.show_on_profile_minimal}
+	album.storage_folder_pid = {$plugin.cwt_community.album.storage_folder_pid}
+	album.title.length = {$plugin.cwt_community.album.title.length}
+	album.description.length = {$plugin.cwt_community.album.description.length}
+	album.new.maximumPerUser = {$plugin.cwt_community.album.new.maximumPerUser}
+	album.photo.new.formatsAllowed = {$plugin.cwt_community.album.photo.new.formatsAllowed}
+	album.photo.new.maxSize = {$plugin.cwt_community.album.photo.new.maxSize}
+	album.photo.new.maximumPerAlbum = {$plugin.cwt_community.album.photo.new.maximumPerAlbum}
+	album.photo.storageFolder = {$plugin.cwt_community.album.photo.storageFolder}
+	album.detail.photosPerRow = {$plugin.cwt_community.album.detail.photosPerRow}
+	album.detail.title.length = {$plugin.cwt_community.album.detail.title.length}
+	album.detail.description.length = {$plugin.cwt_community.album.detail.description.length}
+	
+	album.preview_photo{
+		file.maxW = 150
+		file.maxH = 200
+	}
+	album.detail.photo{
+		file.maxW = 100
+		file.maxH = 150
+	}
+	photo.detail{
+		file.maxW = 640
+		file.maxH = 480
+	}
+	photo.detail.comment_pic{
+		file.maxW = 150
+		file.maxH = 150
+	}	
+	
+	###########################################################################
+	# CWT FEEDIT Form configuration
+	###########################################################################
+	tx_cwtfeedit_pi1.style.all.table =
+	tx_cwtfeedit_pi1.style.all.tr =
+	tx_cwtfeedit_pi1.style.all.th =
+	tx_cwtfeedit_pi1.style.all.td =
+	tx_cwtfeedit_pi1.style.all.input =
+	tx_cwtfeedit_pi1.style.all.select =
+	tx_cwtfeedit_pi1.style.all.option =
+	tx_cwtfeedit_pi1.style.all.submit =  
+	tx_cwtfeedit_pi1.style.all.textarea =
+	tx_cwtfeedit_pi1.style.checkboxColumns = 
+	
+	tx_cwtfeedit_pi1.pre_html =
+	tx_cwtfeedit_pi1.post_html =
+
+	###########################################################################
+	# EXT:smarty configuration
+	###########################################################################
+	smarty {
+		template_dir = EXT:cwt_community/pi1
+		plugins_dir = EXT:cwt_community/res/plugins
+		debugging = false
+		error_reporting = E_ALL
+	}
+	
+	###########################################################################
+	# EXT:jQuery configuration
+	###########################################################################	
+	jquery {
+		enabled = true
+		path = typo3conf/ext/cwt_community/res/jquery
+		themePath = typo3conf/ext/cwt_community/res/jquery/theme
+	}
+	
+}

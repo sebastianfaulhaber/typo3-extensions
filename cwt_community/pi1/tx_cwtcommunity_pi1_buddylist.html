@@ -1,0 +1,14 @@
+<table>
+	{section name=buddy loop=$buddylist}
+            <tr>
+             <td>{$LIB_COMMON->getIsOnlineIcon($buddylist[buddy].buddy_uid)}</td>
+             <td><a href="{$LIB_COMMON->getLinkToUsersProfile($buddylist[buddy].buddy_uid)}">{$buddylist[buddy].username}</a>&nbsp;{$LIB_COMMON->getSexIcon($buddylist[buddy].buddy_uid)}</td>
+             {if $showReadOnly == false}
+             <td>{link parameter=$CONF.pid_buddylist additionalParams="&action=getviewbuddylistdelete&buddy_uid=`$buddylist[buddy].buddy_uid`"}{image file=$CONF.icon_guestbook_delete altText=$LIB_COMMON->getLL('icon_buddylist_delete')}{/link}</td>
+			 <td>{link parameter=$CONF.pid_messages additionalParams="&action=show_messages_answer_msg&recipient_uid=`$buddylist[buddy].buddy_uid`"}{image file=$CONF.icon_messages_new altText=$LIB_COMMON->getLL('CWT_MESSAGES_NEWMSG')}{/link}</td>
+			 {/if}
+            </tr>
+	{sectionelse}
+		{$LIB_COMMON->getLL('CWT_BUDDYLIST_NOUSERS')}
+	{/section}
+</table>

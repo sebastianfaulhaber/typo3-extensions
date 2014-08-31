@@ -1,0 +1,56 @@
+<table>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_USERNAME')}:</th><td>{$user.username}&nbsp;{$LIB_COMMON->getSexIcon($user.uid)}</td><td rowspan="9" valign="top">{image file=$LIB_COMMON->getPathToUserProfileImage($user.uid) setup=plugin.tx_cwtcommunity_pi1.profile.imagePopup}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_STATUS')}:</th><td>{$LIB_COMMON->getIsOnlineIcon($user.uid)}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_MEMBERSINCE')}:</th><td>{$user.crdate|date_format:'%d.%m.%Y'}</td>
+	</tr>
+	{if $LIB_COMMON->isProfileAccessAllowedForLoggedInUser($user.uid)}
+	<tr>
+		<th align="left" >{$LIB_COMMON->getLL('CWT_PROFILE_NAME')}:</th><td>{$user.name}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_COMPANY')}:</th><td>{$user.company}</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">{$LIB_COMMON->getLL('CWT_PROFILE_ADDRESS')}:</th><td>{$user.address}<br>{$user.zip}&nbsp;{$user.city}<br>{$user.country}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_PHONE')}:</th><td>{$user.telephone}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_FAX')}:</th><td>{$user.fax}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_EMAIL')}:</th><td>{link parameter=$user.email}{$user.email}{/link}</td>
+	</tr>		
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_WWW')}:</th><td>{assign var="cObj" value=$LIB_COMMON->getCObj()}{$cObj->getTypoLink($user.www,$user.www,'','_blank')}</td>
+	</tr>
+	<tr>
+		<th align="left">{$LIB_COMMON->getLL('PROFILE_BUDDIES')}:</th><td>{$buddylist}</td>
+	</tr>
+	{/if}
+	{if $userRaw.tx_cwtcommunityuser_gallery_activated != 0}
+	<tr>
+		<td colspan="2">
+			{if ($album_count == 0 && $isOwner == true)}
+				{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_new&album_user_id=`$user.uid`"}{$LIB_COMMON->getLL('ALBUM_NEW_ACTION')}{/link}
+			{elseif ($album_count == 0 && $isOwner == false)}
+			<!--  show nothing -->
+			{else}
+				{if $CONF.gallery.show_on_profile_minimal eq 1}
+					{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_list&album_user_id=`$user.uid`"}
+						{$LIB_COMMON->getLL('GALLERY_GOTO')}&nbsp;({$album_count_forRole}&nbsp;{$LIB_COMMON->getLL('GALLERY_ALBUMS')})
+					{/link}
+				{else}
+					{$gallery}
+				{/if}
+			{/if}
+		</td>
+	</tr>
+	{/if}
+</table>

@@ -1,0 +1,48 @@
+<table border="0">
+	<tr>
+		<td colspan="2">
+			<b>{$LIB_COMMON->getLL('CWT_WELCOME_GREETING')}&nbsp;{$user_info.name}!</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{link parameter=$CONF.pid_messages additionalParams="&action=getviewmessages&uid=`$user_info.cruser_id`"}
+				{if $message_count eq 0}
+					{image file=$CONF.icon_welcome_nonewmail border="0" altText=$LIB_COMMON->getLL('icon_welcome_nonewmail')}
+				{else}
+					{image file=$CONF.icon_welcome_newmail border="0" altText=$LIB_COMMON->getLL('icon_welcome_newmail')}
+				{/if}
+			{/link}
+		</td>
+		<td>
+			{$LIB_COMMON->getLL('CWT_WELCOME_MAIL_COUNT_PRE')}&nbsp;{$message_count}&nbsp;{$LIB_COMMON->getLL('CWT_WELCOME_MAIL_COUNT_POST')}
+			<br>
+			{link parameter=$CONF.pid_messages additionalParams="&action=getviewmessages&uid=`$user_info.cruser_id`"}
+				{$LIB_COMMON->getLL('CWT_WELCOME_LINK_TO_MESSAGES_LABEL')}
+			{/link}
+			<br>
+			<small>{$LIB_COMMON->getLL('CWT_WELCOME_LASTLOGIN')}&nbsp;{$user_info.lastlogin|date_format:'%d.%m.%Y'}&nbsp;,&nbsp;{$user_info.lastlogin|date_format:$LIB_COMMON->getLL('CWT_TIME_FORMAT_SMARTY')}</small>
+		</td>
+	</tr>
+	{if $approval_count > 0}
+	<tr>
+		<td colspan="2">
+			<b>{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_OFFERS')}</b>
+		</td>
+	</tr>
+	{section name=approval loop=$approvals}
+	<tr>
+		<td>
+			<a href="{$LIB_COMMON->getLinkToUsersProfile($approvals[approval].requestor_uid)}">{$LIB_COMMON->getUserPic($approvals[approval].requestor_uid)}</a>
+		</td>
+		<td valign="top">
+			<a href="{$LIB_COMMON->getLinkToUsersProfile($approvals[approval].requestor_uid)}" style="font-weight: bold;">{$approvals[approval].user_info.username}</a><br/>
+			{link parameter=$CONF.pid_buddylist additionalParams="&action=show_buddylist&cmd=accept_approval&approval_uid=`$approvals[approval].uid`"}
+				{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_ACCEPT')}...{/link}<br/>
+			{link parameter=$CONF.pid_buddylist additionalParams="&action=show_buddylist&cmd=deny_approval&approval_uid=`$approvals[approval].uid`"}
+				{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_DENY')}...{/link}<br/>
+		</td>
+	</tr>
+	{/section}
+	{/if}         
+</table>

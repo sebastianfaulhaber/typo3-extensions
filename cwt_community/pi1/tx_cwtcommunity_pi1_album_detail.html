@@ -1,0 +1,59 @@
+<table cellspacing="0" cellpadding="2">
+	<tr>
+		<td colspan="2">
+			{if $album.cruser_id eq $CUR_USER.uid}
+				{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_new&album_uid=`$album.uid`"}
+					{$LIB_COMMON->getLL('ALBUM_DETAIL_ADD_PHOTOS')}{/link}
+			{/if}
+		</td>
+	</tr> 
+	<tr>
+		<td colspan="2">
+			{$LIB_COMMON->getLL('ALBUM_LAST_UPDATE')}: {$album.tstamp|date_format:$LIB_COMMON->getLL('CWT_DATE_FORMAT_SMARTY')}, {$album.tstamp|date_format:$LIB_COMMON->getLL('CWT_TIME_FORMAT_SMARTY')}
+			<br>
+			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_list&album_user_id=`$album.cruser_id`"}
+				{$LIB_COMMON->getLL('ALBUM_DETAIL_BACK')}{/link}
+		</td>
+	</tr>	
+	<tr>
+		<td colspan="2">
+			<table>
+				{section name="entry" loop=$photos}
+					{if $smarty.section.entry.index%$CONF.album.detail.photosPerRow eq 0}
+					<tr>
+					{/if}
+						<td style="border: 1px solid #E5E5E5">
+							{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_detail&photo_uid=`$photos[entry].uid`"}
+								{image file=$photos[entry].pic setup=plugin.tx_cwtcommunity_pi1.album.detail.photo}
+							{/link}<br>
+							{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_detail&photo_uid=`$photos[entry].uid`"}
+								<b>{$photos[entry].title|truncate:$CONF.album.detail.title.length}</b>
+							{/link}<br>
+							{$photos[entry].description|truncate:$CONF.album.detail.description.length}<br>
+							{$photos[entry].comment_count}&nbsp;{$LIB_COMMON->getLL('ALBUM_DETAIL_COMMENTS')}<br><br>
+							{if $album.cruser_id eq $CUR_USER.uid}
+								{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&cmd=set_preview_photo&photo_uid=`$photos[entry].uid`&album_uid=`$album.uid`"}
+									{$LIB_COMMON->getLL('PHOTO_SET_PREVIEW')}
+								{/link}<br>
+								{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_edit&photo_uid=`$photos[entry].uid`"}
+									{$LIB_COMMON->getLL('ALBUM_DETAIL_EDIT_PHOTO')}
+								{/link}<br>
+								{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&cmd=delete_photo&photo_uid=`$photos[entry].uid`&album_uid=`$album.uid`"}
+									{$LIB_COMMON->getLL('ALBUM_DETAIL_DELETE_PHOTO')}
+								{/link}
+							{/if}		
+						</td>
+					{if $smarty.section.entry.index%$CONF.album.detail.photosPerRow eq $CONF.album.detail.photosPerRow-1}
+					</tr>
+					{/if}
+				{sectionelse}
+					<tr>
+						<td colspan="2">		
+							{$LIB_COMMON->getLL('ALBUM_DETAIL_NO_REC')}
+						</td>
+					</tr>	
+				{/section}
+			</table>
+		</td>
+	</tr>
+</table>

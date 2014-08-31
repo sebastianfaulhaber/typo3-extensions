@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Language labels for plugin tx_cwtcommunity_pi1</description>
+        <type>module</type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="CWT_WALL_POST">Post</label>
+			<label index="CWT_WALL_NO_ENTRIES">There are no entries yet...</label>
+			<label index="CWT_WALL_DELETE">Delete</label>
+			<label index="CWT_WALL_DELETE_CONFIRM">Shall this entry be deleted?</label>
+			<label index="CWT_WALL_COMMENT">Comment</label>
+        
+        	<label index="ABUSE_REPORT">Report abuse...</label>
+        	<label index="ABUSE_INTRODUCTION">Please fill out the following form to submit an abuse report.</label>
+        	<label index="ABUSE_EMAIL">Your E-Mail (optional)</label>
+        	<label index="ABUSE_TEXT">Reason</label>
+        	<label index="ABUSE_TEXT_ERRMSG">Please fill in the reason for the abuse report!</label>
+        	<label index="ABUSE_RESULT">Your abuse report has been received. Thank you very much!</label>
+        	<label index="ALL">All</label>
+        	<label index="BACK">Back</label>
+            <label index="FORM_SUBMIT_BUTTON">Send</label>
+            <label index="FORM_CANCEL_BUTTON">Cancel</label>
+            <label index="OPEN_GUESTBOOK_BUTTON">Activate Guestbook</label>
+            <label index="LOCK_GUESTBOOK_BUTTON">Deactivate Guestbook</label>
+            <label index="icon_userlist_status_offline">Offline</label>
+            <label index="icon_userlist_status_online">Online</label>
+            <label index="icon_userlist_addbuddy">Add this user to your buddylist...</label>
+            <label index="icon_guestbook_delete">Delete this entry...</label>
+            <label index="icon_buddylist_delete">Remove this buddy from my list...</label>
+            <label index="icon_messages_delete">Delete this message...</label>
+            <label index="icon_messages_unread">Not yet read...</label>
+            <label index="icon_messages_read">Already read...</label>
+            <label index="icon_messages_answer">Reply...</label>
+            <label index="icon_welcome_newmail">You have mail!</label>
+            <label index="icon_welcome_nonewmail">Sorry, no new mails for you!</label>
+            <label index="CWT_CODE_ERR_MSG">Oops... you did not fill in the 'CODE' field correct. The possible values are the following:&lt;br /&gt;&lt;br /&gt;&lt;b&gt;PROFILE&lt;/b&gt; --&gt; Displays the profile of the logged in user.&lt;br /&gt;&lt;b&gt;PROFILE_EDIT&lt;/b&gt; --&gt; Displays the profile edit page of the logged in user.&lt;br /&gt;&lt;b&gt;MESSAGES&lt;/b&gt; --&gt; Displays the inbox of the logged in user.&lt;br /&gt;&lt;b&gt;BUDDYLIST&lt;/b&gt; --&gt; Displays the buddylist of the logged in user.&lt;br /&gt;&lt;b&gt;GUESTBOOK&lt;/b&gt; --&gt; Displays the guestbook of the logged in user.&lt;br /&gt;&lt;b&gt;WELCOME&lt;/b&gt; --&gt; Displays the personal welcome page for a user.&lt;br /&gt;</label>
+            <label index="CWT_PLEASE_LOGIN">Please login!</label>
+            <label index="CWT_REPLY_ABBREV">RE: </label>
+            <label index="CWT_PROFILE_LANGUAGE">Language</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Username:</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Please enter here your desired username. E.g. 'Sebastian' (without quotes)</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Please enter a username</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL">Realname:</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Please type in your realname (givenname and surname) here.</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Please type in your realname (givenname and surname) here!</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL">Password:</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Password (again):</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Please type in your password!</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Please type in your password again</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Both password fields must be filled and equal</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Address:</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">Your address!</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Please enter your address here!</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL">ZIP:</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Please enter your ZIP-Code here.</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Please enter your ZIP-Code here!</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL">City:</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Please enter your city here.</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Please enter your city here!</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">Country:</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Please enter your country here.</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Please enter your country here!</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Company:</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Please enter your company here.</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Please enter your company here!</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL">Phone:</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Here you can enter your phone-number.</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Please enter your phone-number!</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL">Fax:</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Here you can enter your fax-number.</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Please enter your fax-number</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL">eMail:</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Please enter your eMail-address</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Please enter your eMail-address!</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL">Your Homepage:</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Here you can enter your homepage-URL.</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Please enter your homepage-URL!</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Picture:</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">This picture will be stored in your profile and is visible for the other users. The picture may not exceed {0} KB in size!</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">You can only add pictures that do not exceed {0} KB!</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL">Sex</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Please select your sex.</label>
+            <label index="CWT_PROFILE_EDIT_GALLERY_ACTIVATED_LABEL">Activate Galery?</label>
+            <label index="CWT_PROFILE_EDIT_GALLERY_ACTIVATED_HELPTEXT">You can enable and disable your personal gallery.</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_LABEL">Profile visibility:</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_HELPTEXT">Here you can change the privacy settings for your profile.</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_ERRMSG">Please specify the visiblity of your profile!</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_LABEL">Userlist visibility:</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_HELPTEXT">Restrict the display of your profile in the userlist.</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_ERRMSG">Please specify the visiblity of your profile in the userlist!</label>
+            <label index="CWT_DATE_FORMAT">m-d-Y</label>
+            <label index="CWT_DATE_FORMAT_SMARTY">%m-%d-%Y</label>
+            <label index="CWT_DATE_FORMAT_JS">yyyy-MM-dd</label>
+            <label index="CWT_TIME_FORMAT">H.i</label>
+            <label index="CWT_TIME_FORMAT_SMARTY">%H.%M</label>
+            <label index="CWT_USERLIST_USERNAME">Username</label>
+            <label index="CWT_USERLIST_NAME">Name</label>
+            <label index="CWT_USERLIST_CITY">City</label>
+            <label index="CWT_USERLIST_COUNTRY">Country</label>
+            <label index="CWT_USERLIST_DETAILS">Details...</label>
+            <label index="CWT_PROFILE_USERNAME">Username</label>
+            <label index="CWT_PROFILE_STATUS">Online status</label>
+            <label index="CWT_PROFILE_MEMBERSINCE">Member since</label>
+            <label index="CWT_PROFILE_NAME">Name</label>
+            <label index="CWT_PROFILE_FIRSTNAME">First name</label>
+            <label index="CWT_PROFILE_GENDER">Gender</label>
+            <label index="CWT_PROFILE_MALE">Male</label>
+            <label index="CWT_PROFILE_FEMALE">Female</label>
+            <label index="CWT_PROFILE_COMMENTS">Comments</label>
+            <label index="CWT_PROFILE_ZONE">County/ Province</label>
+            <label index="CWT_PROFILE_DATEOFBIRTH">Date of birth</label>
+            <label index="CWT_PROFILE_LASTNAME">Last name</label>
+            <label index="CWT_PROFILE_ADDRESS">Address</label>
+            <label index="CWT_PROFILE_ZIP">ZIP</label>
+            <label index="CWT_PROFILE_CITY">City</label>
+            <label index="CWT_PROFILE_COUNTRY">Country</label>
+            <label index="CWT_PROFILE_COMPANY">Company</label>
+            <label index="CWT_PROFILE_PHONE">Phone</label>
+            <label index="CWT_PROFILE_FAX">Fax</label>
+            <label index="CWT_PROFILE_EMAIL">E-Mail</label>
+            <label index="CWT_PROFILE_WWW">Homepage</label>
+            <label index="CWT_PROFILE_PASSWORD">Password</label>
+			<label index="CWT_PROFILE_FIRST_NAME">First name</label>
+			<label index="CWT_PROFILE_LAST_NAME">Last name</label>
+			<label index="CWT_PROFILE_CAMPUSBASE">Campusbase</label>
+			<label index="CWT_PROFILE_STUDI_STATUS">State</label>
+			<label index="CWT_PROFILE_STREET">Street</label>
+			<label index="CWT_PROFILE_STREET_NO">Street No.</label>
+			<label index="CWT_PROFILE_REL_STATUS">Relationship state</label>
+			<label index="CWT_PROFILE_SIGN">Zodiac sign</label>
+			<label index="CWT_PROFILE_LANGUAGES">Languages</label>
+			<label index="CWT_PROFILE_LOOKING_FOR">Looking for</label>
+			<label index="CWT_PROFILE_INTERESTS">Interests</label>
+			<label index="CWT_PROFILE_CULTURE">Culture</label>
+			<label index="CWT_PROFILE_SPORT">Sport</label>
+			<label index="CWT_PROFILE_TRAVEL_LOCATIONS">Travel locations</label>
+			<label index="CWT_PROFILE_GAMING">Gaming</label>
+			<label index="CWT_PROFILE_FAVORITE_MUSIC">Favorite Music</label>
+			<label index="CWT_PROFILE_FAVORITE_DRINKS">Favorite Drinks</label>
+			<label index="CWT_PROFILE_SET_NEWSLETTER">Newsletter</label>
+			<label index="CWT_PROFILE_SET_BUDDY_MSG">Notification e-mail when buddy request received</label>
+			<label index="CWT_PROFILE_SET_MESSAGE_MSG">Notification e-mail when private message arrived</label>
+			<label index="CWT_PROFILE_SET_REALNAME">Who may see my real name</label>
+			<label index="CWT_PROFILE_USERSTATS">Userstats</label>
+			<label index="CWT_PROFILE_LASTLOGIN">Last login</label>
+			<label index="CWT_PROFILE_PROFILEVIEWS">Profile views</label>
+			<label index="CWT_PROFILE_ALBUMCOUNT">Photo albums</label>
+			<label index="CWT_PROFILE_PHOTOCOUNT">Photos</label>
+			<label index="CWT_PROFILE_BUDDYCOUNT">Friends</label>
+			<label index="CWT_PROFILE_BUDDYONLINECOUNT">Friends online</label>
+			<label index="CWT_PROFILE_BUDDYREQUESTCOUNT">Buddy requests</label>
+			<label index="SHOW_ALL">Show all</label>
+            <label index="CWT_MESSAGES_SUBJECT">Subject</label>
+            <label index="CWT_MESSAGES_DATE">Date</label>
+            <label index="CWT_MESSAGES_RECIPIENT">Recipient(s)</label>
+            <label index="CWT_MESSAGES_FROM">From</label>
+            <label index="CWT_MESSAGES_BODY">Message</label>
+            <label index="CWT_MESSAGES_SENT">Your message has been sent ...</label>
+            <label index="CWT_MESSAGES_BACK">Back ...</label>
+            <label index="CWT_MESSAGES_DELETE">Delete</label>
+            <label index="CWT_MESSAGES_ANSWER">Answer</label>
+            <label index="CWT_MESSAGES_NEWMSG">Write new message</label>
+            <label index="CWT_MESSAGES_RECIPIENT_ALL_BUDDIES">All of your buddies</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY">New Entry ...</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG">Your guestbook is ACTIVE. That means that other users can read your guestbook entries and can add an entry. Click the button to deactivate it.</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG">Your Guestbook is INACTIVE. That means that other users neither can read your guestbook entries nor can add an entry. Click the button to activate it.</label>
+            <label index="CWT_GUESTBOOK_DELETEALL">Delete all entries</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY">Your entry:</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED">Your entry has been added ...</label>
+            <label index="CWT_GUESTBOOK_BACK">Back to the profile ...</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG">Sorry, but the guestbook is not active.</label>
+            <label index="CWT_GUESTBOOK_TEXT_ERRMSG">Please fill in the text you want to send!</label>
+            <label index="CWT_BUDDYLIST_HEADER">This is your buddylist</label>
+            <label index="CWT_BUDDYLIST_NOUSERS">There are no users on your buddylist.</label>
+            <label index="CWT_BUDDYLIST_MESSAGE">This message will be sent with your friendship request</label>
+            <label index="CWT_WELCOME_GREETING">Welcome</label>
+            <label index="CWT_WELCOME_LASTLOGIN">Last login: </label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE">You have</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST">new mails!</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Go to your inbox...</label>
+            <!-- New fields as of June 29th 2007, SF -->
+			<label index="GALLERY_GOTO">Open user's gallery...</label>
+			<label index="GALLERY_ALBUMS">Albums</label>
+			<label index="ALBUM_NO_REC">This user has not yet created any albums.</label>
+			<label index="ALBUM_NEW_TITLE">Title</label>
+			<label index="ALBUM_NEW_DESCRIPTION">Description</label>
+			<label index="ALBUM_NEW_HEADER">Please enter the information for your new album in the fields below.</label>
+			<label index="ALBUM_NEW_ACCESS_POLICY">Access Policy</label>			
+			<label index="ALBUM_DELETE_CHECK">Are you sure to delete this album and all including photos:</label>
+			<label index="ALBUM_EDIT_TITLE_LABEL">Title</label>
+			<label index="ALBUM_EDIT_TITLE_HELPTEXT">Please enter the title of your album.</label>
+			<label index="ALBUM_EDIT_TITLE_ERRMSG">Please enter the title.</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_LABEL">Description</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_HELPTEXT">Please enter a description for your album.</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_ERRMSG">Please enter the description.</label>
+			<label index="ALBUM_EDIT_ACCESS_POLICY_LABEL">Access Policy</label>
+			<label index="ALBUM_EDIT_ACCESS_POLICY_HELPTEXT">Please choose the access policy for this album.</label>
+			<label index="ALBUM_NEW_ACTION">Create new album</label>
+			<label index="ALBUM_DELETE_EXISTING">Delete this album</label>
+			<label index="ALBUM_EDIT_EXISTING">Edit this album</label>
+			<label index="ALBUM_PHOTO_COUNT_LABEL">Photo(s)</label>
+			<label index="ALBUM_DETAIL_BACK">Back to user's gallery overview...</label>
+			<label index="ALBUM_DETAIL_BACK_TO_PROFILE">Back to user's profile...</label>
+			<label index="ALBUM_DETAIL_ADD_PHOTOS">Add photos</label>
+			<label index="ALBUM_DETAIL_EDIT_PHOTO">Edit</label>
+			<label index="ALBUM_DETAIL_DELETE_PHOTO">Delete</label>
+			<label index="ALBUM_DETAIL_MAKE_PREVIEW">Make album preview</label>
+			<label index="ALBUM_DETAIL_SIZE">Size</label>
+			<label index="ALBUM_DETAIL_DIM">Dimensions</label>
+			<label index="ALBUM_DETAIL_COMMENTS">Comments</label>
+			<label index="ALBUM_DETAIL_NO_REC">There are no photos in this album.</label>			
+			<label index="ALBUM_LAST_UPDATE">Last update</label>						
+			<label index="PHOTO_NEW_HEADER">Here you can upload your photos. Please note that only files of the type {0} are allowed. The maximum file size is {1} KB.</label>
+			<label index="PHOTO_NEW_TITLE">Title</label>
+			<label index="PHOTO_NEW_DESCRIPTION">Description</label>
+			<label index="PHOTO_NEW_UPLOAD">Upload new photos</label>
+			<label index="PHOTO_NEW_ERROR_WRONGSIZE">The file size is too large.</label>
+			<label index="PHOTO_NEW_ERROR_WRONGTYPE">The picture's file type is not allowed.</label>
+			<label index="PHOTO_NEW_ERROR_WRONGFOLDER">The folder does not exist.</label>
+			<label index="PHOTO_DELETE">Delete photo</label>
+			<label index="PHOTO_SET_PREVIEW">Set as preview picture</label>
+			<label index="PHOTO_EDIT_TITLE_LABEL">Title</label>
+			<label index="PHOTO_EDIT_TITLE_HELPTEXT">Please enter a title for your photo.</label>
+			<label index="PHOTO_EDIT_DESCRIPTION_LABEL">Description</label>
+			<label index="PHOTO_EDIT_DESCRIPTION_HELPTEXT">Please enter a description for your photo.</label>
+			<label index="PHOTO_DETAIL_BACK">Back to user's gallery...</label>
+			<label index="PHOTO_DETAIL_REPORT">Report photo</label>
+			<label index="PHOTO_DETAIL_REPORT_DESC">Please describe why this photo shall be removed. Your request will be processed by an administrator as soon as possible. Thank you!</label>
+			<label index="PHOTO_DETAIL_REPORT_MAIL_SUBJECT">Action required: A user has reported a photo.</label>
+			<label index="PHOTO_DETAIL_REPORT_MAIL_BODY">A user has reported and your action is required. Please review the photo and decided if it needs to be deleted.</label>
+			<label index="PHOTO_DETAIL_REPORT_REASON">Reason</label>						
+			<label index="PHOTO_DETAIL_SIZE">Size</label>
+			<label index="PHOTO_DETAIL_DIM">Dimension</label>
+			<label index="PHOTO_DETAIL_NEW_COMMENT">Add comment</label>
+			<label index="PHOTO_DETAIL_DELETE_COMMENT">Delete comment</label>
+			<label index="WELCOME_VIEW_BUDDY_OFFERS">Pending friendship offers</label>
+			<label index="WELCOME_VIEW_NO_BUDDY_OFFERS">You don't have any pending friendship offers.</label>
+			<label index="WELCOME_VIEW_BUDDY_OFFERS_SENT">Outgoing friendship offers</label>
+			<label index="WELCOME_VIEW_NO_BUDDY_OFFERS_SENT">You have not sent any friendship offers, that have not been accepted yet.</label>
+			<label index="WELCOME_VIEW_BUDDY_ACCEPT">Accept</label>
+			<label index="WELCOME_VIEW_BUDDY_DENY">Deny</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_ACCEPT">A friendship offer has been accepted...</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_DENY">A friendship offer has been rejected...</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_ACCEPT">The user {0} has accepted your friendship offer and he will now appear on your buddylist.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_DENY">The user {0} has rejected your friendship offer.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_HEADER">You have received a new friendship offer!</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_BODY">The user {0} wants to add you to his buddylist.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_NOTICE">The user has been notified and will not appear on your buddylist until he accepts your request.</label>
+			<label index="FORM_BUTTON_OK">OK</label>
+			<label index="FORM_BUTTON_UPLOAD">Upload</label>				
+			<label index="FORM_COMMENT_ADD">Add</label>	
+			<label index="FORM_BUTTON_SEARCH">Search</label>
+			<label index="SEARCH_RESULT_01">Your search for '{0}' returned {1} users.</label>
+			<label index="SEARCH_RESULT_02">Your search returned {0} users.</label>
+			<label index="COMMON_USER_DELETED">This user is not active or has been deleted.</label>
+			<label index="COMMON_FILL_OUT_ALL_REQUIRED_FIELDS">Please fill out all required fields!</label>
+			<label index="COMMON_USER_NOT_FOUND">The user '{0}' could not be found!</label>
+			<label index="MESSAGES_MAXIMUM_RECIPIENTS">The message can only be sent to {0} recipients at once!</label>			
+			<label index="PROFILE_BUDDIES">Buddies</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_SUBJECT">You have received a new private message!</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_BODY">Dear {0}, you have received a new private message. Please login to your user account at {1} to read it.</label>
+			<label index="PAGE">Page</label>
+			<label index="FORM_BUTTON_SEARCH_USER">Search for users</label>
+<!--			<label index="ABUSE_NOTIFICATION_MAIL_SUBJECT">New abuse report received</label>-->
+<!--			<label index="ABUSE_NOTIFICATION_MAIL_BODY">A community user has submitted a new abuse report for your review. Contact E-Mail = {1}. Reason = {0}. URL = {2}</label>-->
+			<label index="ABUSE_NOTIFICATION_MAIL_SUBJECT">Neue Missbrauchsmeldung eingegangen</label>
+			<label index="ABUSE_NOTIFICATION_MAIL_BODY">Ein Community Benutzer hat eine neue Missbrauchsmeldung zur Überprüfung eingereicht. Kontakt E-Mail = {1}. Bemerkung = {0}. URL = {2}</label>
+			<label index="GUESTBOOK_NOTIFICATION_MAIL_SUBJECT">New guestbook entry</label>
+			<label index="GUESTBOOK_NOTIFICATION_MAIL_BODY">Dear {0}, someone created a new entry in your guestbook. Please login to your user account at {1} to read it.</label>			
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+			<label index="CWT_WALL_POST">Posten</label>
+			<label index="CWT_WALL_NO_ENTRIES">Noch keine Einträge vorhanden...</label>        
+			<label index="CWT_WALL_DELETE">Löschen</label>
+			<label index="CWT_WALL_DELETE_CONFIRM">Soll dieser Eintrag gelöscht werden?</label>
+			<label index="CWT_WALL_COMMENT">Kommentieren</label>        
+        
+        	<label index="ABUSE_REPORT">Missbrauch melden...</label>
+        	<label index="ABUSE_INTRODUCTION">Bitte fülle das folgende Formular aus, um eine Missbrauchsmeldung einzureichen.</label>
+        	<label index="ABUSE_EMAIL">E-Mail (optional)</label>
+        	<label index="ABUSE_TEXT">Grund</label>
+        	<label index="ABUSE_TEXT_ERRMSG">Bitte gib den Grund für die Missbrauchsmeldung ein!</label>
+        	<label index="ABUSE_RESULT">Deine Missbrauchsmeldung ist eingegangen. Vielen Dank!</label>
+        	<label index="ALL">Alle</label>
+        	<label index="BACK">Zurück</label>
+            <label index="FORM_SUBMIT_BUTTON">Abschicken</label>
+            <label index="FORM_CANCEL_BUTTON">Abbrechen</label>
+            <label index="OPEN_GUESTBOOK_BUTTON">Gästebuch aktivieren</label>
+            <label index="LOCK_GUESTBOOK_BUTTON">Gästebuch deaktivieren</label>
+            <label index="icon_userlist_status_offline">Offline</label>
+            <label index="icon_userlist_status_online">Online</label>
+            <label index="icon_userlist_addbuddy">Diesen Benutzer deiner Buddylist hinzufügen...</label>
+            <label index="icon_guestbook_delete">Diesen Eintrag löschen...</label>
+            <label index="icon_buddylist_delete">Diesen Buddy von meiner Liste entfernen...</label>
+            <label index="icon_messages_delete">Diese Nachricht löschen...</label>
+            <label index="icon_messages_unread">NEUE Nachricht</label>
+            <label index="icon_messages_read">Schon gelesen...</label>
+            <label index="icon_messages_answer">Auf diese Nachricht antworten...</label>
+            <label index="icon_welcome_newmail">Du hast Post!</label>
+            <label index="icon_welcome_nonewmail">Sorry, keine neuen Mails!</label>
+            <label index="CWT_CODE_ERR_MSG">Hoppla... das 'CODE'-Feld wurde nicht richtig gefüllt. Die möglichen Werte sind:&lt;br /&gt;&lt;br /&gt;&lt;b&gt;PROFILE&lt;/b&gt; --&gt; Zeigt das Profil des eingelogten Benutzers an.&lt;br /&gt;&lt;b&gt;PROFILE_EDIT&lt;/b&gt; --&gt; Zeigt die Maske zum ndern des Profils des eingeloggten Benutzers an.&lt;br /&gt;&lt;b&gt;MESSAGES&lt;/b&gt; --&gt; Zeigt die Nachrichten fr den eingeloggten Benutzer an.&lt;br /&gt;&lt;b&gt;BUDDYLIST&lt;/b&gt; --&gt; Zeigt die 'Buddylist' des eingeloggten Benutzers an.&lt;br /&gt;&lt;b&gt;GUESTBOOK&lt;/b&gt; --&gt; Zeigt das 'Guestbook' des eingeloggten Benutzers an.&lt;br /&gt;&lt;b&gt;WELCOME&lt;/b&gt; --&gt; Zeigt die Welcome Seite fr einen Benutzer an.&lt;br /&gt;</label>
+            <label index="CWT_PLEASE_LOGIN">Bitte einloggen!</label>
+            <label index="CWT_REPLY_ABBREV">AW: </label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Benutzername:</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Bitte gib hier deinen gewünschten Benutzernamen ein. Z.B. 'Sebastian' (Ohne Anführungszeichen)</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Bitte einen Benutzernamen eingeben!</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL">Vor- und Nachname:</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Hier bitte Vor- und Nachnamen eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Hier bitte Vor- und Nachnamen eingeben!</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL">Passwort:</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Passwort (wiederholen):</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Bitte Passwort eingeben!</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Bitte Passwort erneut eingeben!</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Beide Passwort-Felder müssen gleich gefüllt sein</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Strasse:</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">Hier bitte Strasse eingeben!</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Hier muss die Strasse eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL">PLZ:</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Hier bitte PLZ eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Hier muss die PLZ eingeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL">Ort:</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Hier bitte Ort eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Hier muss der Ort eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">Land:</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Hier bitte Land eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Hier muss das Land eingeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Firma:</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Hier bitte Firma eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Hier muss die Firma eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL">Telefon:</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Hier kann die Telefonnummer eingegeben werden.</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Hier muss die Telefonnummer eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL">Fax:</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Hier kann die Fax-Nummer eingegeben werden.</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Hier muss die Fax-Nummer eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL">eMail:</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Bitte eMail-Adresse eingeben.</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Hier muss die eMail-Adresse eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL">Homepage:</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Hier kann die URL der Homepage eingegeben werden.</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Hier muss die URL der Homepage eingegeben werden!</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Bild:</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">Dieses Bild wird im Profil gespeichert und ist für die anderen Benutzer sichtbar. Das Bild darf nicht größer als 500 KB sein!</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">Das Bild darf nicht größer als 500 KB sein!</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL">Geschlecht:</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Bitte Geschlecht angeben.</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_LABEL">Profil-Sichtbarkeit:</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_HELPTEXT">Datenschutz Optionen für dein Profil.</label>
+            <label index="CWT_PROFILE_EDIT_PROFILE_ACCESS_ERRMSG">Bitte wähle eine Datenschutz Policy für dein Profil aus!</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_LABEL">Benutzerliste-Sichtbarkeit:</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_HELPTEXT">Datenschutz Option für die Anzeige deines Profils in der Benutzerliste.</label>
+            <label index="CWT_PROFILE_EDIT_USERLIST_VISIBILITY_ERRMSG">Bitte wähle eine Datenschutz Policy für die Benutzerliste aus!</label>                        
+            <label index="CWT_DATE_FORMAT">d.m.Y</label>
+            <label index="CWT_DATE_FORMAT_SMARTY">%d.%m.%Y</label>
+            <label index="CWT_DATE_FORMAT_JS">dd.MM.yyyy</label>
+            <label index="CWT_TIME_FORMAT">H:i</label>
+            <label index="CWT_TIME_FORMAT_SMARTY">%H:%M</label>
+            <label index="CWT_USERLIST_USERNAME">Benutzername</label>
+            <label index="CWT_USERLIST_DETAILS">Details...</label>
+            <label index="CWT_PROFILE_USERNAME">Benutzername</label>
+            <label index="CWT_PROFILE_STATUS">Online status</label>
+            <label index="CWT_PROFILE_MEMBERSINCE">Mitglied seit</label>
+            <label index="CWT_PROFILE_NAME">Name</label>
+            <label index="CWT_PROFILE_FIRSTNAME">Vorname</label>
+            <label index="CWT_PROFILE_ADDRESS">Adresse</label>
+            <label index="CWT_PROFILE_ZIP">PLZ</label>
+            <label index="CWT_PROFILE_CITY">Ort</label>
+            <label index="CWT_PROFILE_COUNTRY">Land</label>
+            <label index="CWT_PROFILE_COMPANY">Firma</label>
+            <label index="CWT_PROFILE_PHONE">Telefon</label>
+            <label index="CWT_PROFILE_FAX">Fax</label>
+            <label index="CWT_PROFILE_EMAIL">E-Mail</label>
+            <label index="CWT_PROFILE_WWW">Homepage</label>
+            <label index="CWT_PROFILE_PASSWORD">Passwort</label>
+            <label index="CWT_PROFILE_GENDER">Geschlecht</label>
+            <label index="CWT_PROFILE_MALE">Männlich</label>
+            <label index="CWT_PROFILE_FEMALE">Weiblich</label>
+			<label index="CWT_PROFILE_FIRST_NAME">Vorname</label>
+			<label index="CWT_PROFILE_LAST_NAME">Nachname</label>
+			<label index="CWT_PROFILE_CAMPUSBASE">Campusbase</label>
+			<label index="CWT_PROFILE_STUDI_STATUS">Status</label>
+			<label index="CWT_PROFILE_STREET">Straße</label>
+			<label index="CWT_PROFILE_STREET_NO">Hausnummer</label>
+			<label index="CWT_PROFILE_REL_STATUS">Beziehungsstatus</label>
+			<label index="CWT_PROFILE_SIGN">Sternzeichen</label>
+			<label index="CWT_PROFILE_LANGUAGES">Sprachen</label>
+			<label index="CWT_PROFILE_LOOKING_FOR">Ich suche</label>
+			<label index="CWT_PROFILE_INTERESTS">Interessen</label>
+			<label index="CWT_PROFILE_CULTURE">Kultur</label>
+			<label index="CWT_PROFILE_SPORT">Sport</label>
+			<label index="CWT_PROFILE_TRAVEL_LOCATIONS">Reiseziele</label>
+			<label index="CWT_PROFILE_GAMING">Zocken</label>
+			<label index="CWT_PROFILE_FAVORITE_MUSIC">Lieblingsmusik</label>
+			<label index="CWT_PROFILE_FAVORITE_DRINKS">Party Getränke</label>
+			<label index="CWT_PROFILE_SET_NEWSLETTER">Newsletterempfang</label>
+			<label index="CWT_PROFILE_SET_BUDDY_MSG">Benachrichtigungsmails bei Freundschaftsanfragen</label>
+			<label index="CWT_PROFILE_SET_MESSAGE_MSG">Benachrichtigungsmails bei Nachrichten</label>
+			<label index="CWT_PROFILE_SET_REALNAME">Wer darf richtigen Vor- und Nachnamen sehen</label>
+			<label index="CWT_PROFILE_USERSTATS">Benutzerstatistiken</label>
+			<label index="CWT_PROFILE_LASTLOGIN">Letzter Login</label>
+			<label index="CWT_PROFILE_PROFILEVIEWS">Profilaufrufe</label>
+			<label index="CWT_PROFILE_ALBUMCOUNT">Fotoalben</label>
+			<label index="CWT_PROFILE_PHOTOCOUNT">Fotos</label>
+			<label index="CWT_PROFILE_BUDDYCOUNT">Freunde</label>
+			<label index="CWT_PROFILE_BUDDYONLINECOUNT">Freunde Online</label>
+			<label index="CWT_PROFILE_BUDDYREQUESTCOUNT">Freundesanfragen</label>
+			<label index="SHOW_ALL">Alle anzeigen</label>            
+            <label index="CWT_MESSAGES_SUBJECT">Betreff</label>
+            <label index="CWT_MESSAGES_DATE">Datum</label>
+			<label index="CWT_MESSAGES_RECIPIENT">Empfänger</label>            
+            <label index="CWT_MESSAGES_FROM">Von</label>
+            <label index="CWT_MESSAGES_BODY">Nachricht</label>
+            <label index="CWT_MESSAGES_SENT">Die Nachricht wurde gesendet...</label>
+            <label index="CWT_MESSAGES_BACK">Zurück...</label>
+            <label index="CWT_MESSAGES_DELETE">Löschen</label>
+            <label index="CWT_MESSAGES_ANSWER">Antwort</label>
+            <label index="CWT_MESSAGES_NEWMSG">Nachricht schreiben</label>
+			<label index="CWT_MESSAGES_RECIPIENT_ALL_BUDDIES">Alle deine Freunde</label>            
+            <label index="CWT_GUESTBOOK_NEWENTRY">Neuer Eintrag...</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG">Das Guestbook ist AKTIV. Das bedeutet, dass andere Benutzer die Guestbook-Einträge lesen können und sich eintragen knnen. Button anklicken um das Guestbook zu deaktivieren.</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG">Das Guestbook ist INAKTIV. Das bedeutet, dass andere Benutzer weder die Guestbook-Einträge lesen können noch sich eintragen knnen. Button anklicken um das Guestbook zu aktivieren.</label>
+            <label index="CWT_GUESTBOOK_DELETEALL">Alle Einträge löschen</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY">Eintrag:</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED">Der Eintrag wurde hinzugefügt ...</label>
+            <label index="CWT_GUESTBOOK_BACK">Zurück zum Profil ...</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG">Sorry, aber das Guestbook ist nicht aktiv.</label>
+            <label index="CWT_GUESTBOOK_TEXT_ERRMSG">Gib bitte den Text ein, der gesendet werden soll!</label>
+            <label index="CWT_BUDDYLIST_HEADER">Buddyliste:</label>
+            <label index="CWT_BUDDYLIST_NOUSERS">Noch sind keine Benutzer auf deiner Buddyliste.</label>
+            <label index="CWT_BUDDYLIST_MESSAGE">Folgende Nachricht wird mit deiner Anfrage mitgesendet</label>
+            <label index="CWT_WELCOME_GREETING">Hallo</label>
+            <label index="CWT_WELCOME_LASTLOGIN">Letzter Login: </label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE">Du hast</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST">neue Mails!</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Zu deinen Mails...</label>
+	        <!-- New fields as of June 29th 2007, SF -->
+			<label index="GALLERY_GOTO">Gallerie öffnen...</label>
+			<label index="GALLERY_ALBUMS">Alben</label>
+			<label index="ALBUM_NO_REC">Dieses Mitglied hat noch kein Album angelegt.</label>
+			<label index="ALBUM_NEW_TITLE">Titel</label>
+			<label index="ALBUM_NEW_DESCRIPTION">Beschreibung</label>
+			<label index="ALBUM_NEW_HEADER">Bitte trage die Informationen zu Deinem neuen Album in die Felder unten ein.</label>
+			<label index="ALBUM_NEW_ACCESS_POLICY">Zugriffsberechtigung</label>			
+			<label index="ALBUM_DELETE_CHECK">Willst Du wirklich das Album und alle darin enthaltenen Bilder löschen?:</label>
+			<label index="ALBUM_EDIT_TITLE_LABEL">Titel</label>
+			<label index="ALBUM_EDIT_TITLE_HELPTEXT">Bitte gib den Titel des Albums ein.</label>
+			<label index="ALBUM_EDIT_TITLE_ERRMSG">Bitte gib den Titel ein.</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_LABEL">Beschreibung</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_HELPTEXT">Bitte gib die Beschreibung des Albums ein..</label>
+			<label index="ALBUM_EDIT_DESCRIPTION_ERRMSG">Bitte gib die Beschreibung ein.</label>
+			<label index="ALBUM_EDIT_ACCESS_POLICY_LABEL">Zugriffsberechtigung</label>
+			<label index="ALBUM_EDIT_ACCESS_POLICY_HELPTEXT">Bitte wähle die Zugriffsberechtigung für dieses Album.</label>
+			<label index="ALBUM_NEW_ACTION">Neues Album anlegen</label>
+			<label index="ALBUM_DELETE_EXISTING">Dies Album löschen</label>
+			<label index="ALBUM_EDIT_EXISTING">Dies Album bearbeiten</label>
+			<label index="ALBUM_PHOTO_COUNT_LABEL">Bild(er)</label>
+			<label index="ALBUM_DETAIL_BACK">Back to user's gallery overview...</label>
+			<label index="ALBUM_DETAIL_ADD_PHOTOS">Bilder hinzufügen</label>
+			<label index="ALBUM_DETAIL_EDIT_PHOTO">Bearbeiten</label>
+			<label index="ALBUM_DETAIL_DELETE_PHOTO">Löschen</label>
+			<label index="ALBUM_DETAIL_MAKE_PREVIEW">Vorschau anlegen</label>
+			<label index="ALBUM_DETAIL_SIZE">Größe</label>
+			<label index="ALBUM_DETAIL_DIM">Abmessungen</label>
+			<label index="ALBUM_DETAIL_COMMENTS">Kommentare</label>
+			<label index="ALBUM_DETAIL_NO_REC">Es gibt keine Fotos in diesem Album.</label>			
+			<label index="ALBUM_LAST_UPDATE">Letzte Aktualisierung</label>						
+			<label index="PHOTO_NEW_HEADER">Hier kannst Du Bilder hochladen. Bitte beachte, dass nur Dateien vom Typ {0} erfolgreich bearbeitet werden. Die maximale Dateigröße beträgt {1} KB.</label>
+			<label index="PHOTO_NEW_TITLE">Titel</label>
+			<label index="PHOTO_NEW_DESCRIPTION">Beschreibung</label>
+			<label index="PHOTO_NEW_UPLOAD">Neue Bilder hochladen</label>
+			<label index="PHOTO_NEW_ERROR_WRONGSIZE">Die maximale Dateigröße ist überschritten.</label>
+			<label index="PHOTO_NEW_ERROR_WRONGTYPE">Der Dateityp dieses Bildes ist nicht zulässig.</label>
+			<label index="PHOTO_NEW_ERROR_WRONGFOLDER">Der Ordner existiert nicht.</label>
+			<label index="PHOTO_DELETE">Bild löschen</label>
+			<label index="PHOTO_SET_PREVIEW">Als Vorschaubild setzen</label>
+			<label index="PHOTO_EDIT_TITLE_LABEL">Titel</label>
+			<label index="PHOTO_EDIT_TITLE_HELPTEXT">Bitte gib den Titel für Dein Bild ein.</label>
+			<label index="PHOTO_EDIT_DESCRIPTION_LABEL">Beschreibung</label>
+			<label index="PHOTO_EDIT_DESCRIPTION_HELPTEXT">Bitte gib die Beschreibung für Dein Bild ein.</label>
+			<label index="PHOTO_DETAIL_BACK">Zurück zur Galerie...</label>
+			<label index="PHOTO_DETAIL_REPORT">Bild melden</label>
+			<label index="PHOTO_DETAIL_REPORT_DESC">Bitte gib an, warum dies Bild entfernt werden soll. Deine Anfrage wird so schnell wie möglich von einem Administrator bearbeitet. Vielen Dank!</label>
+			<label index="PHOTO_DETAIL_REPORT_MAIL_SUBJECT">Achtung! Ein Bild wurde gemeldet.</label>
+			<label index="PHOTO_DETAIL_REPORT_MAIL_BODY">Ein Benutzer hat ein Bild gemeldet und eine Prüfung ist erforderlich. Bitte überprüfe das Bild und entscheide, ob es gelöscht werden muss.</label>
+			<label index="PHOTO_DETAIL_REPORT_REASON">Grund</label>						
+			<label index="PHOTO_DETAIL_SIZE">Größe</label>
+			<label index="PHOTO_DETAIL_DIM">Abmessungen</label>
+			<label index="PHOTO_DETAIL_NEW_COMMENT">Kommentar hinzufügen</label>
+			<label index="PHOTO_DETAIL_DELETE_COMMENT">Kommentar löschen</label>
+			<label index="WELCOME_VIEW_BUDDY_OFFERS">Offene Freundschaftsangebote</label>
+			<label index="WELCOME_VIEW_NO_BUDDY_OFFERS">Du hast keine offenen Freundschaftsangebote.</label>
+			<label index="WELCOME_VIEW_BUDDY_OFFERS_SENT">Ausgehende Freundschaftsanfragen</label>
+			<label index="WELCOME_VIEW_NO_BUDDY_OFFERS_SENT">Alle deine Freundschaftsanfragen wurden bereits akzeptiert.</label>
+			<label index="WELCOME_VIEW_BUDDY_ACCEPT">Annehmen</label>
+			<label index="WELCOME_VIEW_BUDDY_DENY">Ablehnen</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_ACCEPT">Ein Freundschafts-Angebot wurde angenommen...</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_DENY">Ein Freundschafts-Angebot wurde abgelehnt...</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_ACCEPT">Das Mitglied {0} hat Dein Freundschafts-Angebot angenommen und wird nun in Deiner Buddyliste angezeigt.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_DENY">Das Mitglied {0} hat Dein Freundschafts-Angebot abgelehnt.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_HEADER">Du hast ein Freundschafts-Angebot bekommen!</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_BODY">Das Mitglied {0} möchte Dich zu seiner Buddyliste hinzufügen.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_NOTICE">Das Mitglied wurde benachrichtigt. Er erscheint erst auf Deiner Buddyliste, nachdem er Deine Anfrage akzeptiert hat.</label>
+			<label index="FORM_BUTTON_OK">OK</label>
+			<label index="FORM_BUTTON_UPLOAD">hochladen</label>				
+			<label index="FORM_COMMENT_ADD">Hinzufügen</label>	
+			<label index="FORM_BUTTON_SEARCH">Suchen</label>
+			<label index="SEARCH_RESULT_01">Bei Deiner Suche nach '{0}' wurden {1} Mitglieder gefunden.</label>
+			<label index="SEARCH_RESULT_02">Es wurden {0} Mitglieder gefunden.</label>
+			<label index="COMMON_USER_DELETED">Dieses Mitglied ist nicht aktiv oder wurde gelöscht.</label>
+			<label index="COMMON_FILL_OUT_ALL_REQUIRED_FIELDS">Bitte alle Felder ausfüllen!</label>
+			<label index="COMMON_USER_NOT_FOUND">Der Benutzer '{0}' konnte nicht gefunden werden!</label>
+			<label index="MESSAGES_MAXIMUM_RECIPIENTS">Die Nachricht kann nur an maximal {0} Empfänger verschickt werden!</label>
+			<label index="PROFILE_BUDDIES">Buddies</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_SUBJECT">Du hast eine neue private Nachricht erhalten.</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_BODY">Liebe/r {0}, du hast eine neue private Nachricht erhalten. Bitte log dich ein, um die Nachricht zu lesen: {1}.</label>			
+			<label index="PAGE">Seite</label>
+			<label index="FORM_BUTTON_SEARCH_USER">Benutzer suchen</label>    
+			<label index="ABUSE_NOTIFICATION_MAIL_SUBJECT">Neue Missbrauchsmeldung eingegangen</label>
+			<label index="ABUSE_NOTIFICATION_MAIL_BODY">Ein Community Benutzer hat eine neue Missbrauchsmeldung zur Überprüfung eingereicht. Kontakt E-Mail = {1}. Bemerkung = {0}. URL = {2}</label>
+			<label index="GUESTBOOK_NOTIFICATION_MAIL_SUBJECT">Neuer Gästebucheintrag</label>
+			<label index="GUESTBOOK_NOTIFICATION_MAIL_BODY">Liebe/r {0}, jemand hat einen neuen Eintrag in deinem Gästebuch erstellt. Bitte log dich ein, um die Nachricht zu lesen: {1}.</label>			
+        </languageKey>
+        <languageKey index="no" type="array">
+			<label index="FORM_SUBMIT_BUTTON">Send</label>
+			<label index="FORM_CANCEL_BUTTON">Avbryt</label>
+			<label index="OPEN_GUESTBOOK_BUTTON">Aktiver gjestebok</label>
+			<label index="LOCK_GUESTBOOK_BUTTON">Deaktiver gjestebok</label>
+			<label index="icon_userlist_status_offline">Ikke logget på</label>
+			<label index="icon_userlist_status_online">Pålogget</label>
+			<label index="icon_userlist_addbuddy">Legg til denne brukeren på vennelisten min...</label>
+			<label index="icon_guestbook_delete">Slett denne oppføringen...</label>
+			<label index="icon_buddylist_delete">Ta bort denne vennen fra vennelisten min...</label>
+			<label index="icon_messages_delete">Slett denne meldingen...</label>
+			<label index="icon_messages_unread">Ikke lest...</label>
+			<label index="icon_messages_read">Lest...</label>
+			<label index="icon_messages_answer">Svar...</label>
+			<label index="icon_welcome_newmail">Du har uleste meldinger i innboksen!</label>
+			<label index="icon_welcome_nonewmail">Ingen nye meldinger!</label>
+			<label index="CWT_CODE_ERR_MSG">Obs... fylte du inn \'CODE\' feltet korrekt? De tilgjengelige verdiene er:<br /><br /><b>PROFILE</b> --> Viser profilen til den innloggede brukeren.<br /><b>PROFILE_EDIT</b> --> Viser redigeringsiden for den innloggede brukeren.<br /><b>MESSAGES</b> --> Viser innboksen til den innloggede brukeren.<br /><b>BUDDYLIST</b> --> Viser vennelisten til den innloggede brukeren.<br /><b>GUESTBOOK</b> --> Viser gjesteboken til den innloggede brukeren.<br /><b>WELCOME</b> --> Viser den personlige velkomst siden for brukeren.<br /></label>
+			<label index="CWT_PLEASE_LOGIN">Vennligst logg inn!</label>
+			<label index="CWT_REPLY_ABBREV">SVAR: </label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Brukernavn:</label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Skriv inn brukernavnet du vil bruker her. F.eks. \'Sebastian\'</label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Du må skrive et brukernavn</label>
+			<label index="CWT_PROFILE_EDIT_NAME_LABEL">Navn:</label>
+			<label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Skriv inn fornavnet og etternavnet ditt her.</label>
+			<label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Du må skrive inn fornavnet og etternavnet ditt her!</label>
+			<label index="CWT_PROFILE_EDIT_PWD_LABEL">Passord:</label>
+			<label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Passord (en gang til):</label>
+			<label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Skriv inn ditt passord her!</label>
+			<label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Skriv inn passordet en gang til</label>
+			<label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Begge passord feltene må være fylt ut og like</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Adresse:</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">Din adresse!</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Du må skrive din adresse her!</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_LABEL">Postnummer:</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Skriv ditt postnummer her.</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Skriv ditt postnummer her.</label>
+			<label index="CWT_PROFILE_EDIT_CITY_LABEL">By:</label>
+			<label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Skriv din by her.</label>
+			<label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Skriv din by her.</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">Land:</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Skriv landet du kommer fra her.</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Skriv landet du kommer fra her.</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Firma:</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Skriv inn firma navn her.</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Skriv inn firma navn her.</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_LABEL">Telefon:</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Her kan du skrive ditt telefon nummer.</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Skriv ditt telefon nummer her!</label>
+			<label index="CWT_PROFILE_EDIT_FAX_LABEL">Telefaks:</label>
+			<label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Har kan du skrive ditt telefaks nummer.</label>
+			<label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Skriv inn ditt telefaks nukker</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_LABEL">E-post:</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Skriv inn din e-post adresse</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Skriv inn din e-post adresse!</label>
+			<label index="CWT_PROFILE_EDIT_WWW_LABEL">Din hjemmeside:</label>
+			<label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Her kan du skrive inn din hjemmeside sin internett adresse.</label>
+			<label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Skriv inn adressen til hjemmesiden din!</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Bilde:</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">Bildet vil bli lagret i din profil og synlig for andre brukere. Bildet kan ikke overstige 500KB i størrelse!</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">Du kan bare legge til bilder som ikke er større enn 500KB!</label>
+			<label index="CWT_PROFILE_EDIT_SEX_LABEL">Kjønn</label>
+			<label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Ditt kjønn.</label>
+			<label index="CWT_DATE_FORMAT">d-m-Y</label>
+			<label index="CWT_TIME_FORMAT">H.i</label>
+			<label index="CWT_USERLIST_USERNAME">Brukernavn</label>
+			<label index="CWT_USERLIST_DETAILS">Detaljer...</label>
+			<label index="CWT_PROFILE_USERNAME">Brukernavn</label>
+			<label index="CWT_PROFILE_STATUS">Pålogget status</label>
+			<label index="CWT_PROFILE_MEMBERSINCE">Medlem siden</label>
+			<label index="CWT_PROFILE_NAME">Navn</label>
+			<label index="CWT_PROFILE_ADDRESS">Adresse</label>
+			<label index="CWT_PROFILE_ZIP">Postnummer</label>
+			<label index="CWT_PROFILE_CITY">By</label>
+			<label index="CWT_PROFILE_COUNTRY">Land</label>
+			<label index="CWT_PROFILE_COMPANY">Firma</label>
+			<label index="CWT_PROFILE_PHONE">Telefon</label>
+			<label index="CWT_PROFILE_FAX">Telefaks</label>
+			<label index="CWT_PROFILE_EMAIL">E-post</label>
+			<label index="CWT_PROFILE_WWW">Hjemmeside</label>
+			<label index="CWT_MESSAGES_SUBJECT">Emne</label>
+			<label index="CWT_MESSAGES_DATE">Dato</label>
+			<label index="CWT_MESSAGES_FROM">Fra</label>
+			<label index="CWT_MESSAGES_BODY">Melding</label>
+			<label index="CWT_MESSAGES_SENT">Din melding har blitt sendt ...</label>
+			<label index="CWT_MESSAGES_BACK">Tilbake ...</label>
+			<label index="CWT_MESSAGES_DELETE">Slett</label>
+			<label index="CWT_MESSAGES_ANSWER">Svar</label>
+			<label index="CWT_GUESTBOOK_NEWENTRY">Ny oppføring ...</label>
+			<label index="CWT_GUESTBOOK_ACTIVEMSG">Din gjestebok er AKTIV. Andre brukere kan lese gjesteboken og legge inn nye beskjeder. Trykk på knappen hvis du vil deaktivere den.</label>
+			<label index="CWT_GUESTBOOK_INACTIVEMSG">Din gjestebok er IKKE AKTIV. Andre brukere kan ikke lese den, eller legge inn nye beskjeder. Trykk på knappen for å aktivere den.</label>
+			<label index="CWT_GUESTBOOK_DELETEALL">Slett alle oppføringene i gjesteboken</label>
+			<label index="CWT_GUESTBOOK_YOURENTRY">Din oppføring:</label>
+			<label index="CWT_GUESTBOOK_ENTRYADDED">Din oppføring har blitt lagt til ...</label>
+			<label index="CWT_GUESTBOOK_BACK">Tilbake til profilen ...</label>
+			<label index="CWT_GUESTBOOK_DISABLEDMSG">Beklager, gjesteboken er ikke aktiv.</label>
+			<label index="CWT_BUDDYLIST_HEADER">Dette er din venneliste</label>
+			<label index="CWT_WELCOME_GREETING">Velkommen</label>
+			<label index="CWT_WELCOME_LASTLOGIN">Siste innlogging: </label>
+			<label index="CWT_WELCOME_MAIL_COUNT_PRE">Du har</label>
+			<label index="CWT_WELCOME_MAIL_COUNT_POST">nye meldinger!</label>
+			<label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Gå til innboksen din...</label>
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+            <label index="FORM_SUBMIT_BUTTON">Envoyer</label>
+            <label index="FORM_CANCEL_BUTTON">Annuler</label>
+            <label index="OPEN_GUESTBOOK_BUTTON">Activer le livre d'or</label>
+            <label index="LOCK_GUESTBOOK_BUTTON">Désactiver le livre d'or</label>
+            <label index="icon_userlist_status_offline">Hors ligne</label>
+            <label index="icon_userlist_status_online">En ligne</label>
+            <label index="icon_userlist_addbuddy">Ajouter cet utilisateur à mes contacts...</label>
+            <label index="icon_guestbook_delete">Supprimer cette entrée...</label>
+            <label index="icon_buddylist_delete">Supprimer ce contact de ma liste...</label>
+            <label index="icon_messages_delete">Supprimer ce message...</label>
+            <label index="icon_messages_unread">Non lu...</label>
+            <label index="icon_messages_read">Déja lu...</label>
+            <label index="icon_messages_answer">Répondre...</label>
+            <label index="icon_welcome_newmail">Vous avez un message !</label>
+            <label index="icon_welcome_nonewmail">Désolé, aucun message pour vous !</label>
+            <label index="CWT_CODE_ERR_MSG">Oups... vous n'avez pas rempli le champ 'CODE' correctement. Les valeurs possibles sont:&lt;br /&gt;&lt;br /&gt;&lt;b&gt;PROFILE&lt;/b&gt; --&gt; Affiche le profil de l'utilisateur autentifié.&lt;br /&gt;&lt;b&gt;PROFILE_EDIT&lt;/b&gt; --&gt; Edite le profil de l'utilisateur identifié.&lt;br /&gt;&lt;b&gt;MESSAGES&lt;/b&gt; --&gt; Affiche la boite aux lettres de l'utilisateur identifié.&lt;br /&gt;&lt;b&gt;BUDDYLIST&lt;/b&gt; --&gt; Affiche la liste des contacts de l'utilisateur identifié. &lt;br /&gt;&lt;b&gt;GUESTBOOK&lt;/b&gt; --&gt; Affiche le livre d'or de l'utilisateur identifié. &lt;br /&gt;&lt;b&gt;WELCOME&lt;/b&gt; --&gt; Affiche la page de bienvenue de l'utilisateur identifié.&lt;br /&gt;</label>
+            <label index="CWT_PLEASE_LOGIN">Vous devez vous identifier!</label>
+            <label index="CWT_REPLY_ABBREV">RE: </label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Nom d'utilisateur :</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Saisissez votre nom d'utilisateur. Ex : 'Sebastien' (sans apostrophes)</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Entrez un nom d'utilisateur</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL">Nom véritable :</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Saisissez ici votre vrai nom.</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Saisissez ici votre vrai nom !</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL">Mot de passe :</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Mot de passe (encore) :</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Saisissez votre mot de passe !</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Saisissez votre mot de passe à nouveau</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Les deux saisies de mot de passe doivent être identiques</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Adresse :</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">Votre adresse !</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Saisissez votre adresse ici !</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL">Code postal :</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Saisissez votre code postal ici.</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Saisissez votre code postal ici !</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL">Ville :</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Saisissez votre ville ici.</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Saisissez votre ville ici !</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">Pays :</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Saisissez votre pays ici.</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Entrez votre pays ici !</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Société :</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Saisissez votre société ici.</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Saisissez votre société ici !</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL">Téléphone :</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Saisissez votre numéro de téléphone ici.</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Saisissez votre numéro de téléphone ici !</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL">Fax:</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Saisissez votre numéro de fax ici.</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Saisissez votre numéro de fax ici.</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL">eMail:</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Saisissez votre adresse email ici.</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Saisissez votre adresse email ici !</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL">Votre site Internet :</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Saisissez l'URL de votre site personnel.</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Saisissez l'URL de votre site personnel !</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Photographie:</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">Cette photographie sera stockée dans votre profil et visible par les autres utilisateurs. La taille de la photo de doit pas dépasser 500 Ko!</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">Vous pouvez seulement ajouter des photos de moins de 500 Ko!</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL">Sexe</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Sélectionnez votre sexe SVP.</label>
+            <label index="CWT_DATE_FORMAT">m-j-A</label>
+            <label index="CWT_TIME_FORMAT">H.m</label>
+            <label index="CWT_USERLIST_USERNAME">Nom d'utilisateur</label>
+            <label index="CWT_USERLIST_NAME">Nom</label>
+            <label index="CWT_USERLIST_CITY">Ville</label>
+            <label index="CWT_USERLIST_COUNTRY">Pays</label>
+            <label index="CWT_USERLIST_DETAILS">Details...</label>
+            <label index="CWT_PROFILE_USERNAME">Nom d'utilisateur</label>
+            <label index="CWT_PROFILE_STATUS">Statut</label>
+            <label index="CWT_PROFILE_MEMBERSINCE">Membre depuis</label>
+            <label index="CWT_PROFILE_NAME">Nom</label>
+            <label index="CWT_PROFILE_ADDRESS">Adresse</label>
+            <label index="CWT_PROFILE_ZIP">Code postal</label>
+            <label index="CWT_PROFILE_CITY">Ville</label>
+            <label index="CWT_PROFILE_COUNTRY">Pays</label>
+            <label index="CWT_PROFILE_COMPANY">Société</label>
+            <label index="CWT_PROFILE_PHONE">Téléphone</label>
+            <label index="CWT_PROFILE_FAX">Fax</label>
+            <label index="CWT_PROFILE_EMAIL">eMail</label>
+            <label index="CWT_PROFILE_WWW">Site personnel</label>
+            <label index="CWT_MESSAGES_SUBJECT">Sujet</label>
+            <label index="CWT_MESSAGES_DATE">Date</label>
+            <label index="CWT_MESSAGES_FROM">De</label>
+            <label index="CWT_MESSAGES_BODY">Message</label>
+            <label index="CWT_MESSAGES_SENT">Votre message a été envoyé ...</label>
+            <label index="CWT_MESSAGES_BACK">Retour ...</label>
+            <label index="CWT_MESSAGES_DELETE">Effacer</label>
+            <label index="CWT_MESSAGES_ANSWER">Réponse</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY">Nouvelle entrée ...</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG">Votre livre d'or est ACTIF. Les autres utilisateurs peuvent le consulter et laisser une entrée.  Cliquez sur le bouton pour le désactiver.</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG">Votre livre d'or est INACTIF. Les autres utilisateurs ne peuvent ni le consulter ni laisser une entrée.  Cliquez sur le bouton pour l'activer.</label>
+            <label index="CWT_GUESTBOOK_DELETEALL">Supprimer toutes les entrées</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY">Votre entrée :</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED">Votre entrée a été ajoutée ...</label>
+            <label index="CWT_GUESTBOOK_BACK">Retour au profil ...</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG">Désolé mais le livre d'or n'est pas activé.</label>
+            <label index="CWT_BUDDYLIST_HEADER">Voici votre liste de contacts</label>
+            <label index="CWT_WELCOME_GREETING">Bienvenue</label>
+            <label index="CWT_WELCOME_LASTLOGIN">Dernière identification : </label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE">Vous avez</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST">nouveaux messages!</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Aller à votre boite aux lettres...</label>
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+			<label index="ZIP_LABEL">Postcode</label>
+			<label index="icon_messages_delete">Verwijder bericht</label>
+			<label index="icon_messages_unread">Ongelezen</label>
+			<label index="icon_messages_read">Gelezen</label>
+			<label index="icon_messages_answer">Antwoorden</label>
+			<label index="icon_buddylist_delete">Verwijder</label>
+			<label index="FORM_SUBMIT_BUTTON">Verstuur</label>
+			<label index="FORM_CANCEL_BUTTON">Annuleer</label>
+			<label index="CWT_DATE_FORMAT">d-m-Y</label>
+			<label index="CWT_TIME_FORMAT">H:i</label>
+			<label index="CWT_WELCOME_GREETING">Welkom</label>
+			<label index="CWT_WELCOME_LASTLOGIN">Laatste bezoek:</label>
+			<label index="CWT_WELCOME_MAIL_COUNT_PRE">Je hebt</label>
+			<label index="CWT_WELCOME_MAIL_COUNT_POST">ongelezen berichten</label>
+			<label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Berichten lezen</label>
+			<label index="CWT_MESSAGES_NEWMSG">Nieuw bericht</label>
+			<label index="CWT_MESSAGES_SUBJECT">Onderwerp</label>
+			<label index="CWT_MESSAGES_DATE">Datum</label>
+			<label index="CWT_MESSAGES_RECIPIENT">Ontvanger(s)</label>
+			<label index="CWT_MESSAGES_FROM">Van</label>
+			<label index="CWT_MESSAGES_BODY">Bericht</label>
+			<label index="CWT_MESSAGES_SENT">Het bericht is verstuurd.</label>
+			<label index="CWT_MESSAGES_BACK">Terug</label>
+			<label index="CWT_MESSAGES_DELETE">Verwijder</label>
+			<label index="CWT_MESSAGES_ANSWER">Beantwoorden</label>
+			<label index="CWT_MESSAGES_RECIPIENT_ALL_BUDDIES">Alle vrienden</label>
+			<label index="SEARCH_RESULT_01">Uw zoekopdracht '{0}' leverde {1} namen op.</label>
+			<label index="WELCOME_VIEW_BUDDY_OFFERS">U heeft nieuwe uitnodigingen ontvangen:</label>
+			<label index="WELCOME_VIEW_BUDDY_ACCEPT">Accepteren</label>
+			<label index="WELCOME_VIEW_BUDDY_DENY">Afwijzen</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_NOTICE">Uw uitnodiging is naar de deelnemer verstuurd.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_ACCEPT">Uw uitnodiging is geaccepteerd.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BUDDY_DENY">Uw uitnodiging is niet geaccepteerd.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_ACCEPT">Deelnemer {0} heeft uw uitnodiging geaccepteerd en is opgenomen in uw netwerk.</label>
+			<label index="WELCOME_VIEW_MESSAGE_BODY_DENY">Deelnemer {0} heeft uw uitnodiging niet geaccepteerd.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_HEADER">U heeft een netwerkuitnodiging ontvangen</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_BODY">Deelnemer '{0}' heeft u voor Gedeeld Gastheerschap een netwerkuitnodiging gestuurd. Log in op http://gg.roguesheep.nl/login/ om de uitnodiging te lezen. U kunt de uitnodiging accepteren of weigeren. Door de uitnodiging te accepteren gaat u deel uitmaken van het netwerk van degene die u uitgenodigd heeft.</label>
+			<label index="WELCOME_VIEW_BUDDY_APPROVAL_MAIL_BODY2">De deelnemer is op de hoogte gebracht en zal in uw netwerk verschijnen zodra deze de uitnodiging heeft geaccepteerd.</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_SUBJECT">Je hebt een nieuw bericht ontvangen</label>
+			<label index="MESSAGES_NOTIFICATION_MAIL_BODY">Beste {0}, je hebt een nieuw bericht ontvangen. Log in op http://gg.roguesheep.nl/login/ om het bericht te lezen.</label>
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+		<label index="FORM_SUBMIT_BUTTON">Lähetä</label>
+		<label index="FORM_CANCEL_BUTTON">Peruuta</label>
+		<label index="OPEN_GUESTBOOK_BUTTON">Aktivoi vieraskirja</label>
+		<label index="LOCK_GUESTBOOK_BUTTON">Ota vieraskirja pois käytöstä</label>
+		<label index="icon_userlist_status_offline">Offline</label>
+		<label index="icon_userlist_status_online">Online</label>
+		<label index="icon_userlist_addbuddy">Lisää käyttäjä kaverilistallesi...</label>
+		<label index="icon_guestbook_delete">Poista tämä tieto...</label>
+		<label index="icon_buddylist_delete">Poista tämä kaveri listaltani...</label>
+		<label index="icon_messages_delete">Poista tämä viesti</label>
+		<label index="icon_messages_unread">Lukematon...</label>
+		<label index="icon_messages_read">On jo luettu ....</label>
+		<label index="icon_messages_answer">Vastaa...</label>
+		<label index="icon_welcome_newmail">Sinulle on postia!</label>
+		<label index="icon_welcome_nonewmail">Ei uusia posteja.</label>
+		<label index="CWT_CODE_ERR_MSG">Oho... et täyttänyt \'CODE\' tietoa oikein. Mahdolliset arvot ovat seuraavat:<br /><br /><b>PROFILE</b> --> Näyttää sisääkirjoittautuneen käyttäjän profiilin.<br /><b>PROFILE_EDIT</b> --> Näyttää profiilin muokkauslonakkeen sisäänkirjoittautuneelle käyttäjälle.<br /><b>MESSAGES</b> --> Näyttää sisäänkirjoittautuneen käyttäjän saapuneet-kansion.<br /><b>BUDDYLIST</b> --> Näyttää sisäänkirjoittautuneen käyttäjän kaverilistan.<br /><b>GUESTBOOK</b> --> Näyttää sisäänkirjoittautuneen käyttäjän vieraskirjan.<br /></label>
+		<label index="CWT_PLEASE_LOGIN">Ole hyvä ja kirjaudu sisään!</label>
+		<label index="CWT_REPLY_ABBREV">RE:</label>
+		<label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Käyttäjänimi:</label>
+		<label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Ole hyvä ja anna haluamasi käyttäjänimi. Esimerkiksi \'Matias\' (ilman lainausmerkkejä)</label>
+		<label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Ole hyvä ja anna käyttäjänimi</label>
+		<label index="CWT_PROFILE_EDIT_NAME_LABEL">Oikea nimi:</label>
+		<label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Kirjoita oikea nimesi (etunimi ja sukunimi) tähän :</label>
+		<label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Kirjoita oikea nimesi (etunimi ja sukunimi) tähän !</label>
+		<label index="CWT_PROFILE_EDIT_PWD_LABEL">Salasana:</label>
+		<label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Salasana (uudestaan):</label>
+		<label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Ole hyvä ja anna salasana!</label>
+		<label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Ole hyvä ja anna salasana uudestaan</label>
+		<label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Molemmat salasanatiedotovat pakollisia ja niiden tulee olla identtisiä</label>
+		<label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Osoite:</label>
+		<label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">Osoitteesi!</label>
+		<label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Ole hyvä ja anna osoitteesi tähän!</label>
+		<label index="CWT_PROFILE_EDIT_ZIP_LABEL">Postinumero:</label>
+		<label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Ole hyvä ja anna postinumerosi tähän.</label>
+		<label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Ole hyvä ja anna postinumerosi tähän!</label>
+		<label index="CWT_PROFILE_EDIT_CITY_LABEL">Kaupunki:</label>
+		<label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Ole hyvä ja anna kaupunkisi (kuntasi).</label>
+		<label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Ole hyvä ja anna kaupunkisi (kuntasi):!</label>
+		<label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">Maa:</label>
+		<label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Ole hyvä ja anna maa tähän.</label>
+		<label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Ole hyvä ja anna maa tähän!</label>
+		<label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Yritys:</label>
+		<label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Ole hyvä ja anna yrityksesi nimi tähän.</label>
+		<label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Ole hyvä ja anna yrityksesi nimi tähän1</label>
+		<label index="CWT_PROFILE_EDIT_PHONE_LABEL">Puhelin:</label>
+		<label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Tähän voit laittaa puhelinnumerosi.</label>
+		<label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Ole hyvä ja anna puhelinnumerosi tähän1</label>
+		<label index="CWT_PROFILE_EDIT_FAX_LABEL">Fax:</label>
+		<label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Tähän voit laittaa faxnumerosi.</label>
+		<label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Ole hyvä ja anna faxnumerosi tähän1</label>
+		<label index="CWT_PROFILE_EDIT_EMAIL_LABEL">Sähköpostiosoite:</label>
+		<label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Ole hyvä ja anna sähköpostiosoitteesi tähän.</label>
+		<label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Ole hyvä ja anna sähköpostiosoitteesi tähän!</label>
+		<label index="CWT_PROFILE_EDIT_WWW_LABEL">Kotisivusi:</label>
+		<label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Tähän voit laittaa kotisivusiosoitteesi.</label>
+		<label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Ole hyvä ja anna kotisivusi osoite tähän!</label>
+		<label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Kuva:</label>
+		<label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">Tämä kuva tallennetaan profiiliisija se on näkyvissä muille käyttäjille. Kuvan koko ei saa ylittää 500 Kb!</label>
+		<label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">Et voi lisätä kuvaa, jonka koko on suurempi kuin 500 Kb!</label>
+		<label index="CWT_PROFILE_EDIT_SEX_LABEL">Sukupuoli:</label>
+		<label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Anna sukupuolesi.</label>
+		<label index="CWT_DATE_FORMAT">m-d-Y</label>
+		<label index="CWT_TIME_FORMAT">H.i</label>
+		<label index="CWT_USERLIST_USERNAME">Käyttäjänimi</label>
+		<label index="CWT_USERLIST_DETAILS">Tarkemmat tiedot</label>
+		<label index="CWT_PROFILE_USERNAME">Käyttäjänimi</label>
+		<label index="CWT_PROFILE_STATUS">Online tila</label>
+		<label index="CWT_PROFILE_MEMBERSINCE">Jäsen alkaen</label>
+		<label index="CWT_PROFILE_NAME">Nimi</label>
+		<label index="CWT_PROFILE_ADDRESS">Osoite</label>
+		<label index="CWT_PROFILE_ZIP">Postinumero</label>
+		<label index="CWT_PROFILE_CITY">Kaupunki</label>
+		<label index="CWT_PROFILE_COUNTRY">Maa</label>
+		<label index="CWT_PROFILE_COMPANY">Yritys</label>
+		<label index="CWT_PROFILE_PHONE">Puhelin</label>
+		<label index="CWT_PROFILE_FAX">Fax</label>
+		<label index="CWT_PROFILE_EMAIL">Sähköpostiosoite</label>
+		<label index="CWT_PROFILE_WWW">Kotisivu</label>
+		<label index="CWT_MESSAGES_SUBJECT">Aihe</label>
+		<label index="CWT_MESSAGES_DATE">Päiväys</label>
+		<label index="CWT_MESSAGES_FROM">Lähettäjä</label>
+		<label index="CWT_MESSAGES_BODY">Viesti</label>
+		<label index="CWT_MESSAGES_SENT">Viestisi on lähetetty...</label>
+		<label index="CWT_MESSAGES_BACK">Takaisin ...</label>
+		<label index="CWT_MESSAGES_DELETE">Poista</label>
+		<label index="CWT_MESSAGES_ANSWER">Vastaus</label>
+		<label index="CWT_GUESTBOOK_NEWENTRY">Uusi aihe ...</label>
+		<label index="CWT_GUESTBOOK_ACTIVEMSG">Vieraskirjasi on AKTIIVINEN.Tämä tarkoittaa että muut käyttäjät voivat lukea sen sisältöä ja lisätä sinne. Klikkaa painiketta, jos haluat poistaa vieraskirjan käytön.</label>
+		<label index="CWT_GUESTBOOK_INACTIVEMSG">Vieraskirjasi EI OLE AKTIIVINEN. Tämä tarkoittaa etteivätmuut käyttäjät näe sen sisältö eivätkä voi listä siihen mitään. Jos haluat aktivoida vieraskirjan, klikkaa painiketta.</label>
+		<label index="CWT_GUESTBOOK_DELETEALL">Poista kaikki viestit</label>
+		<label index="CWT_GUESTBOOK_YOURENTRY">Sinun viestisi:</label>
+		<label index="CWT_GUESTBOOK_ENTRYADDED">Viestisi on lisätty ...</label>
+		<label index="CWT_GUESTBOOK_BACK">Takaisin profiiliin ...</label>
+		<label index="CWT_GUESTBOOK_DISABLEDMSG">Valitan, vieraskirja ei ole käytössä.</label>
+		<label index="CWT_BUDDYLIST_HEADER">Tämä on Sinun kaverilistasi</label>
+		<label index="CWT_WELCOME_GREETING">Tervetuloa</label>
+		<label index="CWT_WELCOME_LASTLOGIN">Edellinen kirjautuminen:</label>
+		<label index="CWT_WELCOME_MAIL_COUNT_PRE">Sinulle on</label>
+		<label index="CWT_WELCOME_MAIL_COUNT_POST">uutta viestiä!</label>
+		<label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Siirry saapuneet-kansioon...</label>
+
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+			<label index="FORM_SUBMIT_BUTTON">Enviar</label>
+			<label index="FORM_CANCEL_BUTTON">Cancelar</label>
+			<label index="OPEN_GUESTBOOK_BUTTON">Activar Livro de Visitas</label>
+			<label index="LOCK_GUESTBOOK_BUTTON">Desactivar Livro de Visitas</label>
+			<label index="icon_userlist_status_offline">Offline</label>
+			<label index="icon_userlist_status_online">Online</label>
+			<label index="icon_userlist_addbuddy">Adicionar à lista de amigos...</label>
+			<label index="icon_guestbook_delete">Apagar esta mensagem...</label>
+			<label index="icon_buddylist_delete">Remover este amigo da lista...</label>
+			<label index="icon_messages_delete">Apagar esta mensagem...</label>
+			<label index="icon_messages_unread">Não lida...</label>
+			<label index="icon_messages_read">Lida...</label>
+			<label index="icon_messages_answer">Responder...</label>
+			<label index="icon_welcome_newmail">Tem novo correio!</label>
+			<label index="icon_welcome_nonewmail">Lamentamos, não tem correio novo.</label>
+			<label index="CWT_CODE_ERR_MSG">Oops... não preencheu o campo \'CODE\' correctamente. Os valores possíveis são:<br /><br /><b>PROFILE</b> --> Mostra o perfil do utilizador logado.<br /><b>PROFILE_EDIT</b> --> Mostra a página de edição de perfil do utilizador logado.<br /><b>MESSAGES</b> -->  Mostra a caixa de entrada do utilizador logado.<br /><b>BUDDYLIST</b> --> Mostra a lista de amigos do utilizador logado.<br /><b>GUESTBOOK</b> --> Mostra o Livro de Visitas do utilizador logado.<br /><b>WELCOME</b> --> Mostra a mensagem pessoal de boas vndas para um utilizador.</label>
+			<label index="CWT_PLEASE_LOGIN">Por favor, faça login!</label>
+			<label index="CWT_REPLY_ABBREV">RE: </label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_LABEL">Utilizador:</label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT">Introduza o nome de utilizador que deseja. Ex. \'Pedro\' (sem plicas)</label>
+			<label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG">Introduza o nome de utilizador</label>
+			<label index="CWT_PROFILE_EDIT_NAME_LABEL">Nome:</label>
+			<label index="CWT_PROFILE_EDIT_NAME_HELPTEXT">Introduza o seu nome (primeiro e último) aqui.</label>
+			<label index="CWT_PROFILE_EDIT_NAME_ERRMSG">Introduza o seu nome (primeiro e último) aqui.</label>
+			<label index="CWT_PROFILE_EDIT_PWD_LABEL">Senha:</label>
+			<label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN">Senha (novamente):</label>
+			<label index="CWT_PROFILE_EDIT_PWD_HELPTEXT">Introduza a sua senha.</label>
+			<label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN">Introduza a sua senha novamente.</label>
+			<label index="CWT_PROFILE_EDIT_PWD_ERRMSG">Ambos os campos de senha devem ter o mesmo valor.</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_LABEL">Endereço:</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT">O seu endereço.</label>
+			<label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG">Introduza o seu endereço aqui.</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_LABEL">Código Postal:</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT">Introduza o seu código postal.</label>
+			<label index="CWT_PROFILE_EDIT_ZIP_ERRMSG">Introduza o seu código postal aqui.</label>
+			<label index="CWT_PROFILE_EDIT_CITY_LABEL">Localidade:</label>
+			<label index="CWT_PROFILE_EDIT_CITY_HELPTEXT">Introduza a sua localidade.</label>
+			<label index="CWT_PROFILE_EDIT_CITY_ERRMSG">Introduza a sua localidade aqui.</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_LABEL">País:</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT">Introduza o seu país aqui.</label>
+			<label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG">Introduza o seu país aqui!</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_LABEL">Empresa:</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT">Introduza a sua empresa aqui.</label>
+			<label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG">Introduza a sua empresa aqui.</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_LABEL">Telefone:</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT">Introduza o seu número de telefone.</label>
+			<label index="CWT_PROFILE_EDIT_PHONE_ERRMSG">Introduza o seu número de telefone.</label>
+			<label index="CWT_PROFILE_EDIT_FAX_LABEL">Fax:</label>
+			<label index="CWT_PROFILE_EDIT_FAX_HELPTEXT">Introduza o seu número de fax.</label>
+			<label index="CWT_PROFILE_EDIT_FAX_ERRMSG">Introduza o seu número de fax.</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_LABEL">Email:</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT">Introduza o seu endereço de correio electrónico.</label>
+			<label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG">Introduza o seu endereço de correio electrónico.</label>
+			<label index="CWT_PROFILE_EDIT_WWW_LABEL">Sua página pessoal:</label>
+			<label index="CWT_PROFILE_EDIT_WWW_HELPTEXT">Introduza o endereço da sua página pessoal.</label>
+			<label index="CWT_PROFILE_EDIT_WWW_ERRMSG">Introduza o endereço da sua página pessoal.</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_LABEL">Foto:</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT">Esta foto será guardada no seu perfil e visível aos outros utilizadores. A foto não pode exceder 500KB em tamanho.</label>
+			<label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG">Apenas pode introduzir fotos que não excedam 500KB!</label>
+			<label index="CWT_PROFILE_EDIT_SEX_LABEL">Sexo</label>
+			<label index="CWT_PROFILE_EDIT_SEX_HELPTEXT">Introduza o seu sexo.</label>
+			<label index="CWT_DATE_FORMAT">d-m-Y</label>
+			<label index="CWT_TIME_FORMAT">H.i</label>
+			<label index="CWT_USERLIST_USERNAME">Utilizador</label>
+			<label index="CWT_USERLIST_NAME">Nome</label>
+			<label index="CWT_USERLIST_CITY">Cidade</label>
+			<label index="CWT_USERLIST_COUNTRY">País</label>
+			<label index="CWT_USERLIST_DETAILS">Detalhes...</label>
+			<label index="CWT_PROFILE_USERNAME">Utilizador</label>
+			<label index="CWT_PROFILE_STATUS">Estado</label>
+			<label index="CWT_PROFILE_MEMBERSINCE">Membro desde</label>
+			<label index="CWT_PROFILE_NAME">Nome</label>
+			<label index="CWT_PROFILE_ADDRESS">Endereço</label>
+			<label index="CWT_PROFILE_ZIP">Código Postal</label>
+			<label index="CWT_PROFILE_CITY">Localidade</label>
+			<label index="CWT_PROFILE_COUNTRY">País</label>
+			<label index="CWT_PROFILE_COMPANY">Empresa</label>
+			<label index="CWT_PROFILE_PHONE">Telefone</label>
+			<label index="CWT_PROFILE_FAX">Fax</label>
+			<label index="CWT_PROFILE_EMAIL">eMail</label>
+			<label index="CWT_PROFILE_WWW">Página Pessoal</label>
+			<label index="CWT_MESSAGES_SUBJECT">Motivo</label>
+			<label index="CWT_MESSAGES_DATE">Data</label>
+			<label index="CWT_MESSAGES_FROM">De</label>
+			<label index="CWT_MESSAGES_BODY">Mensagem</label>
+			<label index="CWT_MESSAGES_SENT">A sua mensagem foi enviada...</label>
+			<label index="CWT_MESSAGES_BACK">Voltar...</label>
+			<label index="CWT_MESSAGES_DELETE">Apagar</label>
+			<label index="CWT_MESSAGES_ANSWER">Responder</label>
+			<label index="CWT_GUESTBOOK_NEWENTRY">Nova mensagem...</label>
+			<label index="CWT_GUESTBOOK_ACTIVEMSG">O seu Livro de Visitas está ACTIVO. Isso significa que outros utilizadores podem ler o seu conteúdo e adicionar novas mensagens. Carregue no botão para desactivar.</label>
+			<label index="CWT_GUESTBOOK_INACTIVEMSG">O seu Livro de Visitas está ACTIVO. Isso significa que outros utilizadores não poderão ler ou adicionar novas mensagens. Carregue no botão para activar.</label>
+			<label index="CWT_GUESTBOOK_DELETEALL">Apagar todas as mensagens</label>
+			<label index="CWT_GUESTBOOK_YOURENTRY">Sua mensagem:</label>
+			<label index="CWT_GUESTBOOK_ENTRYADDED">Sua mensagem foi adicionada...</label>
+			<label index="CWT_GUESTBOOK_BACK">De volta ao perfil...</label>
+			<label index="CWT_GUESTBOOK_DISABLEDMSG">Lamentamos mas o Livro de Visitas está inactivo.</label>
+			<label index="CWT_BUDDYLIST_HEADER">Esta é a sua lista de amigos</label>
+			<label index="CWT_WELCOME_GREETING">Bem-Vindo</label>
+			<label index="CWT_WELCOME_LASTLOGIN">Último Login: </label>
+			<label index="CWT_WELCOME_MAIL_COUNT_PRE">Tem</label>
+			<label index="CWT_WELCOME_MAIL_COUNT_POST">novas mensagens!</label>
+			<label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL">Ir para a caixa de entrada...</label>        
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_NAME" type="integer">77521672</label>
+            <label index="CWT_USERLIST_CITY" type="integer">92079470</label>
+            <label index="CWT_USERLIST_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_NAME" type="integer">77521672</label>
+            <label index="CWT_USERLIST_CITY" type="integer">92079470</label>
+            <label index="CWT_USERLIST_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+            <label index="FORM_SUBMIT_BUTTON" type="integer">155805401</label>
+            <label index="FORM_CANCEL_BUTTON" type="integer">245659783</label>
+            <label index="OPEN_GUESTBOOK_BUTTON" type="integer">165241635</label>
+            <label index="LOCK_GUESTBOOK_BUTTON" type="integer">12454326</label>
+            <label index="icon_userlist_status_offline" type="integer">148494923</label>
+            <label index="icon_userlist_status_online" type="integer">89089612</label>
+            <label index="icon_userlist_addbuddy" type="integer">46849957</label>
+            <label index="icon_guestbook_delete" type="integer">223000751</label>
+            <label index="icon_buddylist_delete" type="integer">38728356</label>
+            <label index="icon_messages_delete" type="integer">228184406</label>
+            <label index="icon_messages_unread" type="integer">253384957</label>
+            <label index="icon_messages_read" type="integer">120522000</label>
+            <label index="icon_messages_answer" type="integer">85317851</label>
+            <label index="icon_welcome_newmail" type="integer">229264863</label>
+            <label index="icon_welcome_nonewmail" type="integer">89791172</label>
+            <label index="CWT_CODE_ERR_MSG" type="integer">237220137</label>
+            <label index="CWT_PLEASE_LOGIN" type="integer">95937286</label>
+            <label index="CWT_REPLY_ABBREV" type="integer">174510258</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_LABEL" type="integer">212632006</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_HELPTEXT" type="integer">205836315</label>
+            <label index="CWT_PROFILE_EDIT_USERNAME_ERRMSG" type="integer">74673609</label>
+            <label index="CWT_PROFILE_EDIT_NAME_LABEL" type="integer">90685150</label>
+            <label index="CWT_PROFILE_EDIT_NAME_HELPTEXT" type="integer">205289352</label>
+            <label index="CWT_PROFILE_EDIT_NAME_ERRMSG" type="integer">1675668</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABEL" type="integer">187963993</label>
+            <label index="CWT_PROFILE_EDIT_PWD_LABELAGAIN" type="integer">81927419</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXT" type="integer">212496962</label>
+            <label index="CWT_PROFILE_EDIT_PWD_HELPTEXTAGAIN" type="integer">131408754</label>
+            <label index="CWT_PROFILE_EDIT_PWD_ERRMSG" type="integer">36347165</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_LABEL" type="integer">46079327</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_HELPTEXT" type="integer">103394588</label>
+            <label index="CWT_PROFILE_EDIT_ADDRESS_ERRMSG" type="integer">54457222</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_LABEL" type="integer">234550549</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_HELPTEXT" type="integer">11442531</label>
+            <label index="CWT_PROFILE_EDIT_ZIP_ERRMSG" type="integer">83083562</label>
+            <label index="CWT_PROFILE_EDIT_CITY_LABEL" type="integer">201307921</label>
+            <label index="CWT_PROFILE_EDIT_CITY_HELPTEXT" type="integer">241946454</label>
+            <label index="CWT_PROFILE_EDIT_CITY_ERRMSG" type="integer">177571902</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_LABEL" type="integer">258260574</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_HELPTEXT" type="integer">74883706</label>
+            <label index="CWT_PROFILE_EDIT_COUNTRY_ERRMSG" type="integer">118236200</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_LABEL" type="integer">98955432</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_HELPTEXT" type="integer">3881285</label>
+            <label index="CWT_PROFILE_EDIT_COMPANY_ERRMSG" type="integer">894903</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_LABEL" type="integer">108244482</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_HELPTEXT" type="integer">61088125</label>
+            <label index="CWT_PROFILE_EDIT_PHONE_ERRMSG" type="integer">10537166</label>
+            <label index="CWT_PROFILE_EDIT_FAX_LABEL" type="integer">14875483</label>
+            <label index="CWT_PROFILE_EDIT_FAX_HELPTEXT" type="integer">199431920</label>
+            <label index="CWT_PROFILE_EDIT_FAX_ERRMSG" type="integer">217348727</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_LABEL" type="integer">45546387</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_HELPTEXT" type="integer">8591174</label>
+            <label index="CWT_PROFILE_EDIT_EMAIL_ERRMSG" type="integer">153782973</label>
+            <label index="CWT_PROFILE_EDIT_WWW_LABEL" type="integer">253240014</label>
+            <label index="CWT_PROFILE_EDIT_WWW_HELPTEXT" type="integer">213875814</label>
+            <label index="CWT_PROFILE_EDIT_WWW_ERRMSG" type="integer">165967944</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_LABEL" type="integer">131759065</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_HELPTEXT" type="integer">192950583</label>
+            <label index="CWT_PROFILE_EDIT_IMAGE_ERRMSG" type="integer">70006844</label>
+            <label index="CWT_PROFILE_EDIT_SEX_LABEL" type="integer">229292044</label>
+            <label index="CWT_PROFILE_EDIT_SEX_HELPTEXT" type="integer">224833514</label>
+            <label index="CWT_DATE_FORMAT" type="integer">263496322</label>
+            <label index="CWT_TIME_FORMAT" type="integer">234564261</label>
+            <label index="CWT_USERLIST_USERNAME" type="integer">257964500</label>
+            <label index="CWT_USERLIST_DETAILS" type="integer">88734265</label>
+            <label index="CWT_PROFILE_USERNAME" type="integer">257964500</label>
+            <label index="CWT_PROFILE_STATUS" type="integer">228858709</label>
+            <label index="CWT_PROFILE_MEMBERSINCE" type="integer">228514255</label>
+            <label index="CWT_PROFILE_NAME" type="integer">77521672</label>
+            <label index="CWT_PROFILE_ADDRESS" type="integer">232242979</label>
+            <label index="CWT_PROFILE_ZIP" type="integer">70553491</label>
+            <label index="CWT_PROFILE_CITY" type="integer">92079470</label>
+            <label index="CWT_PROFILE_COUNTRY" type="integer">93787849</label>
+            <label index="CWT_PROFILE_COMPANY" type="integer">29846719</label>
+            <label index="CWT_PROFILE_PHONE" type="integer">197928267</label>
+            <label index="CWT_PROFILE_FAX" type="integer">159451810</label>
+            <label index="CWT_PROFILE_EMAIL" type="integer">192524450</label>
+            <label index="CWT_PROFILE_WWW" type="integer">54130594</label>
+            <label index="CWT_MESSAGES_SUBJECT" type="integer">209228523</label>
+            <label index="CWT_MESSAGES_DATE" type="integer">71780721</label>
+            <label index="CWT_MESSAGES_FROM" type="integer">98197902</label>
+            <label index="CWT_MESSAGES_BODY" type="integer">79866110</label>
+            <label index="CWT_MESSAGES_SENT" type="integer">18564416</label>
+            <label index="CWT_MESSAGES_BACK" type="integer">170818826</label>
+            <label index="CWT_MESSAGES_DELETE" type="integer">254438473</label>
+            <label index="CWT_MESSAGES_ANSWER" type="integer">58005141</label>
+            <label index="CWT_GUESTBOOK_NEWENTRY" type="integer">267625648</label>
+            <label index="CWT_GUESTBOOK_ACTIVEMSG" type="integer">203383809</label>
+            <label index="CWT_GUESTBOOK_INACTIVEMSG" type="integer">76909276</label>
+            <label index="CWT_GUESTBOOK_DELETEALL" type="integer">262651631</label>
+            <label index="CWT_GUESTBOOK_YOURENTRY" type="integer">107681272</label>
+            <label index="CWT_GUESTBOOK_ENTRYADDED" type="integer">25626260</label>
+            <label index="CWT_GUESTBOOK_BACK" type="integer">169776103</label>
+            <label index="CWT_GUESTBOOK_DISABLEDMSG" type="integer">12575048</label>
+            <label index="CWT_BUDDYLIST_HEADER" type="integer">138525587</label>
+            <label index="CWT_WELCOME_GREETING" type="integer">137500844</label>
+            <label index="CWT_WELCOME_LASTLOGIN" type="integer">183152245</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_PRE" type="integer">898986</label>
+            <label index="CWT_WELCOME_MAIL_COUNT_POST" type="integer">74766616</label>
+            <label index="CWT_WELCOME_LINK_TO_MESSAGES_LABEL" type="integer">259485101</label>        
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

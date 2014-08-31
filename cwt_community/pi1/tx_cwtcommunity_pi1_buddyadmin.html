@@ -1,0 +1,52 @@
+<table>
+	<!-- Offers, that have been received. -->
+	<tr>
+		<td colspan="2">
+			<b>{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_OFFERS')}</b>
+		</td>
+	</tr>
+	{section name=i loop=$approvalsRec}
+		<tr>
+			<td>
+				<a href="{$LIB_COMMON->getLinkToUsersProfile($approvalsRec[i].requestor_uid)}">{$LIB_COMMON->getUserPic($approvalsRec[i].requestor_uid)}</a>
+			</td>
+			<td valign="top">
+				<a href="{$LIB_COMMON->getLinkToUsersProfile($approvalsRec[i].requestor_uid)}" style="font-weight: bold;">{$approvalsRec[i].user_info.username}</a><br/>
+				<i>&quot;{$approvalsRec[i].message}&quot;</i><br/>
+				{link parameter=$CONF.pid_buddyadmin additionalParams="&action=show_buddylist&cmd=accept_approval&approval_uid=`$approvalsRec[i].uid`"}
+					{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_ACCEPT')}...{/link}<br/>
+				{link parameter=$CONF.pid_buddyadmin additionalParams="&action=show_buddylist&cmd=deny_approval&approval_uid=`$approvalsRec[i].uid`"}
+					{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_DENY')}...{/link}<br/>
+			</td>
+		</tr>
+	{sectionelse}	
+		<tr>
+			<td colspan="2">
+				{$LIB_COMMON->getLL('WELCOME_VIEW_NO_BUDDY_OFFERS')}
+			</td>
+		</tr>
+	{/section}
+	<!-- Offers, that have been sent. -->
+	<tr>
+		<td colspan="2">
+			<b>{$LIB_COMMON->getLL('WELCOME_VIEW_BUDDY_OFFERS_SENT')}</b>
+		</td>
+	</tr>
+	{section name=j loop=$approvalsSent}
+		<tr>
+			<td>
+				<a href="{$LIB_COMMON->getLinkToUsersProfile($approvalsSent[j].target_uid)}">{$LIB_COMMON->getUserPic($approvalsSent[j].target_uid)}</a>
+			</td>
+			<td valign="top">
+				<a href="{$LIB_COMMON->getLinkToUsersProfile($approvalsSent[j].target_uid)}" style="font-weight: bold;">{$approvalsSent[j].user_info.username}</a><br/>
+				<i>&quot;{$approvalsSent[j].message}&quot;</i><br/>
+			</td>
+		</tr>
+	{sectionelse}	
+		<tr>
+			<td colspan="2">
+				{$LIB_COMMON->getLL('WELCOME_VIEW_NO_BUDDY_OFFERS_SENT')}
+			</td>
+		</tr>
+	{/section}	      
+</table>

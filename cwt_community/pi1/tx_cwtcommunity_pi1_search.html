@@ -1,0 +1,63 @@
+{if $view eq "simple"}
+	<form action="{$search}" method="POST" enctype="multipart/form-data">
+		<table border="0">
+			<tr>
+				<td><input name="searchtext" type="text" value="" size="30"></td>
+				<td><input type="submit" name="{$LIB_COMMON->getLL('CWT_BUDDYLIST_HEADER')}" value="{$LIB_COMMON->getLL('FORM_BUTTON_SEARCH')}"/></td>
+			</tr>                                                
+		</table>
+	</form>
+{elseif $view eq "result"}
+	<b>{$LIB_COMMON->getLL('SEARCH_RESULT_01', $searchtext_numberResults)}</b>
+{elseif $view eq "extended"}
+	<form action="{$search}" method="POST" enctype="multipart/form-data">
+		<table border="0">
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_NAME')}</td>
+				<td><input name="searchtext[name]" type="text" value="{$searcharray.name}"/></td>
+			</tr>
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_USERNAME')}</td>
+				<td><input name="searchtext[username]" type="text" value="{$searcharray.username}"/></td>
+			</tr>
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_GENDER')}</td>
+				<td>
+					<select name="searchtext[tx_cwtcommunityuser_sex]">
+						<option value=""></option>
+						<option value="0" {if $searcharray.tx_cwtcommunityuser_sex === "0"} selected="true" {/if}>{$LIB_COMMON->getLL('CWT_PROFILE_MALE')}</option>
+						<option value="1" {if $searcharray.tx_cwtcommunityuser_sex === "1"} selected="true" {/if}>{$LIB_COMMON->getLL('CWT_PROFILE_FEMALE')}</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_CITY')}</td>
+	  			<td><input name="searchtext[city]" type="text" value="{$searcharray.city}"/></td>
+			</tr>  
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_COUNTRY')}</td>
+				<td>
+					<select name="searchtext[country]">
+						<option value=""></option>
+						{section name=country loop=$countries}
+							<option value="{$countries[country].cn_short_en}" {if $searcharray.country === $countries[country].cn_short_en} selected="true"{/if}>
+								{$countries[country].cn_short_en}
+							</option>
+						{/section}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>{$LIB_COMMON->getLL('CWT_PROFILE_WWW')}</td>
+				<td><input name="searchtext[www]" type="text" value="{$searcharray.www}"/></td>
+			</tr>						
+			<tr>
+				<td colspan="2"><input type="submit" name="submit" value="{$LIB_COMMON->getLL('FORM_BUTTON_SEARCH')}"/></td>
+			</tr>            
+		</table>
+	</form>
+	{if $isSubmitted eq true}
+		<b>{$LIB_COMMON->getLL('SEARCH_RESULT_02', $numberResults)}</b>
+		{$search_result}         
+	{/if}
+{/if}
