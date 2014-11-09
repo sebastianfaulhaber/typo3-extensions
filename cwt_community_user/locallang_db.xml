@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>database</type>
+        <description>Language labels for database tables/fields belonging to extension 'cwt_community_user'</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="fe_users.tx_cwtcommunityuser_image">Image</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.0">Male</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.1">Female</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.2">Pair</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex">Sex</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated.I.0">Disabled</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated.I.1">Enabled</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated">Your gallery</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access">Profile visibility</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.0">Only visible for you</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.1">Only visible for your Buddys</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.2">Visible for all users</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility">Userlist visibility</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.0">Nobody can see you</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.1">Only your Buddys can see you</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.2">All users can see you</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy.I.0">Disabled</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy.I.1">Enabled</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy">Send notification on new buddy request</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg.I.0">Disabled</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg.I.1">Enabled</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg">Send notification on new private message</label>  
+			<label index="fe_users.tx_cwtcommunityuser_stats_profileviews">Profile views</label>                                  
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="fe_users.tx_cwtcommunityuser_image">Bild</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.0">Männlich</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.1">Weiblich</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex.I.2">Pärchen</label>
+            <label index="fe_users.tx_cwtcommunityuser_sex">Geschlecht</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated.I.0">Deaktiviert</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated.I.1">Aktiviert</label>
+            <label index="fe_users.tx_cwtcommunityuser_gallery_activated">Galeriefunktion</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access">Profil-Sichtbarkeit</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.0">Nur für Dich sichtbar</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.1">Nur für Buddys sichtbar</label>
+            <label index="fe_users.tx_cwtcommunityuser_profile_access.I.2">Für Alle sichtbar</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility">Benutzerliste-Sichtbarkeit</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.0">Niemand kann dich sehen</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.1">Nur deine Buddys sehen dich</label>
+            <label index="fe_users.tx_cwtcommunityuser_userlist_visibility.I.2">Alle Benutzer sehen dich</label> 
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy.I.0">Deaktiviert</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy.I.1">Aktiviert</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newbuddy">Benachrichtigung bei neuen Buddy Anfragen</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg.I.0">Deaktiviert</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg.I.1">Aktiviert</label>
+			<label index="fe_users.tx_cwtcommunityuser_notification_newmsg">Benachrichtigung bei neuer privater Nachricht</label>
+			<label index="fe_users.tx_cwtcommunityuser_stats_profileviews">Anzahl von Profilaufrufen</label>                                   
+        </languageKey>
+    </data>
+</T3locallang>
