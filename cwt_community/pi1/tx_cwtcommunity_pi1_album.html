@@ -12,7 +12,7 @@
 		<td style="border: 1px solid #E5E5E5; width: 150px;" valign="top">
 			{link parameter=$CONF.pid_gallery additionalParams="&action=show_album_detail&album_uid=`$albumData[entry].uid`"}
 				
-				{image file=$albumData[entry].preview_pic setup=plugin.tx_cwtcommunity_pi1.album.preview_photo}
+				{image file=$albumData[entry].preview_pic setup="plugin.tx_cwtcommunity_pi1.album.preview_photo"}
 			{/link}&nbsp;
 		</td>
 		<td style="border: 1px solid #E5E5E5; width: 100%;" valign="top">

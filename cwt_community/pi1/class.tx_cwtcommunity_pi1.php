@@ -45,7 +45,7 @@ include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_l
  * @package TYPO3
  * @subpackage	tx_cwtcommunity
  */
-class tx_cwtcommunity_pi1 {
+class tx_cwtcommunity_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 	public $prefixId = tx_cwtcommunity_lib_constants::CONST_PREFIX_ID;
 	// Path to this script relative to the extension dir.
 	public $scriptRelPath = "pi1/class.tx_cwtcommunity_pi1.php";

@@ -1,6 +1,6 @@
 <table>
 	<tr>
-		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_USERNAME')}:</th><td>{$user.username}&nbsp;{$LIB_COMMON->getSexIcon($user.uid)}</td><td rowspan="9" valign="top">{image file=$LIB_COMMON->getPathToUserProfileImage($user.uid) setup=plugin.tx_cwtcommunity_pi1.profile.imagePopup}</td>
+		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_USERNAME')}:</th><td>{$user.username}&nbsp;{$LIB_COMMON->getSexIcon($user.uid)}</td><td rowspan="9" valign="top">{image file=$LIB_COMMON->getPathToUserProfileImage($user.uid) setup="plugin.tx_cwtcommunity_pi1.profile.imagePopup"}</td>
 	</tr>
 	<tr>
 		<th align="left">{$LIB_COMMON->getLL('CWT_PROFILE_STATUS')}:</th><td>{$LIB_COMMON->getIsOnlineIcon($user.uid)}</td>

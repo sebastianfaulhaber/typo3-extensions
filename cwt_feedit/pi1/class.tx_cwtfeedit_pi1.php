@@ -33,7 +33,7 @@ use TYPO3\CMS\Core\Utility\DebugUtility;
  * @package TYPO3
  * @subpackage	tx_cwtfeedit
  */
-class tx_cwtfeedit_pi1 {
+class tx_cwtfeedit_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 	var $prefixId = "tx_cwtfeedit_pi1";		// Same as class name
 	var $scriptRelPath = "pi1/class.tx_cwtfeedit_pi1.php";	// Path to this script relative to the extension dir.
 	var $extKey = "cwt_feedit"; // The extension key.

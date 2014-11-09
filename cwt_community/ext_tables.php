@@ -1,6 +1,4 @@
 <?php
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 if (TYPO3_MODE == 'BE') {
@@ -254,7 +252,7 @@ $TCA["tx_cwtcommunity_profileviews"] = array (
     )
 );
 
-GeneralUtility::loadTCA('tt_content');
+\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi1']='layout,select_key';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi1']='pi_flexform';
 

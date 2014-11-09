@@ -24,7 +24,7 @@
 					{/if}
 						<td style="border: 1px solid #E5E5E5">
 							{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_detail&photo_uid=`$photos[entry].uid`"}
-								{image file=$photos[entry].pic setup=plugin.tx_cwtcommunity_pi1.album.detail.photo}
+								{image file=$photos[entry].pic setup="plugin.tx_cwtcommunity_pi1.album.detail.photo"}
 							{/link}<br>
 							{link parameter=$CONF.pid_gallery additionalParams="&action=show_photo_detail&photo_uid=`$photos[entry].uid`"}
 								<b>{$photos[entry].title|truncate:$CONF.album.detail.title.length}</b>
