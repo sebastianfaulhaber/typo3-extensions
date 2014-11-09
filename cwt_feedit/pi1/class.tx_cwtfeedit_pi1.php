@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2003-2009 Sebastian Faulhaber (http://www.faulhaber.it)
+*  (c) 2003-2014 Sebastian Faulhaber (http://www.faulhaber.it)
 *  								  (sebastian.faulhaber@gmx.de)
 *  All rights reserved
 *
@@ -23,8 +23,8 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(PATH_tslib."class.tslib_pibase.php");
-require_once(PATH_t3lib."class.t3lib_basicfilefunc.php");
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * Plugin 'CWT Frontend Edit' for the 'cwt_feedit' extension.
@@ -33,7 +33,7 @@ require_once(PATH_t3lib."class.t3lib_basicfilefunc.php");
  * @package TYPO3
  * @subpackage	tx_cwtfeedit
  */
-class tx_cwtfeedit_pi1 extends tslib_pibase {
+class tx_cwtfeedit_pi1 {
 	var $prefixId = "tx_cwtfeedit_pi1";		// Same as class name
 	var $scriptRelPath = "pi1/class.tx_cwtfeedit_pi1.php";	// Path to this script relative to the extension dir.
 	var $extKey = "cwt_feedit"; // The extension key.
@@ -125,19 +125,19 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
         // Call Constructor!!. Needed for the display of the correct language values, according to typoscript settings!
 		parent::__construct();
 		//Load TCA for table
-		t3lib_div::loadTCA($table);
+		GeneralUtility::loadTCA($table);
 		//Merge TCA form $ext_keys
 		$this->mergeExtendingTCAs($ext_keys);
 		// Initialize new cObj
-		$cObj = t3lib_div::makeInstance("tslib_cObj");
+		$cObj = GeneralUtility::makeInstance("tslib_cObj");
         //Initialize fileFunc object
-        $fileFunc = t3lib_div::makeInstance("t3lib_basicFileFunctions");
+        $fileFunc = GeneralUtility::makeInstance("t3lib_basicFileFunctions");
 		
         //Set language
 		$this->lang = ($GLOBALS["TSFE"]->config["config"]["language"]) ? $GLOBALS["TSFE"]->config["config"]["language"] : "default";
 		
 		//Assign items to global.
-		$this->postvars = t3lib_div::_POST($this->prefixId);
+		$this->postvars = GeneralUtility::_POST($this->prefixId);
 		$this->table = $table;
 		$this->items = $items;
 		$this->record_uid = $record_uid;
@@ -155,9 +155,9 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 
 		//Some debugging output
 		if ($this->debug) {
-			t3lib_div::print_array(t3lib_div::_POST());			
-			t3lib_div::print_array($_FILES);
-            t3lib_div::print_array($this->items);
+			DebugUtility::printArray(GeneralUtility::_POST());			
+			DebugUtility::printArray($_FILES);
+            DebugUtility::printArray($this->items);
 		}
 
 		//Load Local Language values
@@ -531,7 +531,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 				$number = $size - sizeof($filenames);
 
 				//Get directory where the files reside
-				$dir = t3lib_div::getIndpEnv('TYPO3_SITE_URL').$TCA["config"]["uploadfolder"];
+				$dir = GeneralUtility::getIndpEnv('TYPO3_SITE_URL').$TCA["config"]["uploadfolder"];
 
 				//Start creating the code
 				$code .= '<tr class="'.$cl_TR.'">';
@@ -982,7 +982,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 					}
 				break;
 				case "email":
-					if (!t3lib_div::validEmail($item_value))	{
+					if (!GeneralUtility::validEmail($item_value))	{
 						$this->lasterror=$this->pi_getLL("error_email","You must enter a valid email address.");
 						return false;
 				}
@@ -1009,7 +1009,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 							intval($pars[1]) ? intval($pars[1]) : 999,
 							intval($pars[2])
 						);
-						if (!$pid_list || !t3lib_div::inList($pid_list,$item_value))	{
+						if (!$pid_list || !GeneralUtility::inList($pid_list,$item_value))	{
 							$this->lasterror=sprintf($this->pi_getLL("error_inBranch","The value was not a valid value from this list: %s"), $pid_list);
 							return false;
 						}
@@ -1160,7 +1160,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 		//Load TCA for item
 		$table = $this->table;
 		$label = $item_key;
-		t3lib_div::loadTCA($table);
+		GeneralUtility::loadTCA($table);
 		$TCA = $GLOBALS["TCA"][$table]["columns"][$label]["config"]["eval"];
 		$TCA = explode(",", $TCA);
 		if (in_array("required", $TCA) || is_int(stripos($this->items[$item_key]['eval'], self::EVAL_REQUIRED))){
@@ -1385,7 +1385,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 		//Move the files
 		for($i = 0; $i < sizeof($keys); $i++){
 			$filename = $_FILES[$this->prefixId]["name"][$item_key][$keys[$i]];
-			t3lib_div::upload_copy_move($_FILES[$this->prefixId]["tmp_name"][$item_key][$keys[$i]], $dir."/".$filename);
+			GeneralUtility::upload_copy_move($_FILES[$this->prefixId]["tmp_name"][$item_key][$keys[$i]], $dir."/".$filename);
 		}
 	}
 
@@ -1441,7 +1441,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 				$newPw = $this->fetchValueFromItem($item_keys[$i]);
 		   		// Only change if different from db value
 		   		if ($newPw != $pw) {
-					$temp[] = $item_keys[$i]."='".md5(mysql_escape_string($newPw))."'";		   			
+					$temp[] = $item_keys[$i]."='".md5($GLOBALS['TYPO3_DB']->fullQuoteStr($newPw, $this->table))."'";		   			
 		   		}
 		   }
 		   // Special handling for checkbox fields
@@ -1453,16 +1453,16 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 				} elseif ($checkbox_itemValue == null) {
 					$checkbox_itemValue = 0;
 				}
-		   		$temp[] = $item_keys[$i]."='".mysql_escape_string($checkbox_itemValue)."'";
+		   		$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($checkbox_itemValue, $this->table)."'";
 		   }
 		   // Special handling for input fields with eval = 'date'
 		   elseif ($type == 'input' && strstr($TCA['config']['eval'], self::EVAL_DATE) != false) {
 		   		$timestamp = strtotime($this->fetchValueFromItem($item_keys[$i]));
-		   		$temp[] = $item_keys[$i]."='".mysql_escape_string($timestamp)."'";
+		   		$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($timestamp, $this->table)."'";
 		   }
 		   // Normal items
 		   else{
-				$temp[] = $item_keys[$i]."='".mysql_escape_string($this->fetchValueFromItem($item_keys[$i]))."'";
+				$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($this->fetchValueFromItem($item_keys[$i]), $this->table)."'";
 		   }
 	   }
 	   $temp = implode(", ", $temp);
@@ -1470,7 +1470,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 	   $temp .= ", tstamp='".time()."'";
 
 	   //Create the query depending on the mode we are in
-		$createNew = t3lib_div::_GP($this->prefixId);
+		$createNew = GeneralUtility::_GP($this->prefixId);
 		$createNew = $createNew['createNew']; 
 	   if ($createNew != 'true') {
 			// Normal RECORD EDIT MODE
@@ -1487,20 +1487,20 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 	   $hookConfig = $this->conf['tx_cwtfeedit_pi1.']['hook.']['aftersave.'];
 	   if ($hookConfig['class'] != null && $hookConfig['class'] != '') {
 	   		// Try to include the hook class
-	   			$class = t3lib_div::getFileAbsFileName($hookConfig['class']);
+	   			$class = GeneralUtility::getFileAbsFileName($hookConfig['class']);
 				if (file_exists($class)) {
 					require_once($class);
-					$classObj = t3lib_div::makeInstance($hookConfig['className']);
+					$classObj = GeneralUtility::makeInstance($hookConfig['className']);
 					
 					if ($createNew != 'true') {
 						$record = $this->doDatabaseQuery("SELECT * FROM ".$this->table." WHERE uid=".intval($this->record_uid));
 					} else {
-						$record = $this->doDatabaseQuery("SELECT * FROM ".$this->table." WHERE uid=".mysql_insert_id());
+						$record = $this->doDatabaseQuery("SELECT * FROM ".$this->table." WHERE uid=".$GLOBALS['TYPO3_DB']->sql_insert_id());
 					}
 					
 					$classObj->executeHook($this->parent_class, $record[0]);
 				} else {
-					t3lib_div::sysLog('CWT_FEEDIT: The class file "'.$class.'" could not be found!', $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
+					GeneralUtility::sysLog('CWT_FEEDIT: The class file "'.$class.'" could not be found!', $this->extKey, GeneralUtility::SYSLOG_SEVERITY_ERROR);
 				}
 	   }
 	}
@@ -1532,7 +1532,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
   		$itemsProcFunc = $itemsProcFunc[0];
 
   		// Call the itemsProcFunc class and generate items array
-  		$procFuncClass = t3lib_div::makeInstance($itemsProcFunc);
+  		$procFuncClass = GeneralUtility::makeInstance($itemsProcFunc);
   		$pObj = array();
   		$procFuncClass->main($TCA["config"], $pObj);
 	}
@@ -1561,7 +1561,7 @@ class tx_cwtfeedit_pi1 extends tslib_pibase {
 		$res = $GLOBALS['TYPO3_DB']->sql_query($query);
 		// Preparing result set
 		$rows = array();
-		while ($row = mysql_fetch_assoc($res)) {
+		while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
 			$rows[] = $row;
 		}
 		// Debugging

@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -21,9 +21,8 @@
  *
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_t3lib.'class.t3lib_basicfilefunc.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_buddylist.php');
 
 /**
@@ -76,7 +75,7 @@ class tx_cwtcommunity_lib_profile {
         
         if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['tx_cwtcommunity']['getViewProfile'] != null) {
         	foreach($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['tx_cwtcommunity']['getViewProfile'] as $_classRef) {
-        		$_procObj = & t3lib_div::getUserObj($_classRef);
+        		$_procObj = & GeneralUtility::getUserObj($_classRef);
         		$_procObj->getViewProfile($smartyInstance, $user);
         	}	 
         }
@@ -95,7 +94,7 @@ class tx_cwtcommunity_lib_profile {
     public static function getViewProfileGeneric($user, $userRaw, $config) {
         // Get Smarty Instance
     	$smartyInstance = tx_cwtcommunity_lib_common::getSmartyInstance();
-        $tplPath = t3lib_div::getFileAbsFileName($config['tpl']);
+        $tplPath = GeneralUtility::getFileAbsFileName($config['tpl']);
         
         // Provide smarty with the information for the template
         $smartyInstance->assign('userRaw', $userRaw);

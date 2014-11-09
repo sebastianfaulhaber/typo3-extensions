@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -21,9 +21,8 @@
  *
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_t3lib.'class.t3lib_basicfilefunc.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 
 /**
@@ -289,7 +288,7 @@ class tx_cwtcommunity_lib_buddylist {
 		$user = tx_cwtcommunity_lib_common::getUser($target_uid);
 		$requestor = tx_cwtcommunity_lib_common::getUser($requestor_uid);
     	//Send E-Mail
-		if ($user != '' && t3lib_div::validEmail($user['email'])) {
+		if ($user != '' && GeneralUtility::validEmail($user['email'])) {
 			// Extract variables for LL substitution
 			$varDbFields = explode(',', $conf['buddylist.']['notification.']['sender_db_field']);
 			$vars = array();
@@ -305,7 +304,7 @@ class tx_cwtcommunity_lib_buddylist {
 			$fromName = $conf['common.']['notification.']['mail.']['fromName'];
 			$mail_headers = 'From: "'.$fromName.'" <'.$fromAddress.'>';			
 			// Send mail
-			@t3lib_div::plainMailEncoded($user['email'], $mail_subject, $mail_body, $mail_headers);
+			@GeneralUtility::plainMailEncoded($user['email'], $mail_subject, $mail_body, $mail_headers);
 		}
     }
     

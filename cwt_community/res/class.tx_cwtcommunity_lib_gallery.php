@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -22,8 +22,7 @@
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
 
-include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_common.php');
-include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Some functions for the gallery feature of the community.
@@ -131,7 +130,7 @@ class tx_cwtcommunity_lib_gallery {
 		$cruser_id = tx_cwtcommunity_lib_common::getLoggedInUserUID();
 
         //Create form object
-        $form = t3lib_div::makeInstance('tx_cwtfeedit_pi1');
+        $form = GeneralUtility::makeInstance('tx_cwtfeedit_pi1');
         $form->init($table, $items, '0', $cruser_id, $GLOBALS["TSFE"]->id, 
         				array(tx_cwtcommunity_lib_constants::CONST_ACTION => tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_LIST
         					, tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID => tx_cwtcommunity_lib_common::getLoggedInUserUID())
@@ -167,7 +166,7 @@ class tx_cwtcommunity_lib_gallery {
 		$cruser_id = tx_cwtcommunity_lib_common::getLoggedInUserUID();
 
         //Create form object
-        $form = t3lib_div::makeInstance('tx_cwtfeedit_pi1');
+        $form = GeneralUtility::makeInstance('tx_cwtfeedit_pi1');
         $form->init($table, $items, $album_uid, $cruser_id, $GLOBALS["TSFE"]->id
         						, array(tx_cwtcommunity_lib_constants::CONST_ACTION => tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_LIST
         						, tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID => tx_cwtcommunity_lib_common::getLoggedInUserUID())
@@ -256,7 +255,7 @@ class tx_cwtcommunity_lib_gallery {
 		$cruser_id = tx_cwtcommunity_lib_common::getLoggedInUserUID();
 
         //Create form object
-        $form = t3lib_div::makeInstance('tx_cwtfeedit_pi1');
+        $form = GeneralUtility::makeInstance('tx_cwtfeedit_pi1');
         $form->init($table, $items, $photo_uid, $cruser_id, $GLOBALS["TSFE"]->id
         						, array(tx_cwtcommunity_lib_constants::CONST_ACTION => tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_DETAIL
         						, tx_cwtcommunity_lib_constants::CONST_ALBUM_UID => $photo['album_uid'])
@@ -531,7 +530,7 @@ class tx_cwtcommunity_lib_gallery {
 										 
 					// Move file to configured storage directory
 					$storageFolder = $conf['album.']['photo.']['storageFolder'];
-					t3lib_div::upload_copy_move($file['tmp_name'], $storageFolder.$uniqueFilename);
+					GeneralUtility::upload_copy_move($file['tmp_name'], $storageFolder.$uniqueFilename);
 					$dimensions = getimagesize($storageFolder.$uniqueFilename);
 
 					// Create database record
@@ -674,7 +673,7 @@ class tx_cwtcommunity_lib_gallery {
 		$mail_headers = 'From: '.$fromName.' <'.$fromAddress.'>';
 		
 		// Send mail
-		@t3lib_div::plainMailEncoded($recipient, $mail_subject, $mail_body, $mail_headers);
+		@GeneralUtility::plainMailEncoded($recipient, $mail_subject, $mail_body, $mail_headers);
 	}
 }
 

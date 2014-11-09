@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -21,9 +21,8 @@
  *
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_t3lib.'class.t3lib_basicfilefunc.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_common.php');
 
@@ -98,7 +97,7 @@ class tx_cwtcommunity_lib_abuse {
 		$fromName = $conf['common.']['notification.']['mail.']['fromName'];
 		$mail_headers = 'From: '.$fromName.' <'.$fromAddress.'>';			
 		// Send mail
-		@t3lib_div::plainMailEncoded($conf['abuse.']['notification.']['recipient'], $mail_subject, $mail_body, $mail_headers);
+		@GeneralUtility::plainMailEncoded($conf['abuse.']['notification.']['recipient'], $mail_subject, $mail_body, $mail_headers);
     	
     }
     

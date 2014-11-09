@@ -1,4 +1,7 @@
 <?php
+
+	use TYPO3\CMS\Core\Utility\GeneralUtility;
+	
 	//START CONFIG FOR FEEDIT
 	$table = "fe_users";
 	//Create Item array
@@ -69,7 +72,7 @@
 	   }
 	   
 	//Create form object
-	$form = t3lib_div::makeInstance('tx_cwtfeedit_pi1');
+	$form = GeneralUtility::makeInstance('tx_cwtfeedit_pi1');
 	$form->init($table, $items, $record_uid, $cruser_id, $GLOBALS["TSFE"]->id, array(), $this, array("cwt_community_user"), false, $isHashingEnabled, 0, $this->conf, true);
 	//Generate content
 	$content.= $form->getFormHeader();

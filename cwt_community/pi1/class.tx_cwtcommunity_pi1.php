@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -21,8 +21,8 @@
  *
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
 include_once(t3lib_extMgm::extPath('cwt_feedit').'pi1/class.tx_cwtfeedit_pi1.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_common.php');
@@ -45,7 +45,7 @@ include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_l
  * @package TYPO3
  * @subpackage	tx_cwtcommunity
  */
-class tx_cwtcommunity_pi1 extends tslib_pibase {
+class tx_cwtcommunity_pi1 {
 	public $prefixId = tx_cwtcommunity_lib_constants::CONST_PREFIX_ID;
 	// Path to this script relative to the extension dir.
 	public $scriptRelPath = "pi1/class.tx_cwtcommunity_pi1.php";
@@ -67,7 +67,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 	 * @param	array		$conf: The PlugIn configuration
 	 * @return	The content that is displayed on the website
 	 */
-    function main($content, $conf) {
+    public function main($content, $conf) {
     	$this->conf = $conf;
         $this->pi_setPiVarDefaults();
         $this->pi_loadLL();
@@ -83,7 +83,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
     		$this->flexform = $this->conf['tsFlex'];
     	}
     	$CODE = $this->pi_getFFvalue($this->flexform, 'field_code', 'sDEF');
-		$action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+		$action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
 		
     	/**
     	 * INIT DEBUGGING OPTIONS
@@ -108,8 +108,8 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			header('Expires: -1', true); 
 			
 			// Extract data from POST data
-			$header = t3lib_div::_GET('header');
-			$data = t3lib_div::_GET('data');
+			$header = GeneralUtility::_GET('header');
+			$data = GeneralUtility::_GET('data');
 			$module = $header['module'];
 			$func = $header['func'];
 
@@ -202,7 +202,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
         }
                 
         // Initialize new cObj 
-        $cObj = t3lib_div::makeInstance('tslib_cObj');
+        $cObj = GeneralUtility::makeInstance('tslib_cObj');
         $this->cObj = $cObj;
 
         
@@ -215,7 +215,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			
 		} elseif ($CODE == 'WALL') {
                 // TODO: Fix GET/POST var access.
-                $uid = t3lib_div::_GP("uid");
+                $uid = GeneralUtility::_GP("uid");
                 if ($uid == null) {
                     $uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                 }
@@ -225,11 +225,11 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			
 		} elseif ($CODE == 'ABUSE_REPORT') {
 			// Get action
-			$action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
-			$submitPressed = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CMD_SEND);
-			$reason = t3lib_div::_GP('reason');
-			$email = t3lib_div::_GP('email');
-			$url = t3lib_div::_GP('url');
+			$action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+			$submitPressed = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CMD_SEND);
+			$reason = GeneralUtility::_GP('reason');
+			$email = GeneralUtility::_GP('email');
+			$url = GeneralUtility::_GP('url');
                 
 			if ($reason != null && $submitPressed != null) {
 				// UID of fe user logged in
@@ -265,7 +265,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			// Read the file
 			$this->orig_templateCode = $this->cObj->fileResource($conf["template_messages"]);
 			//Get action
-			$action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+			$action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
 			//Check for post vars
 			$submitPressed = $this->piVars["submit_button"];
 			$cancelPressed = $this->piVars["cancel_button"];
@@ -278,7 +278,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				$content .= tx_cwtcommunity_lib_messages::getViewMessages($messages);
 			} elseif ($action == "getviewmessagesdelete"){
 				//Get the msg uid
-				$msg_uid = t3lib_div::_GP('msg_uid');
+				$msg_uid = GeneralUtility::_GP('msg_uid');
 				$msg = tx_cwtcommunity_lib_messages::getMessage($msg_uid);
 				//Sanity check
 				if ($msg['fe_users_uid'] != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
@@ -295,12 +295,12 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			} elseif (	$action == tx_cwtcommunity_lib_constants::ACTION_MESSAGES_SHOW_ANSWER_MSG || 
 						$action == tx_cwtcommunity_lib_constants::ACTION_MESSAGES_SHOW_NEW_MSG){
 				//Get the recipient uid
-				$recipient_uid = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENT_UID);
-				$answer_uid = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ANSWER_UID);
-				$subject = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_SUBJECT);
-				$body = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_BODY);
-				$recipients = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENTS);
-				$recipients_all_buddies = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENTS_ALL_BUDDIES);
+				$recipient_uid = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENT_UID);
+				$answer_uid = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ANSWER_UID);
+				$subject = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_SUBJECT);
+				$body = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_BODY);
+				$recipients = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENTS);
+				$recipients_all_buddies = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_RECIPIENTS_ALL_BUDDIES);
 				$action == tx_cwtcommunity_lib_constants::ACTION_MESSAGES_SHOW_NEW_MSG ? $mode = tx_cwtcommunity_lib_constants::ACTION_MESSAGES_SHOW_NEW_MSG : $mode = tx_cwtcommunity_lib_constants::ACTION_MESSAGES_SHOW_ANSWER_MSG;
                         
 				// user wants to submit
@@ -374,7 +374,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				}
 			} elseif ($action == "getviewmessagessingle"){
 				//Get the msg uid
-				$msg_uid = t3lib_div::_GP("msg_uid");
+				$msg_uid = GeneralUtility::_GP("msg_uid");
 				//Get the model
 				$message = tx_cwtcommunity_lib_messages::getMessagesSingle($session_user_uid, $msg_uid);
 				//Generate the view
@@ -388,7 +388,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			$isNotificationEnabled = tx_cwtcommunity_lib_guestbook::isGuestbookNotificationEnabled();
 			
             // if no uid is given, then take session user uid
-            $uid = t3lib_div::_GP("uid");
+            $uid = GeneralUtility::_GP("uid");
             if ($uid == null){
             	$uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
             }
@@ -416,8 +416,8 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 
 				// Then check for action, in case the user wants to delete something.
                 // Get action
-                $action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
-				$item = t3lib_div::_GP("item");
+                $action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+				$item = GeneralUtility::_GP("item");
 				if ($action == "getviewguestbookdeleteitem") {
 					// Delete guestbook item
 					$res = tx_cwtcommunity_lib_guestbook::deleteGuestbookItem($item);
@@ -433,16 +433,16 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			} else{
 				// FOR OTHER USERS
 				// Check, if the user has enabled his gb
-				$status = tx_cwtcommunity_lib_guestbook::getGuestbookStatus(t3lib_div::_GP("uid"));
+				$status = tx_cwtcommunity_lib_guestbook::getGuestbookStatus(GeneralUtility::_GP("uid"));
 
 				// ENABLED !! Everything is fine ;-)
 				if ($status == "0") {
 	                // Get action
-                	$action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+                	$action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
                 	// Decide what to do
             	    if ($action == "getviewguestbookadd") {
         	            // Get fe user uid
-    	                $uid = t3lib_div::_GP("uid");
+    	                $uid = GeneralUtility::_GP("uid");
                     	$text = htmlspecialchars($this->piVars["text"]);
 						$submitPressed = $this->piVars["submit_button"];
 						$cancelPressed = $this->piVars["cancel_button"];
@@ -467,7 +467,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             	        	// CANCEL
 							// Display normal guestbook view
 		                    // Get fe user uid
-                    		$uid = t3lib_div::_GP("uid");
+                    		$uid = GeneralUtility::_GP("uid");
                 		    // Get the model->guestbook
             		        $guestbook = tx_cwtcommunity_lib_guestbook::getGuestbook($uid);
             		        // Generate the view
@@ -480,7 +480,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
                 	    }
             	    } else {
 		                    // Get fe user uid
-                    		$uid = t3lib_div::_GP("uid");
+                    		$uid = GeneralUtility::_GP("uid");
                 		    // Get the model->user
             		        $guestbook = tx_cwtcommunity_lib_guestbook::getGuestbook($uid);
         		            // Generate the view
@@ -495,7 +495,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             } elseif ($CODE == "PROFILE") {
                 // If no FE User uid is given, then take session user uid
                 // TODO: Fix GET/POST var access.
-                $uid = t3lib_div::_GP("uid");
+                $uid = GeneralUtility::_GP("uid");
                 if ($uid == null) {
                     $uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                 }
@@ -515,7 +515,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				}
 			
             } elseif ($CODE == "PROFILE_MINI") {
-                $uid = t3lib_div::_GP("uid");
+                $uid = GeneralUtility::_GP("uid");
                 if ($uid == null) {
                     $uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                 }
@@ -534,7 +534,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				$tsConfigRef = $this->pi_getFFvalue($this->flexform, 'ts_configuration', 'generic_views_profile');
 				$config = $conf['generics.']['profile.'][$tsConfigRef.'.'];
 				
-				$uid = t3lib_div::_GP("uid");
+				$uid = GeneralUtility::_GP("uid");
                 if ($uid == null) {
                     $uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                 }
@@ -547,7 +547,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             } elseif ($CODE == "PROFILE_USERSTATS") {
 		    // If no FE User uid is given, then take session user uid
             // TODO: Fix GET/POST var access.
-            $uid = t3lib_div::_GP("uid");
+            $uid = GeneralUtility::_GP("uid");
             if ($uid == null) {
             	$uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
             }
@@ -567,7 +567,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 			
             }  elseif ($CODE == "SEARCH_EXTENDED") {
               // Get search result
-			$searcharray = t3lib_div::_GP('searchtext');
+			$searcharray = GeneralUtility::_GP('searchtext');
 			
 			if ($searcharray != null) {
 				// excecute search
@@ -588,9 +588,9 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
                 //Get the uid of logged in user
                 $uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                 //Get action
-                $action = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
-                $cmd = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
-                $approval_uid = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_APPROVAL_UID);
+                $action = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ACTION);
+                $cmd = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
+                $approval_uid = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_APPROVAL_UID);
                 $approvalsReceived = tx_cwtcommunity_lib_buddylist::getBuddylistApprovalsReceived($uid);
 				$approvalsSent = tx_cwtcommunity_lib_buddylist::getBuddylistApprovalsSent($uid);
 					
@@ -627,8 +627,8 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
                 } elseif ($action == "getviewbuddylistadd") {
                     //get buddy uid, which should be added
                     // TODO: Fix GET/POST var access.
-                    $buddy_uid = t3lib_div::_GP("buddy_uid");
-                    $message = t3lib_div::_GP("message");
+                    $buddy_uid = GeneralUtility::_GP("buddy_uid");
+                    $message = GeneralUtility::_GP("message");
                     $requestor_uid = tx_cwtcommunity_lib_common::getLoggedInUserUID();
                     
                     // Check if buddylist approval is enabled
@@ -658,7 +658,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 					
                 } elseif($action == "getviewbuddylistdelete"){
                     //get buddy uid, which should be added
-                    $buddy_uid = t3lib_div::_GP("buddy_uid");
+                    $buddy_uid = GeneralUtility::_GP("buddy_uid");
                     //Add it to list
                     $res = tx_cwtcommunity_lib_buddylist::deleteBuddy($uid, $buddy_uid);
                     //Get the model
@@ -670,12 +670,12 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 
                 // Decide what to do
                 if ($action == null || $action == "getviewuserlist") {
-					$searchstring = t3lib_div::_GP('searchtext');
-					$searcharray = t3lib_div::_GP('searcharray');
-                	$letter = t3lib_div::_GP("letter");
-					$sortOrder = t3lib_div::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_SORT_ORDER);
-					$sortColumn = t3lib_div::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_SORT_COLUMN);
-					$page = t3lib_div::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_PAGE);
+					$searchstring = GeneralUtility::_GP('searchtext');
+					$searcharray = GeneralUtility::_GP('searcharray');
+                	$letter = GeneralUtility::_GP("letter");
+					$sortOrder = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_SORT_ORDER);
+					$sortColumn = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_SORT_COLUMN);
+					$page = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_PAGE);
 					$isSearchResult = false;
 					
                     // Get the model->user
@@ -711,7 +711,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
                     
                 } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_SEARCH_SHOW_RESULT) {
 	                // Get search result
-					$searchstring = t3lib_div::_GP('searchtext');
+					$searchstring = GeneralUtility::_GP('searchtext');
                     // Get the model->user
                     $users = tx_cwtcommunity_lib_search::executeSimpleSearch($searchstring);
                     $usersForDisplay = tx_cwtcommunity_lib_common::getUsersForDisplay($users);
@@ -726,7 +726,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				// Get FF configuration
 				$tsConfigRef = $this->pi_getFFvalue($this->flexform, 'ts_configuration', 'generic_views_userlist');
 				$config = $conf['generics.']['userlist.'][$tsConfigRef.'.'];
-				$page = t3lib_div::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_PAGE);
+				$page = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::ACTION_COMMON_PAGE);
 								
 				// Check for action
 				if ($action == tx_cwtcommunity_lib_constants::ACTION_USERLIST_GENERIC_SHOWLIST) {
@@ -736,10 +736,10 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				}
 				
 				// Include external class and make an instance
-				$class = t3lib_div::getFileAbsFileName($config['class']);
+				$class = GeneralUtility::getFileAbsFileName($config['class']);
 				if (file_exists($class)) {
 					require_once($class);
-					$classObj = t3lib_div::makeInstance($config['className']);
+					$classObj = GeneralUtility::makeInstance($config['className']);
 					$users = $classObj->getUsers($config);
 					$usersForDisplay = tx_cwtcommunity_lib_common::getUsersForDisplay($users);
 					$pageCount = tx_cwtcommunity_lib_common::getPageCount(tx_cwtcommunity_lib_common::getUserCount(), $conf['userlist.']['paging.']['usersPerPage']);
@@ -748,14 +748,14 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 					$content .= tx_cwtcommunity_lib_userlist::getViewUserlistGeneric($users, $usersForDisplay, $config, $page, $pageCount, $userCount);
 					
 				} else {
-					t3lib_div::sysLog('GENERICS_USERLIST: The class file "'.$class.'" could not be found!', $this->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
+					GeneralUtility::sysLog('GENERICS_USERLIST: The class file "'.$class.'" could not be found!', $this->extKey, GeneralUtility::SYSLOG_SEVERITY_ERROR);
 				}
 			
             } elseif ($CODE == "GALLERY") {
                 // Decide what to do
             if ($action == null || $action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_LIST) {
             	// Sanity checks
-				$owner_uid = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID);	
+				$owner_uid = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID);	
             	if (!tx_cwtcommunity_lib_gallery::isGalleryActivated($owner_uid)) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
 				}
@@ -764,16 +764,16 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             		
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_EDIT) {
             	// Sanity check
-				$album = tx_cwtcommunity_lib_gallery::getAlbum(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
+				$album = tx_cwtcommunity_lib_gallery::getAlbum(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
 				if ($album['cruser_id'] != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
 				}
 				// Generate content
-				$content .= tx_cwtcommunity_lib_gallery::getViewAlbumEdit(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID), $this, $conf);
+				$content .= tx_cwtcommunity_lib_gallery::getViewAlbumEdit(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID), $this, $conf);
             	            		
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_DETAIL) {
          		// Sanity checks
-				$album = tx_cwtcommunity_lib_gallery::getAlbum(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
+				$album = tx_cwtcommunity_lib_gallery::getAlbum(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
 				// Is gallery activated?
             	if (!tx_cwtcommunity_lib_gallery::isGalleryActivated($album['cruser_id'])) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
@@ -785,14 +785,14 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				
 				// Handle commands
 				if ($album['cruser_id'] == tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
-					$cmd = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
+					$cmd = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
 					// Delete command
 					if ($cmd == tx_cwtcommunity_lib_constants::CMD_GALLERY_DELETE_PHOTO) {
-						tx_cwtcommunity_lib_gallery::deletePhoto(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID), $this->conf);
+						tx_cwtcommunity_lib_gallery::deletePhoto(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID), $this->conf);
 					}
 					// Set preview command
 					if ($cmd == tx_cwtcommunity_lib_constants::CMD_GALLERY_SET_PREVIEW_PHOTO) {
-						tx_cwtcommunity_lib_gallery::setPhotoAsPreview(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID), $album['uid']);
+						tx_cwtcommunity_lib_gallery::setPhotoAsPreview(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID), $album['uid']);
 					}
 				}
 				
@@ -801,13 +801,13 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             	            		
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_DELETE) {
                 // Sanity check
-				$album = tx_cwtcommunity_lib_gallery::getAlbum(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
+				$album = tx_cwtcommunity_lib_gallery::getAlbum(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
 				if ($album['cruser_id'] != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
 				}            		
 				// Check if album has photos
-				$deleteFlag = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CMD_GALLERY_DELETE_ALBUM);
-				$cancelFlag = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CMD_CANCEL);
+				$deleteFlag = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CMD_GALLERY_DELETE_ALBUM);
+				$cancelFlag = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CMD_CANCEL);
 				if (tx_cwtcommunity_lib_gallery::getPhotoCount($album['uid']) > 0 
 					&& ($deleteFlag == null || $deleteFlag == '') && ($cancelFlag == '' || $cancelFlag == null)) {
 					// Show confirmation page
@@ -822,7 +822,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_ALBUM_NEW) {
                 // Sanity check
-				$feuser_uid = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID);
+				$feuser_uid = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_CRUSER_ID);
 				if ($feuser_uid != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
 				}		
@@ -837,7 +837,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_PHOTO_DETAIL) {
          		// Sanity checks
-				$photo = tx_cwtcommunity_lib_gallery::getPhoto(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
+				$photo = tx_cwtcommunity_lib_gallery::getPhoto(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
 				// Is gallery activated?
             	if (!tx_cwtcommunity_lib_gallery::isGalleryActivated($photo['cruser_id'])) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
@@ -848,11 +848,11 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				}
 				
 				// Handle commands
-            	$cmd = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
+            	$cmd = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
 				// Add comment            		
 				if ($cmd == tx_cwtcommunity_lib_common::getLL('FORM_COMMENT_ADD')) {
 					// Sanity check
-					$comment = t3lib_div::_GP('TEXT');
+					$comment = GeneralUtility::_GP('TEXT');
 					if ($comment != null && $comment != '') {
 						tx_cwtcommunity_lib_gallery::addComment($photo['uid'], htmlspecialchars($comment));
 					}
@@ -860,7 +860,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				// 	Delete comment					
 				if ($photo['cruser_id'] == tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					if ($cmd == tx_cwtcommunity_lib_constants::CMD_GALLERY_DELETE_COMMENT) {		
-						tx_cwtcommunity_lib_gallery::deleteComment(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_COMMENT_UID));
+						tx_cwtcommunity_lib_gallery::deleteComment(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_COMMENT_UID));
 					}						
 				}
 
@@ -869,13 +869,13 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             	
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_PHOTO_NEW) {
             	// Sanity check
-				$album = tx_cwtcommunity_lib_gallery::getAlbum(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
+				$album = tx_cwtcommunity_lib_gallery::getAlbum(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
 				// Check if owner
 				if ($album['cruser_id'] != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
 				}
 				// Generate content
-				$cmd = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
+				$cmd = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_CMD);
 				if ($cmd == tx_cwtcommunity_lib_common::getLL('FORM_CANCEL_BUTTON')) {
 					$content .= tx_cwtcommunity_lib_gallery::getViewAlbumDetail($album['uid']);
 					
@@ -885,18 +885,18 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 					// If there are any errors go back to upload form
 					if ($errors != null) {
 						$content .= $errors;
-						$content .= tx_cwtcommunity_lib_gallery::getViewPhotoNew(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID)); 
+						$content .= tx_cwtcommunity_lib_gallery::getViewPhotoNew(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID)); 
 					} else {
 						// Go back to album detail
 						$content .= tx_cwtcommunity_lib_gallery::getViewAlbumDetail($album['uid']);							
 					}
 				} else {
-					$content .= tx_cwtcommunity_lib_gallery::getViewPhotoNew(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
+					$content .= tx_cwtcommunity_lib_gallery::getViewPhotoNew(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_ALBUM_UID));
 				}
 
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_PHOTO_EDIT) {
             	// Sanity check
-				$photo = tx_cwtcommunity_lib_gallery::getPhoto(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
+				$photo = tx_cwtcommunity_lib_gallery::getPhoto(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
 				// Check if owner
 				if ($photo['cruser_id'] != tx_cwtcommunity_lib_common::getLoggedInUserUID()) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
@@ -907,7 +907,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 
             } elseif ($action == tx_cwtcommunity_lib_constants::ACTION_GALLERY_SHOW_PHOTO_REPORT) {
          		// Sanity checks
-				$photo = tx_cwtcommunity_lib_gallery::getPhoto(t3lib_div::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
+				$photo = tx_cwtcommunity_lib_gallery::getPhoto(GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID));
 				// Is gallery activated?
             	if (!tx_cwtcommunity_lib_gallery::isGalleryActivated($photo['cruser_id'])) {
 					return tx_cwtcommunity_lib_common::generateErrorMessage('An unknown error has occured. Please contact your system administrator.');
@@ -918,12 +918,12 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
 				}
 				
 				// Handle commands
-            	$report = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CMD_GALLERY_REPORT_PHOTO);
-            	$cancel = t3lib_div::_GP(tx_cwtcommunity_lib_constants::CMD_CANCEL);           		
+            	$report = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CMD_GALLERY_REPORT_PHOTO);
+            	$cancel = GeneralUtility::_GP(tx_cwtcommunity_lib_constants::CMD_CANCEL);           		
 				if ($report != '' || $cancel != '') {
 					if ($report != null && $report != '') {
 						// Report photo
-						$reason = t3lib_div::_GP('REASON');
+						$reason = GeneralUtility::_GP('REASON');
 						if ($reason != null && $reason != '') {
 							tx_cwtcommunity_lib_gallery::reportPhotoToAdmin($photo['uid'], tx_cwtcommunity_lib_common::getLoggedInUserUID(), $reason, $this->conf);
 						}							
@@ -938,7 +938,7 @@ class tx_cwtcommunity_pi1 extends tslib_pibase {
             }
         } elseif ($CODE == "PROFILE_EDIT") {
 			// Include the CWT_FEEDIT configuration for the profile edit page.
-			$path = t3lib_div::getFileAbsFileName($conf['template_profile_edit']);
+			$path = GeneralUtility::getFileAbsFileName($conf['template_profile_edit']);
 			if (file_exists($path)) {
 				include_once($path);	
 			} else {

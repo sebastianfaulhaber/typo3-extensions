@@ -26,10 +26,9 @@
  *
  * Hint: use extdeveval to insert/update function index above.
  */
-
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $LANG->includeLLFile('EXT:cwt_community/mod1/locallang.xml');
-require_once(PATH_t3lib . 'class.t3lib_scbase.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_common.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_gallery.php');
@@ -58,12 +57,6 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		global $BE_USER,$LANG,$BACK_PATH,$TCA_DESCR,$TCA,$CLIENT,$TYPO3_CONF_VARS;
 
 		parent::init();
-
-		/*
-		 if (t3lib_div::_GP('clear_all_cache'))    {
-		 $this->include_once[] = PATH_t3lib.'class.t3lib_tcemain.php';
-		 }
-		 */
 	}
 
 	/**
@@ -100,7 +93,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		if (($this->id && $access) || ($BE_USER->user['admin'] && !$this->id))    {
 
 			// Draw the header.
-			$this->doc = t3lib_div::makeInstance('mediumDoc');
+			$this->doc = GeneralUtility::makeInstance('mediumDoc');
 			$this->doc->backPath = $BACK_PATH;
 			$this->doc->form='<form action="" method="post" enctype="multipart/form-data">';
 
@@ -121,7 +114,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
                         ';
 
 			$headerSection = $this->doc->getHeader('pages', $this->pageinfo, $this->pageinfo['_thePath']) . '<br />'
-			. $LANG->sL('LLL:EXT:lang/locallang_core.xml:labels.path') . ': ' . t3lib_div::fixed_lgd_cs($this->pageinfo['_thePath'], -50);
+			. $LANG->sL('LLL:EXT:lang/locallang_core.xml:labels.path') . ': ' . GeneralUtility::fixed_lgd_cs($this->pageinfo['_thePath'], -50);
 
 			$this->content.=$this->doc->startPage($LANG->getLL('title'));
 			$this->content.=$this->doc->header($LANG->getLL('title'));
@@ -143,7 +136,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		} else {
 			// If no access or if ID == zero
 
-			$this->doc = t3lib_div::makeInstance('mediumDoc');
+			$this->doc = GeneralUtility::makeInstance('mediumDoc');
 			$this->doc->backPath = $BACK_PATH;
 
 			$this->content.=$this->doc->startPage($LANG->getLL('title'));
@@ -180,36 +173,36 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 			case 1:
 				//Get action value
 				$action = null;
-				$action = t3lib_div::_GET(tx_cwtcommunity_lib_constants::CONST_ACTION);
+				$action = GeneralUtility::_GET(tx_cwtcommunity_lib_constants::CONST_ACTION);
 
 				//Decide what to do
 				if ($action == null || $action == tx_cwtcommunity_lib_constants::BE_ACTION_USER_ADMINISTRATION) {
 					//Get letter
-					$letter = t3lib_div::_GET('letter');
+					$letter = GeneralUtility::_GET('letter');
 					//Get the model
 					$users = tx_cwtcommunity_lib_common::getUserlist($letter);
 					//Generate the view
 					$content.= $this->getViewUserAdministration($users);
 				} elseif ($action == tx_cwtcommunity_lib_constants::BE_ACTION_USER_ADMINISTRATION_ENABLED) {
 					//Get uid
-					$uid = t3lib_div::_GET('uid');
+					$uid = GeneralUtility::_GET('uid');
 					//Do the action
 					$res = tx_cwtcommunity_lib_common::enableUser($uid);
 					//Generate the view
 					$content.= $this->getViewUserAdministrationEnabled();
 				} elseif ($action == tx_cwtcommunity_lib_constants::BE_ACTION_USER_ADMINISTRATION_DISABLED) {
 					//Get uid
-					$uid = t3lib_div::_GET('uid');
+					$uid = GeneralUtility::_GET('uid');
 					//Do the action
 					$res = tx_cwtcommunity_lib_common::disableUser($uid);
 					//Generate the view
 					$content.= $this->getViewUserAdministrationDisabled();
 				} elseif ($action == tx_cwtcommunity_lib_constants::BE_ACTION_GALLERY) {
-					$feuser_uid = t3lib_div::_GET(tx_cwtcommunity_lib_constants::CONST_USER_UID);
+					$feuser_uid = GeneralUtility::_GET(tx_cwtcommunity_lib_constants::CONST_USER_UID);
 					//Generate the view
 					$content.= $this->getViewUserAdministrationGallery($feuser_uid);
 				} elseif ($action == tx_cwtcommunity_lib_constants::BE_ACTION_GALLERY_COMMENTS) {
-					$photo_uid = t3lib_div::_GET(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID);
+					$photo_uid = GeneralUtility::_GET(tx_cwtcommunity_lib_constants::CONST_PHOTO_UID);
 					//Generate the view
 					$content.= $this->getViewUserAdministrationGalleryComments($photo_uid);
 				}
@@ -221,7 +214,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 			case 2:
 				//Get action value
 				$action = null;
-				$action = t3lib_div::_POST(tx_cwtcommunity_lib_constants::CONST_ACTION);
+				$action = GeneralUtility::_POST(tx_cwtcommunity_lib_constants::CONST_ACTION);
 
 				//Decide what to do
 				if ($action == null || $action == '') {
@@ -242,10 +235,10 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 				}
 				else if ($action == tx_cwtcommunity_lib_constants::BE_ACTION_MESSAGE_SEND){
 					//Get button value
-					$submit = t3lib_div::_POST('submit');
+					$submit = GeneralUtility::_POST('submit');
 					if ($submit == $LANG->getLL('viewMailing_submitmessage')){
 						//Get fe_group_uid
-						$fe_group_uid = t3lib_div::_POST('fe_group');
+						$fe_group_uid = GeneralUtility::_POST('fe_group');
 						//Generate content
 						$content.= $this->getViewMailingResult($fe_group_uid);
 						$this->content.=$this->doc->section($LANG->getLL('function2'),$content,1,1);
@@ -312,7 +305,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_cruser_id').'</td>';
 		$content.='<td><select name="cruser_id">';
 		//Generate options from db result
-		$cruser_id = t3lib_div::_POST('cruser_id');
+		$cruser_id = GeneralUtility::_POST('cruser_id');
 		for ($i=0;$i < sizeof($fe_users) ; $i++){
 			if ($cruser_id == $fe_users[$i]['uid']){
 				$content.= '<option value="'.$fe_users[$i]['uid'].'" selected="selected">'.$fe_users[$i]['username'].'</option>';
@@ -325,18 +318,18 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_title').'</td>';
-		$content.='<td><input name="title" type="text" size="51" value="'.t3lib_div::_POST('title').'"></td>';
+		$content.='<td><input name="title" type="text" size="51" value="'.GeneralUtility::_POST('title').'"></td>';
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_text').'</td>';
-		$content.='<td><textarea name="text" cols="50" rows="10">'.t3lib_div::_POST('text').'</textarea></td>';
+		$content.='<td><textarea name="text" cols="50" rows="10">'.GeneralUtility::_POST('text').'</textarea></td>';
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_group').'</td>';
 		$content.='<td><select name="fe_group">';
 		$content.='<option value="" ></option>';
 		//Generate options from db result
-		$fe_group = t3lib_div::_POST('fe_group');
+		$fe_group = GeneralUtility::_POST('fe_group');
 		for ($i=0;$i < sizeof($fe_groups) ; $i++){
 			if ($fe_group == $fe_groups[$i]['uid']){
 				$content.= '<option value="'.$fe_groups[$i]['uid'].'" selected="selected">'.$fe_groups[$i]['title'].'</option>';
@@ -373,10 +366,10 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		//Init some vars
 		$content = null;
 		$doc = get_object_vars($this->doc);
-		$username = tx_cwtcommunity_lib_common::dbQuery('SELECT username FROM fe_users WHERE uid = '.intval(t3lib_div::_POST('cruser_id')));
+		$username = tx_cwtcommunity_lib_common::dbQuery('SELECT username FROM fe_users WHERE uid = '.intval(GeneralUtility::_POST('cruser_id')));
 		$username = $username[0]['username'];
-		if (t3lib_div::_POST('fe_group') != null && t3lib_div::_POST('fe_group') != ''){
-			$fe_group = tx_cwtcommunity_lib_common::dbQuery('SELECT title FROM fe_groups WHERE uid = '.intval(t3lib_div::_POST('fe_group')));
+		if (GeneralUtility::_POST('fe_group') != null && GeneralUtility::_POST('fe_group') != ''){
+			$fe_group = tx_cwtcommunity_lib_common::dbQuery('SELECT title FROM fe_groups WHERE uid = '.intval(GeneralUtility::_POST('fe_group')));
 			$fe_group = $fe_group[0]['title'];
 		}
 
@@ -387,10 +380,10 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		$content.='<form action="" method="POST">';
 		//Hidden fields
 		$content.='<input name="'.tx_cwtcommunity_lib_constants::CONST_ACTION.'" type="hidden" value="'.tx_cwtcommunity_lib_constants::BE_ACTION_MESSAGE_SEND.'">';
-		$content.='<input name="cruser_id" type="hidden" value="'.t3lib_div::_POST('cruser_id').'">';
-		$content.='<input name="title" type="hidden" value="'.t3lib_div::_POST('title').'">';
-		$content.='<input name="text" type="hidden" value="'.t3lib_div::_POST('text').'">';
-		$content.='<input name="fe_group" type="hidden" value="'.t3lib_div::_POST('fe_group').'">';
+		$content.='<input name="cruser_id" type="hidden" value="'.GeneralUtility::_POST('cruser_id').'">';
+		$content.='<input name="title" type="hidden" value="'.GeneralUtility::_POST('title').'">';
+		$content.='<input name="text" type="hidden" value="'.GeneralUtility::_POST('text').'">';
+		$content.='<input name="fe_group" type="hidden" value="'.GeneralUtility::_POST('fe_group').'">';
 		$content.='<table width="100%">';
 		$content.='<tr bgcolor="'.$doc['bgColor5'].'">';
 		$content.='<td colspan="2"><b>'.$LANG->getLL('viewMailing_newmessage_2').'</td>';
@@ -401,11 +394,11 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top" width="200">'.$LANG->getLL('viewMailing_title').'</td>';
-		$content.='<td>'.t3lib_div::_POST('title').'</td>';
+		$content.='<td>'.GeneralUtility::_POST('title').'</td>';
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_text').'</td>';
-		$content.='<td>'.t3lib_div::_POST('text').'</td>';
+		$content.='<td>'.GeneralUtility::_POST('text').'</td>';
 		$content.='</tr>';
 		$content.='<tr>';
 		$content.='<td valign="top">'.$LANG->getLL('viewMailing_group').'</td>';
@@ -442,9 +435,9 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 
 		//Output description
 		//$content.= $LANG->getLL('viewMailing_description').'<br><br>';
-		$cruser_id = t3lib_div::_POST('cruser_id');
-		$subject = t3lib_div::_POST('title');
-		$text = t3lib_div::_POST('text');
+		$cruser_id = GeneralUtility::_POST('cruser_id');
+		$subject = GeneralUtility::_POST('title');
+		$text = GeneralUtility::_POST('text');
 
 		//Send messages
 		tx_cwtcommunity_lib_common::sendMessages($fe_group_uid, $subject, $text, $cruser_id);
@@ -532,7 +525,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 				$content .= '<td><a style="'.$this->linkStyle.'" href="?id='.$this->id.'&M=web_txcwtcommunityM1'.'&'.tx_cwtcommunity_lib_constants::CONST_ACTION.'='.tx_cwtcommunity_lib_constants::BE_ACTION_USER_ADMINISTRATION_ENABLED.'&uid='.$users[$i]['uid'].'"><img src="'.TYPO3_MOD_PATH.'action_enable.gif" alt="'.$LANG->getLL('viewUserAdministration_enable').'" border="0"></a></td>';
 			}
 			$content .= '<td><a href="#" onclick="'.htmlspecialchars(tx_cwtcommunity_lib_common::beGenerateViewLink('fe_users', $users[$i]['uid'])).'"><img src="'.TYPO3_MOD_PATH.'action_view.gif" alt="'.$LANG->getLL('COMMON_VIEW').'" border="0"></a></td>';
-			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[fe_users]['.$users[$i]['uid'].']=edit',$GLOBALS['BACK_PATH'],t3lib_div::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
+			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[fe_users]['.$users[$i]['uid'].']=edit',$GLOBALS['BACK_PATH'],GeneralUtility::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
 			$content .= '<td><a href="'.htmlspecialchars($GLOBALS['SOBE']->doc->issueCommand('&id='.$this->id.'&cmd[fe_users]['.$users[$i]['uid'].'][delete]=1')).'" onclick="'.htmlspecialchars("return confirm('Want to delete?');").'"><img src="'.TYPO3_MOD_PATH.'action_delete.gif" alt="'.$LANG->getLL('COMMON_DELETE').'" border="0"></a></td>';
 			$content .= '</tr>';
 		}
@@ -650,7 +643,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 			$content .= '<td>&nbsp;</td>';
 			$content .= '<td>&nbsp;</td>';
 			$content .= '<td><a href="#" onclick="'.htmlspecialchars(tx_cwtcommunity_lib_common::beGenerateViewLink('tx_cwtcommunity_albums', $album['uid'])).'"><img src="'.TYPO3_MOD_PATH.'action_view.gif" alt="'.$LANG->getLL('COMMON_VIEW').'" border="0"></a></td>';
-			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_albums]['.$album['uid'].']=edit',$GLOBALS['BACK_PATH'],t3lib_div::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
+			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_albums]['.$album['uid'].']=edit',$GLOBALS['BACK_PATH'],GeneralUtility::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
 			$content .= '<td><a href="'.htmlspecialchars($GLOBALS['SOBE']->doc->issueCommand('&id='.$this->id.'&cmd[tx_cwtcommunity_albums]['.$album['uid'].'][delete]=1')).'" onclick="'.htmlspecialchars("return confirm('Want to delete?');").'"><img src="'.TYPO3_MOD_PATH.'action_delete.gif" alt="'.$LANG->getLL('COMMON_DELETE').'" border="0"></a></td>';
 			$content .= '</tr>';
 
@@ -675,7 +668,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 				$content .= '<td><a style="'.$this->linkStyle.'" target="_blank" href="'.$photo_path.'">'.$photo['filename'].'</a></td>';
 				$content .= '<td><a style="'.$this->linkStyle.'" href="?id='.$this->id.'&M=web_txcwtcommunityM1'.'&'.tx_cwtcommunity_lib_constants::CONST_ACTION.'='.tx_cwtcommunity_lib_constants::BE_ACTION_GALLERY_COMMENTS.'&'.tx_cwtcommunity_lib_constants::CONST_USER_UID.'='.$photo['cruser_id'].'&'.tx_cwtcommunity_lib_constants::CONST_PHOTO_UID.'='.$photo['uid'].'">'.$comment_count.' '.$LANG->getLL('GALLERY_COMMENTS').'</a></td>';
 				$content .= '<td><a href="#" onclick="'.htmlspecialchars(tx_cwtcommunity_lib_common::beGenerateViewLink('tx_cwtcommunity_photos', $photo['uid'])).'"><img src="'.TYPO3_MOD_PATH.'action_view.gif" alt="'.$LANG->getLL('COMMON_VIEW').'" border="0"></a></td>';
-				$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_photos]['.$photo['uid'].']=edit',$GLOBALS['BACK_PATH'],t3lib_div::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
+				$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_photos]['.$photo['uid'].']=edit',$GLOBALS['BACK_PATH'],GeneralUtility::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
 				$content .= '<td><a href="'.htmlspecialchars($GLOBALS['SOBE']->doc->issueCommand('&id='.$this->id.'&cmd[tx_cwtcommunity_photos]['.$photo['uid'].'][delete]=1')).'" onclick="'.htmlspecialchars("return confirm('Want to delete?');").'"><img src="'.TYPO3_MOD_PATH.'action_delete.gif" alt="'.$LANG->getLL('COMMON_DELETE').'" border="0"></a></td>';
 				$content .= '</tr>';
 			}
@@ -739,7 +732,7 @@ class  tx_cwtcommunity_module1 extends t3lib_SCbase {
 			$content .= '<td>'.$comment['text'].'</td>';
 			$content .= '<td><a style="'.$this->linkStyle.'" href="#" onclick="'.htmlspecialchars(tx_cwtcommunity_lib_common::beGenerateViewLink('fe_users', $creator['uid'])).'">'.$creator['username'].'</a></td>';
 			$content .= '<td><a href="#" onclick="'.htmlspecialchars(tx_cwtcommunity_lib_common::beGenerateViewLink('tx_cwtcommunity_photo_comments', $comment['uid'])).'"><img src="'.TYPO3_MOD_PATH.'action_view.gif" alt="'.$LANG->getLL('COMMON_VIEW').'" border="0"></a></td>';
-			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_photo_comments]['.$comment['uid'].']=edit',$GLOBALS['BACK_PATH'],t3lib_div::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
+			$content .= '<td><a href="#" onclick="'.htmlspecialchars(t3lib_BEfunc::editOnClick('&id='.$this->id.'&edit[tx_cwtcommunity_photo_comments]['.$comment['uid'].']=edit',$GLOBALS['BACK_PATH'],GeneralUtility::getIndpEnv('REQUEST_URI'))).'"><img src="'.TYPO3_MOD_PATH.'action_edit.gif" alt="'.$LANG->getLL('COMMON_EDIT').'" border="0"></a></td>';
 			$content .= '<td><a href="'.htmlspecialchars($GLOBALS['SOBE']->doc->issueCommand('&id='.$this->id.'&cmd[tx_cwtcommunity_photo_comments]['.$comment['uid'].'][delete]=1')).'" onclick="'.htmlspecialchars("return confirm('Want to delete?');").'"><img src="'.TYPO3_MOD_PATH.'action_delete.gif" alt="'.$LANG->getLL('COMMON_DELETE').'" border="0"></a></td>';
 			$content .= '</tr>';
 
@@ -814,7 +807,7 @@ if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/cwt_com
 
 
 // Make instance:
-$SOBE = t3lib_div::makeInstance('tx_cwtcommunity_module1');
+$SOBE = GeneralUtility::makeInstance('tx_cwtcommunity_module1');
 $SOBE->init();
 
 // Include files?

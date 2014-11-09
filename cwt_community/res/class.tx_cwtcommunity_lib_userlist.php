@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -22,8 +22,8 @@
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_t3lib.'class.t3lib_basicfilefunc.php');
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_common.php');
 
@@ -78,7 +78,7 @@ class tx_cwtcommunity_lib_userlist {
         // Get Smarty Instance
     	$smartyInstance = tx_cwtcommunity_lib_common::getSmartyInstance();
         $conf = tx_cwtcommunity_lib_common::getConfArray();
-        $tplPath = t3lib_div::getFileAbsFileName($config['tpl']);
+        $tplPath = GeneralUtility::getFileAbsFileName($config['tpl']);
         
         // Provide smarty with the information for the template
         $smartyInstance->assign('users', $users);

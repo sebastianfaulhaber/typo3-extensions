@@ -2,7 +2,7 @@
 /**
  * Copyright notice
  *
- *   (c) 2003-2009 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
+ *   (c) 2003-2014 Sebastian Faulhaber (sebastian.faulhaber@gmx.de)
  *   All rights reserved
  *
  *   This script is part of the Typo3 project. The Typo3 project is
@@ -21,9 +21,8 @@
  *
  *   This copyright notice MUST APPEAR in all copies of the script!
  */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once(PATH_t3lib.'class.t3lib_basicfilefunc.php');
 include_once(t3lib_extMgm::extPath('cwt_community').'res/class.tx_cwtcommunity_lib_constants.php');
 
 /**
@@ -115,20 +114,20 @@ class tx_cwtcommunity_lib_common {
 		// Assign this class as object
 		$self = new tx_cwtcommunity_lib_common();
 		self::getSmartyInstance()->assign_by_ref('LIB_COMMON', $self);
-		self::getSmartyInstance()->assign_by_ref('LIB_BUDDY', t3lib_div::makeInstance('tx_cwtcommunity_lib_buddylist'));
+		self::getSmartyInstance()->assign_by_ref('LIB_BUDDY', GeneralUtility::makeInstance('tx_cwtcommunity_lib_buddylist'));
 		
 		// Assign foreign classes aka. "GENERICS - Global"
 		$genConfigItems = $conf['generics.']['global.'];
 		is_array($genConfigItems) ? $genConfigItems : $genConfigItems = array();
 		foreach ($genConfigItems as $genConfigItem) {
-				$class = t3lib_div::getFileAbsFileName($genConfigItem['class']);
+				$class = GeneralUtility::getFileAbsFileName($genConfigItem['class']);
 				if (file_exists($class)) {
 					require_once($class);
-					$classObj = t3lib_div::makeInstance($genConfigItem['className']);
+					$classObj = GeneralUtility::makeInstance($genConfigItem['className']);
 					self::getSmartyInstance()->assign_by_ref('LIB_'.strtoupper($genConfigItem['className']), $classObj);
 					
 				} else {
-					t3lib_div::sysLog('GENERICS_GLOBAL: The class file "'.$class.'" could not be found!', self::getCallerRef()->extKey, t3lib_div::SYSLOG_SEVERITY_ERROR);
+					GeneralUtility::sysLog('GENERICS_GLOBAL: The class file "'.$class.'" could not be found!', self::getCallerRef()->extKey, GeneralUtility::SYSLOG_SEVERITY_ERROR);
 				}
 		}
 		
@@ -167,7 +166,7 @@ class tx_cwtcommunity_lib_common {
 	public static function getCObj() {
 		// Lazy load cobj
 		if (self::$cObj == null) {
-			self::$cObj = t3lib_div::makeInstance('tslib_cObj');
+			self::$cObj = GeneralUtility::makeInstance('tslib_cObj');
 		}
 		return self::$cObj;
 	}
@@ -248,7 +247,7 @@ class tx_cwtcommunity_lib_common {
 
 		//Create marker array
 		//Load TCA for table
-		t3lib_div::loadTCA('fe_users');
+		GeneralUtility::loadTCA('fe_users');
 		//Merge TCA form $ext_keys
 		$mergers = array('cwt_community_user');
 		$foreignMergers = self::$conf['mergeTCAFromExtension'];
@@ -339,7 +338,7 @@ class tx_cwtcommunity_lib_common {
 		
 		
 		//Load TCA for table
-		t3lib_div::loadTCA($table);
+		GeneralUtility::loadTCA($table);
 		//Merge TCA form $ext_keys
 		self::mergeExtendingTCAs($mergeTCAFromExtension);
 		 
@@ -459,7 +458,7 @@ class tx_cwtcommunity_lib_common {
   		$itemsProcFunc = explode('->', $TCA["config"]["itemsProcFunc"]);
   		$itemsProcFunc = $itemsProcFunc[0];
   		// Call the itemsProcFunc class and generate items array
-  		$procFuncClass = t3lib_div::makeInstance($itemsProcFunc);
+  		$procFuncClass = GeneralUtility::makeInstance($itemsProcFunc);
   		$pObj = array();
   		if (method_exists($procFuncClass, 'main')) {
   			$procFuncClass->main($TCA["config"], $pObj);	
@@ -526,7 +525,7 @@ class tx_cwtcommunity_lib_common {
 		if ($additionalClasses != null) {
 			$addClassesArr = explode(",", $additionalClasses);
 			for ($i=0; $i < sizeof($addClassesArr); $i++) {
-				$absFileName = t3lib_div::getFileAbsFileName(trim($addClassesArr[$i]));
+				$absFileName = GeneralUtility::getFileAbsFileName(trim($addClassesArr[$i]));
 				if (file_exists($absFileName)) {
 					include_once($absFileName);	
 				} else {
@@ -573,12 +572,9 @@ class tx_cwtcommunity_lib_common {
 				// Lookup in cache
 				if (self::$local_lang_cache[$pathToFile] != null) {
 					$LOCAL_LANG = self::$local_lang_cache[$pathToFile];
-				} else {
-					//T3_V6: Removed this because of incompatibility.
-					$LOCAL_LANG = t3lib_div::readLLXMLfile(t3lib_div::getFileAbsFileName($pathToFile), $lang);
-					
+				} else {					
 					//T3_V6: This is for Typo3 V6
-					//$LOCAL_LANG = \TYPO3\CMS\Core\Utility\GeneralUtility::readLLfile(t3lib_div::getFileAbsFileName($pathToFile), $lang);
+					$LOCAL_LANG = \TYPO3\CMS\Core\Utility\GeneralUtility::readLLfile(GeneralUtility::getFileAbsFileName($pathToFile), $lang);
 					
 					self::$local_lang_cache[$pathToFile] = $LOCAL_LANG;
 				}
@@ -784,7 +780,7 @@ class tx_cwtcommunity_lib_common {
 		// Debugging
 		if (tx_cwtcommunity_lib_constants::$DEBUG_SQL_QUERIES) {
 			debug($rows, 'DEBUG_SQL_QUERIES: '.$query);
-			debug(mysql_error(), $query);
+			debug($GLOBALS['TYPO3_DB']->sql_error(), $query);
 		}
 		// Return the array
 		return $rows;
@@ -803,7 +799,7 @@ class tx_cwtcommunity_lib_common {
 		// Debugging
 		if (tx_cwtcommunity_lib_constants::$DEBUG_SQL_QUERIES) {
 			debug($query, 'DEBUG_SQL_QUERIES: The SQL query.');
-			debug(mysql_error(), $query);
+			debug($GLOBALS['TYPO3_DB']->sql_error(), $query);
 		}
 		
 		// Check for SQL error
@@ -944,7 +940,7 @@ class tx_cwtcommunity_lib_common {
 	 */
 	public static function cleanFilename($filename) {
 		//Initialize fileFunc object
-        $fileFunc = t3lib_div::makeInstance("t3lib_basicFileFunctions");
+        $fileFunc = GeneralUtility::makeInstance("t3lib_basicFileFunctions");
 		
 		return $fileFunc->cleanFilename($filename);
 	}
@@ -1560,10 +1556,10 @@ class tx_cwtcommunity_lib_common {
     	
 		//Send E-Mail
 		if(!is_array($email)) {
-			$emailArray = t3lib_div::trimExplode(',', $email, 1);
+			$emailArray = GeneralUtility::trimExplode(',', $email, 1);
 		}
     	for ($i = 0; $i < sizeof($emailArray); $i++) {
-			if (!t3lib_div::validEmail($emailArray[$i])) {
+			if (!GeneralUtility::validEmail($emailArray[$i])) {
 				if ( substr( $emailArray[$i], strlen( $emailArray[$i] ) - strlen( '.t3vm' ) ) !== '.t3vm' ){
 					$validMail = false;
 				}
@@ -1578,7 +1574,7 @@ class tx_cwtcommunity_lib_common {
 			$html_end='</body></html>';	
 			// Send mail
 	  	    // new TYPO3 swiftmailer code
-	        $htmlMail = t3lib_div::makeInstance('t3lib_mail_Message');
+	        $htmlMail = GeneralUtility::makeInstance('t3lib_mail_Message');
 	        $htmlMail->setTo($emailArray);
 	        $htmlMail->setBcc($bcc);
 			$htmlMail->setFrom(array($fromAddress => $fromName));

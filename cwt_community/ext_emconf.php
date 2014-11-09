@@ -18,7 +18,7 @@ Userlist, Profile, Profile Administration, Guestbook, Messages, Buddylist, Backe
 	'author' => 'Sebastian Faulhaber',
 	'author_email' => 'sebastian.faulhaber@gmx.de',
 	'shy' => '',
-	'version' => '2.1.1',
+	'version' => '3.0.0',
 	'dependencies' => 'cwt_community_user,cwt_feedit,smarty',
 	'conflicts' => '',
 	'priority' => '',
@@ -36,7 +36,7 @@ Userlist, Profile, Profile Administration, Guestbook, Messages, Buddylist, Backe
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '4.5.0-6.0.4',
+			'typo3' => '6.2.0-6.2.99',
 			'cwt_community_user' => 'cwt_community_user',
 			'cwt_feedit' => 'cwt_feedit',
 			'smarty' => 'smarty',

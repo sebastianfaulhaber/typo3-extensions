@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'This extension features semi-automatic rendering of frontend user input forms. You only have to set up the CWT Frontend Edit Extension with a few lines of code and then it handles everything else. Automatic input validation and rendering of Input, Textare',
 	'category' => 'fe',
 	'shy' => 1,
-	'version' => '1.2.5',
+	'version' => '2.0.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -34,7 +34,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '4.5.0-6.0.4',
+			'typo3' => '6.2.0-6.2.99',
 		),
 		'conflicts' => array(
 		),
