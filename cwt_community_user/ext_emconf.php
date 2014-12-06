@@ -32,11 +32,10 @@ $EM_CONF[$_EXTKEY] = array(
 	'lockType' => '',
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
-	'version' => '3.0.0',
+	'version' => '3.0.1',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2.0-6.2.99',
-			'cwt_community' => '3.0.0'
 		),
 		'conflicts' => array(
 		),
