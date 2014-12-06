@@ -34,3 +34,8 @@ Where can I get the binaries?
 ----------------------------------
 * Download: http://typo3.org/extensions/repository/view/cwt_community
 * More Information: http://www.faulhaber.it/typo3-extensions/cwt-community/
+
+ToDo List
+---------
+[] Upgrade to newer jQuery Version
+[] Add documentation for wall functionality
