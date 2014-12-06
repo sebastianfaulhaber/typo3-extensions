@@ -34,29 +34,31 @@ use TYPO3\CMS\Core\Utility\DebugUtility;
  * @subpackage	tx_cwtfeedit
  */
 class tx_cwtfeedit_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
-	var $prefixId = "tx_cwtfeedit_pi1";		// Same as class name
-	var $scriptRelPath = "pi1/class.tx_cwtfeedit_pi1.php";	// Path to this script relative to the extension dir.
-	var $extKey = "cwt_feedit"; // The extension key.
-	var $table = null; //Holds the table name.
-	var $items = null; //Holds information about the columns to render
-	var $record_uid = null; //Holds the uid of the record, that
-	var $cruser_id = null; //Hold the fe user uid.
-	var $back_pid = null; //Holds the pid of the page the user will be sent back to
-	var $back_values = null; //Values, which will be appended to all back links
-	var $parent_class = null; //A reference to the calling class, from which this class is instantiated.
-	var $conf = null; //Typoscript configuration
-	var $mode = "VIEW_EDITPROFILE"; //Decides how the form is rendered. Possible values are "VIEW_EDITPROFILE", "VIEW_EDITPROFILE_NEW", "VIEW_EDITPROFILE_PREVIEW" ,"VIEW_EDITPROFILE_RESULT", "VIEW_EDITPROFILE_ERROR"
-	var $cObj = null; //
-	var $debug = false; //If true, then debug messages appear in the frontend. For developing purposes only.
-	var $postvars = null;
-    var $fileFunc = null;
-	var $lang = null;
-	var $lasterror=""; // Store some Default Error Text
-	var $createNew = false;
-	var $hashPasswords = false;
-	var $insert_pid = 0;
-	var $skipPreview = false; //If true, the preview page will be skipped.
-	var $CHECKBOX_ON = 'on';
+	public $prefixId = "tx_cwtfeedit_pi1";		// Same as class name
+	public $scriptRelPath = "pi1/class.tx_cwtfeedit_pi1.php";	// Path to this script relative to the extension dir.
+	public $extKey = "cwt_feedit"; // The extension key.
+	public $conf = null; //Typoscript configuration
+	public $cObj = null; //
+	public $lang = null;
+	public $languageDependencies = array();
+	
+	public $table = null; //Holds the table name.
+	public $items = null; //Holds information about the columns to render
+	public $record_uid = null; //Holds the uid of the record, that
+	public $cruser_id = null; //Hold the fe user uid.
+	public $back_pid = null; //Holds the pid of the page the user will be sent back to
+	public $back_values = null; //Values, which will be appended to all back links
+	public $parent_class = null; //A reference to the calling class, from which this class is instantiated.
+	public $mode = "VIEW_EDITPROFILE"; //Decides how the form is rendered. Possible values are "VIEW_EDITPROFILE", "VIEW_EDITPROFILE_NEW", "VIEW_EDITPROFILE_PREVIEW" ,"VIEW_EDITPROFILE_RESULT", "VIEW_EDITPROFILE_ERROR"
+	public $debug = false; //If true, then debug messages appear in the frontend. For developing purposes only.
+	public $postvars = null;
+    public $fileFunc = null;
+	public $lasterror=""; // Store some Default Error Text
+	public $createNew = false;
+	public $hashPasswords = false;
+	public $insert_pid = 0;
+	public $skipPreview = false; //If true, the preview page will be skipped.
+	public $CHECKBOX_ON = 'on';
 	
 	/**
 	 * Item type: field will be displayed read-only. No input field will be rendered.
@@ -135,7 +137,9 @@ class tx_cwtfeedit_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 		
         //Set language
 		$this->lang = ($GLOBALS["TSFE"]->config["config"]["language"]) ? $GLOBALS["TSFE"]->config["config"]["language"] : "default";
-		
+		$this->languageDependencies[] = $this->lang;
+		$this->languageDependencies[] = 'default';
+				
 		//Assign items to global.
 		$this->postvars = GeneralUtility::_POST($this->prefixId);
 		$this->table = $table;
@@ -1441,7 +1445,7 @@ class tx_cwtfeedit_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 				$newPw = $this->fetchValueFromItem($item_keys[$i]);
 		   		// Only change if different from db value
 		   		if ($newPw != $pw) {
-					$temp[] = $item_keys[$i]."='".md5($GLOBALS['TYPO3_DB']->fullQuoteStr($newPw, $this->table))."'";		   			
+					$temp[] = $item_keys[$i]."=".md5($GLOBALS['TYPO3_DB']->fullQuoteStr($newPw, $this->table));		   			
 		   		}
 		   }
 		   // Special handling for checkbox fields
@@ -1453,16 +1457,16 @@ class tx_cwtfeedit_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 				} elseif ($checkbox_itemValue == null) {
 					$checkbox_itemValue = 0;
 				}
-		   		$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($checkbox_itemValue, $this->table)."'";
+		   		$temp[] = $item_keys[$i]."=".$GLOBALS['TYPO3_DB']->fullQuoteStr($checkbox_itemValue, $this->table);
 		   }
 		   // Special handling for input fields with eval = 'date'
 		   elseif ($type == 'input' && strstr($TCA['config']['eval'], self::EVAL_DATE) != false) {
 		   		$timestamp = strtotime($this->fetchValueFromItem($item_keys[$i]));
-		   		$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($timestamp, $this->table)."'";
+		   		$temp[] = $item_keys[$i]."=".$GLOBALS['TYPO3_DB']->fullQuoteStr($timestamp, $this->table);
 		   }
 		   // Normal items
 		   else{
-				$temp[] = $item_keys[$i]."='".$GLOBALS['TYPO3_DB']->fullQuoteStr($this->fetchValueFromItem($item_keys[$i]), $this->table)."'";
+				$temp[] = $item_keys[$i]."=".$GLOBALS['TYPO3_DB']->fullQuoteStr($this->fetchValueFromItem($item_keys[$i]), $this->table);
 		   }
 	   }
 	   $temp = implode(", ", $temp);
