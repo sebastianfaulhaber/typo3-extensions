@@ -198,7 +198,7 @@ class tx_cwtcommunity_lib_search {
 		        			
 		        			$searchFieldsWhereClause.= ' '.$column.' IN ('.$searchtextImploded.')'; 	        				
 	        			} 
-	        		} elseif (tx_cwtcommunity_lib_constants::CONST_USERLIST_SEARCHMODE_USERGROUP) {
+	        		} elseif ($searchmode == tx_cwtcommunity_lib_constants::CONST_USERLIST_SEARCHMODE_USERGROUP) {
 	        			if (is_array($searchtext)) {
 	        				for ($j = 0; $j < sizeof($searchtext); $j++) {
 	        					if ($j > 0) {
