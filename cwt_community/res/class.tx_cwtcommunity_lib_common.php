@@ -955,10 +955,9 @@ class tx_cwtcommunity_lib_common {
 	public static function makeFilenameUnique($filename) {
 		//Get timestamp
 		$tstamp = time();
-		// Explode it by '.'
-		$filename = explode(".",$filename);
-		// Make it unique
-		$uniqueName = md5($filename[0]."_".$tstamp).".".$filename[1];
+		$fileExtension = strrchr($filename, '.');
+		$filename = str_replace('.', '_', $filename);
+		$uniqueName = md5($filename."_".$tstamp).".".$fileExtension;
 		return $uniqueName;
 	}
 
