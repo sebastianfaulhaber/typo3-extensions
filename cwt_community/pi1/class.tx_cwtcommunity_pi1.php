@@ -125,6 +125,8 @@ class tx_cwtcommunity_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 				} elseif ($func == 'deleteWallEntry') {
 					$res = tx_cwtcommunity_lib_wall::deleteWallEntry($data['entry_uid']);
 					
+				} elseif ($func == 'getWallEntries') {
+					$res = tx_cwtcommunity_lib_wall::getWallEntries($data['limit']);
 				}
 				
 			} else if ($module == 'tx_cwtcommunity_lib_search') {
