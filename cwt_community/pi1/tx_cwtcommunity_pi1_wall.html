@@ -129,20 +129,33 @@
 		html += '<div class="cwt_community_wall_entry_pic"><a href="' + entry.cruser_linkToUsersProfile + '">' + entry.cruser_pic + '</a></div>';
 		html += '<div class="cwt_community_wall_entry_content">';
 		html += '<span class="cwt_community_wall_entry_content_header"><a href="' + entry.cruser_linkToUsersProfile + '">' + entry.cruser.first_name + "&nbsp;" + entry.cruser.last_name + "</a></span>";
-		html += '<span class="cwt_community_wall_entry_content_header_functions"><a href="javascript:deleteWallEntry(' + entry.uid + ')">{/literal}{$LIB_COMMON->getLL('CWT_WALL_DELETE')}{literal}</a></span>'; 
-		html += '<span class="cwt_community_wall_entry_content_body">' + entry.content_text + "</span>";
-		html += '<span class="cwt_community_wall_entry_content_footer">' + entry.crdate_date + ", " + entry.crdate_time + "</span>"; 
+		
+		if (entry.type == 'wall') {
+			html += '<span class="cwt_community_wall_entry_content_header_functions"><a href="javascript:deleteWallEntry(' + entry.uid + ')">{/literal}{$LIB_COMMON->getLL('CWT_WALL_DELETE')}{literal}</a></span>';
+			html += '<span class="cwt_community_wall_entry_content_body">' + entry.content_text + "</span>";
+			html += '<span class="cwt_community_wall_entry_content_footer">' + entry.crdate_date + ", " + entry.crdate_time + "</span>"; 			
+		} else if (entry.type == 'gallery_new_album') {
+			html += '<span class="cwt_community_wall_entry_content_body">...hat ein neues Fotoalbum mit dem Titel "<a href="'+ entry.gallery_new_album.linkToAlbum + '">' + entry.gallery_new_album.title + '</a>" angelegt.</span>';
+			html += '<span class="cwt_community_wall_entry_content_footer">' + entry.crdate_date + ", " + entry.crdate_time + "</span>"; 						
+		} else if (entry.type == 'profile_update') {
+			html += '<span class="cwt_community_wall_entry_content_body">...hat "<a href="'+ entry.cruser_linkToUsersProfile + '">sein Profil</a>" aktualisiert.</span>';
+			html += '<span class="cwt_community_wall_entry_content_footer">' + entry.crdate_date + ", " + entry.crdate_time + "</span>"; 						
+		}
 		html += '</div>';
 		html += '</div>'; 
+		html += '<br/>';
 		return html;
 	}
+
+
+	reloadWall();
 
 </script>
 
 {/literal}
 
 <div id="wall_add">
-		<textarea id="wall_entry_new_content_text"></textarea>
+		<textarea id="wall_entry_new_content_text">Was war heute los?</textarea>
 		<input id="wall_entry_new_add" type="submit" value="{$LIB_COMMON->getLL('CWT_WALL_POST')}" onclick="javascript:addWallEntryText()">
 </div>
 
