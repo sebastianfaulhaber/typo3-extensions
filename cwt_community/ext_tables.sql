@@ -243,7 +243,7 @@ CREATE TABLE tx_cwtcommunity_wall (
     fe_group int(11) DEFAULT '0' NOT NULL,
     wall_owner_uid int(11) DEFAULT '0' NOT NULL,
     wall_entry_uid int(11) DEFAULT NULL,
-    content_text tinytext,
+    content_text text,
     content_image text,
     
     PRIMARY KEY (uid),
